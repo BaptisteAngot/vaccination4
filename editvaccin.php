@@ -33,10 +33,11 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
         $dosage=trim(strip_tags($_POST['dosage']));
         $error=validationChiffre($error,$dosage,'dosage');
 
+        //status
         $status=trim(strip_tags($_POST['status']));
         $error=validationText($error,$status,2,50,'status');
 
-        //status
+        //Condition
         $condition=trim(strip_tags($_POST['condition']));
         $error=validationText($error,$condition,2,50,'condition');
 
@@ -56,13 +57,13 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
           <h4>Modification d'un vaccin:</h4>
         </div>
           <div class="card-body">
-            <!-- Formulaire d'ajout d'un nouveau vaccin -->
+            <!-- Formulaire d'edit d'un vaccin -->
             <form class="" method="post">
                 <!-- Champs nom du vaccin -->
                 <div class="form-group label-floating">
                  <label for="nomvaccin" class="bmd-label-floating">Nom du vaccin</label>
                  <input type="text" class="form-control" id="exampleInput1" name="nomvaccin" value="<?php if(!empty($data['nom'])){echo $data['nom'];} ?>">
-                 <span class="bmd-help"><?php if(!empty($error['nomvaccin'])){echo $error['nomvaccin'];}else echo "Veuillez saisir un nom à votre vaccin."?></span>
+                 <span class="bmd-help"><?php if(!empty($error['nomvaccin'])){echo $error['nomvaccin'];}else echo "Nom de votre vaccin à modifier."?></span>
                 </div>
                 <!-- Champs description du vaccin -->
                 <div class="form-group">

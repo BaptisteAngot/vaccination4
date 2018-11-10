@@ -237,6 +237,19 @@ function validationText($error,$data,$min,$max,$key,$empty = true){
   return $error;
 }
 
+function vmail($error,$data,$key){
+  if(!empty($data)){
+    if(!filter_var($data,FILTER_VALIDATE_EMAIL)){
+      $error[$key]= 'Cette adresse mail n\'est pas valide.';
+    }
+  }
+  else{
+    if($empty){
+      $error[$key]='Veuillez renseigner ce champ';
+    }
+  return $error;
+  }
+}
 function validationChiffre($error,$data,$key,$empty = true){
   if(!empty($data)){
     if(!is_numeric($data)){

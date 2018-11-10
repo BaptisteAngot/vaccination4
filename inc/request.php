@@ -130,12 +130,20 @@ function returnvaccins(){
 function deletevaccin($id){
   global $pdo;
 
-  $sql="DELETE FROM vaccin WHERE id=:id";
+  $sql="DELETE * FROM vaccin WHERE id=:id";
   $query = $pdo -> prepare($sql);
   $query ->bindValue(':id',$id, PDO::PARAM_INT);
   $query -> execute();
 }
+//Fonction pour effacer un utilisateur en fonction de son id
+function deleteuser($id){
+  global $pdo;
 
+  $sql="DELETE * FROM user WHERE id=:id";
+  $query = $pdo ->prepare($sql);
+  $query -> bindValue(':id',$id,PDO::PARAM_INT);
+  $query -> execute();
+}
 
 //Fonction pour récupérer les données d'un vaccin en fonction d'un id
 function recovervaccindata($id){
@@ -145,6 +153,17 @@ function recovervaccindata($id){
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $resultat = $query -> fetch();
+  return $resultat;
+}
+
+//Fonction pour récupérer les données d'un user en fonction de son id
+function recoveruserdata($id){
+  global $pdo;
+
+  $sql="SELECT id,login,status,role,email FROM user WHERE id=$id";
+  $query= $pdo->prepare($sql);
+  $query -> execute();
+  $resultat = $query ->fetch();
   return $resultat;
 }
 
@@ -162,6 +181,8 @@ function envoyerinfovaccin($name,$desc,$age,$dosage,$status,$condition){
   $query->bindValue(':condition_requise',$condition,PDO::PARAM_STR);
   $query->execute();
 }
+
+//fonction qui met à jour la table vaccin en fonction d'un id
 function updatevaccindata($id,$name,$desc,$age,$dosage,$status,$condition){
   global $pdo;
 
@@ -177,6 +198,21 @@ function updatevaccindata($id,$name,$desc,$age,$dosage,$status,$condition){
   $query ->bindValue(':id',$id, PDO::PARAM_INT);
   $query->execute();
 }
+
+//fonction qui met à jour la table user en fonction d'un id d'utlisateur
+function updateuserdata($id,$login,$status,$role,$mail){
+  global $pdo;
+
+  $sql="UPDATE user SET login=:login,status=:status,role=:role,mail=:mail,updated_at=NOW() WHERE id=:id";
+  $query=$pdo->prepare($sql);
+  $query -> bindValue(':login',$login,PDO::PARAM_STR);
+  $query -> bindValue(':status',$status,PDO::PARAM_STR);
+  $query -> bindValue(':role',$role,PDO::PARAM_STR);
+  $query -> bindValue(':mail',$mail,PDO::PARAM_STR);
+  $query ->bindValue(':id',$id, PDO::PARAM_INT);
+  $query->execute();
+}
+
 
 //Fonction qui retourne la liste de tout les users
 function returnusers(){

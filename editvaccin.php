@@ -96,7 +96,7 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
               <!-- Condition requise -->
               <div class="form-group">
                  <label for="condition" class="bmd-label-floating">Condition requise pour faire le vaccin</label>
-                 <input type="text" class="form-control" id="condition" name="condition" value="<?php if(!empty($data['age'])){echo $data['age'];} ?>">
+                 <input type="text" class="form-control" id="condition" name="condition" value="<?php if(!empty($data['condition_requise'])){echo $data['condition_requise'];} ?>">
                  <span class="bmd-help"><?php if(!empty($error['condition'])){echo $error['condition'];}else echo "Veuillez saisir une condition.";?></span>
               </div>
               <!-- Submit -->

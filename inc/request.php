@@ -163,7 +163,7 @@ function envoyerinfovaccin($name,$desc,$age,$dosage,$status,$condition){
 function updatevaccindata($id,$name,$desc,$age,$dosage,$status,$condition){
   global $pdo;
 
-  $sql ="UPDATE vaccin SET nom=:name,description=:desc,age=:age,dosage=:dosage,status=:status, condition_requise=:condition WHERE id=:id";
+  $sql ="UPDATE vaccin SET nom=:name,description=:desc,age=:age,dosage=:dosage,status=:status, condition_requise=:condition, updated_at=NOW() WHERE id=:id";
 
   $query = $pdo->prepare($sql);
   $query ->bindValue(':name',$name, PDO::PARAM_STR);
@@ -173,6 +173,5 @@ function updatevaccindata($id,$name,$desc,$age,$dosage,$status,$condition){
   $query ->bindValue(':status',$status, PDO::PARAM_STR);
   $query ->bindValue(':condition',$condition, PDO::PARAM_STR);
   $query ->bindValue(':id',$id, PDO::PARAM_INT);
-
   $query->execute();
 }

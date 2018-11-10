@@ -17,9 +17,9 @@
         <div class="navbar">
           <nav>
             <ul>
-              <li><a href="#">Acceuil</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Nous contacter</a></li>
+              <li><a href="index.php">Acceuil</a></li>
+              <li><a href="#FAQ">FAQ</a></li>
+              <li><a href="#form_contact">Nous contacter</a></li>
               <li><a href="./connexion.php">Se connecter</a></li>
               <li><a href="./inscription.php">S'inscrire</a></li>
             </ul>
@@ -34,15 +34,16 @@
             inscrivez-vous dès maintenant !</p>
 
           <div class="wrap">
-            <!-- Bouton inscription -->
-            <div class="inscription">
-              <a href="#">inscription</a>
-            </div>
 
             <!-- Bouton connexion -->
             <div class="connexion">
-              <a href="#">connexion</a>
+              <a href="#">Se connecter</a>
             </div>
+            <!-- Bouton inscription -->
+            <div class="inscription">
+              <a href="#">S'inscrire</a>
+            </div>
+
           </div>
 
           <div class="clear"></div>

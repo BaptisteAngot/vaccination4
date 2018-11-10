@@ -21,7 +21,6 @@ function afficherelement($element,$pagename){
   echo '</li>';
 }
 
-<<<<<<< HEAD
 function br()
 {
   echo '<br />';
@@ -53,7 +52,8 @@ function afficherErreur($error, $name)
         echo $error[$name];
      }
   echo '</span>';
-=======
+}
+
 function Afficherinfovaccins($vaccin){
   echo '<tr>';
     echo '<td>' . $vaccin['nom'] . '</td>';
@@ -105,7 +105,6 @@ function Affichertableauvaccin($vaccins,$title,$description){
 function transformdate($date){
   $newdate= date("d-m-Y", strtotime($date['created_at']));
   return $newdate;
->>>>>>> 103c26e9f35e60506be97de7fb83d4b16094782a
 }
 
 function validationText($error,$data,$min,$max,$key,$empty = true){

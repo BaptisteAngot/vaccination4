@@ -1,0 +1,126 @@
+@import "reset.css";
+
+body
+{
+  line-height: 1.5;
+	font-family: 'Arvo', serif;
+	font-size: 17px;
+	border-top: 5px #000 solid;
+  background-color: #56739A;
+}
+
+.wrap
+{
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+#header .medicalFond{
+  background-image: url("../images/medicalFond.jpg");
+  height: 100%;
+  background-size: 100%;
+}
+
+#header img{
+  width: 25%;
+  margin: 5% 0 0 10%;
+  float : left;
+}
+
+#header .navbar{
+  background-color: #8EA2C6;
+  height: 30px;
+}
+
+#header nav{
+  float: right;
+  width: 55%;
+}
+
+#header nav ul li{
+  background-color: #8EA2C6;
+  float: left;
+}
+
+#header nav ul li a {
+	color: #ffffff;
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	transition: all 1.5s;
+  font-size: 1.1em;
+}
+
+#header nav ul li a:hover{
+  background-color: #56739A;
+  font-size: 1.2em;
+  border-radius: 3px;
+}
+
+
+.intro{
+  text-align: center;
+  font-size: 1.4em;
+  margin-top: 5%;
+  color: #FFF;
+}
+
+
+.inscription {
+  width: 50%;
+  float: right;
+  margin: 10% 0 0 0;
+}
+
+.connexion{
+  width: 50%;
+  float: left;
+  margin: 10% 0 0 0;
+  padding: 0 0 20% 0;
+}
+
+.intro .inscription a, .connexion a{
+  background-color: #8EA2C6;
+  padding: 3%;
+  text-decoration: none;
+  color: #FFF;
+  box-shadow: 0 5px 0 #5472AE;
+  text-transform: uppercase;
+}
+
+.intro a:hover{
+  background-color: #56739A;
+}
+.questions{
+  margin-top: 50px;
+}
+
+.corps{
+  margin-top: 15%;
+}
+.corps .img1 img{
+  width: 50%;
+  float: left;
+  margin-top: 30px;
+}
+
+.corps .img2 img{
+  width: 50%;
+  margin-top: 10px;
+  float: left;
+}
+
+.corps ul{
+  width: 45%;
+  float: left;
+  margin: -302px 0 0 10px;
+  color: #25877c;
+}
+
+.corps .boite1, .boite2, .boite3, .boite4{
+  background-color: #3fb3a6;
+  color: #FFF;
+  padding: 2%;
+  text-align: center;
+}

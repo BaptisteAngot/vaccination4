@@ -48,6 +48,23 @@ function afficherErreur($error, $name)
         echo $error[$name];
      }
   echo '</span>';
+<<<<<<< HEAD
+=======
+}
+
+function Afficherinfovaccins($vaccin){
+  echo '<tr>';
+    echo '<td>' . $vaccin['nom'] . '</td>';
+    echo '<td>' . $vaccin['description'] . '</td>';
+    echo '<td>' . $vaccin['age'] . '</td>';
+    echo '<td>' . $vaccin['dosage'] . '</td>';
+    echo '<td>' . transformdate($vaccin) . '</td>';
+    echo '<td>' . $vaccin['status'] . '</td>';
+    echo '<td class="text-info">' . $vaccin['condition_requise'] . '</td>';
+    echo '<td><a href="editvaccin.php?id=' . $vaccin['id'] . '"><i class="material-icons">edit</i></a></td>';
+    echo '<td><a href="deletevaccin.php?id=' . $vaccin['id'] . '"><i class="material-icons">delete</i></a></td>';
+  echo '</tr>';
+>>>>>>> 42cc155843e56969542ca8bbda304bd6f33018c8
 }
 function labelTextArea($name, $title, $rows, $cols)
 {
@@ -55,6 +72,7 @@ function labelTextArea($name, $title, $rows, $cols)
   br();
   echo '<textarea name="'.$name.'" rows="'.$rows.'" cols="'.$cols.'"></textarea>';
 }
+<<<<<<< HEAD
 function inputButton($value)
 {
   echo '<input type="submit" name="submitted" value="'.$value.'">';
@@ -159,6 +177,41 @@ function validationpassword($error,$password1,$password2,$min,$max,$empty = true
   }
   else {
     $error['password'] = 'Erreur : password vide';
+=======
+
+function transformdate($date){
+  $newdate= date("d-m-Y", strtotime($date['created_at']));
+  return $newdate;
+}
+
+function validationText($error,$data,$min,$max,$key,$empty = true){
+  if(!empty($data)){
+    if(strlen($data)<$min){
+      $error[$key]= 'Minimum '.$min .' caractères';
+    }
+    elseif (strlen($data)>$max) {
+      $error[$key]= 'Maximum '.$max.' caractères';
+    }
+  }
+  else{
+    if($empty){
+      $error[$key]='Veuillez renseigner ce champ';
+    }
+  }
+  return $error;
+}
+
+function validationChiffre($error,$data,$key,$empty = true){
+  if(!empty($data)){
+    if(!is_numeric($data)){
+      $error[$key]= 'Ce champ veuillez saisir un chiffre';
+    }
+  }
+  else{
+    if($empty){
+      $error[$key]='Veillez renseigner ce champ';
+    }
+>>>>>>> 42cc155843e56969542ca8bbda304bd6f33018c8
   }
   return $error;
 }

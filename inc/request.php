@@ -124,6 +124,8 @@ function returnvaccins(){
   return $vaccins;
 }
 
+
+
 // Fonction pour effacer un vaccin en fonction de son id
 function deletevaccin($id){
   global $pdo;
@@ -174,4 +176,15 @@ function updatevaccindata($id,$name,$desc,$age,$dosage,$status,$condition){
   $query ->bindValue(':condition',$condition, PDO::PARAM_STR);
   $query ->bindValue(':id',$id, PDO::PARAM_INT);
   $query->execute();
+}
+
+//Fonction qui retourne la liste de tout les users
+function returnusers(){
+  global $pdo;
+
+  $sql= "SELECT * FROM user";
+  $query=$pdo->prepare($sql);
+  $query->execute();
+  $users=$query->fetchAll();
+  return $users;
 }

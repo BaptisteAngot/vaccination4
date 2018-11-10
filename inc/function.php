@@ -250,3 +250,50 @@ function validationChiffre($error,$data,$key,$empty = true){
   }
   return $error;
 }
+
+//Fonction pour afficher des infos d'un user
+function Afficherinfo($user){
+  echo '<tr>';
+    echo '<td>' . $user['id'] . '</td>';
+    echo '<td>' . $user['login'] . '</td>';
+    echo '<td>' . $user['status'] . '</td>';
+    echo '<td>' . $user['created_at'] . '</td>';
+    echo '<td>' . $user['role'] . '</td>';
+    echo '<td>
+                <a class="material-icons" href="edit_user_back.php?id=' . $user['id'] . '"><i class="material-icons">edit</i></a>
+          </td>';
+    echo '<td><a href="deleteuser_back.php?id=' . $user['id'] . '"><i class="material-icons">delete</i></a></td>';
+    echo '</tr>';
+}
+
+//Fonction pour afficher le tableau avec tout les utilisateurs
+function Affichertableauuser($users,$title,$description){
+  echo '<div class="col-md-12">';
+    echo '<div class="card">';
+      echo '<div class="card-header card-header-info">';
+        echo '<h4 class="card-title ">' . $title . '</h4>';
+        echo '<p class="card-category">' . $description . '</p>';
+      echo '</div>';
+      echo '<div class="card-body">';
+        echo '<div class="table-responsive">';
+          echo '<table class="table">';
+            echo '<thead class=" text-info">';
+              echo '<th> ID </th>';
+              echo '<th> Login </th>';
+              echo '<th> Status </th>';
+              echo '<th> Date de création </th>';
+              echo '<th> Rôle </th>';
+              echo '<th> Edit </th>';
+              echo '<th> Delete </th>';
+            echo '</thead>';
+            echo '<tbody>';
+              foreach ($users as $user) {
+                Afficherinfo($user);
+              }
+            echo '</tbody>';
+          echo '</table>';
+        echo '</div>';
+      echo '</div>';
+    echo '</div>';
+  echo '</div>';
+}

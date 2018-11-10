@@ -7,8 +7,8 @@ include('inc/header_back.php');
 
 $error=array();
 $status=array(
-  'obligatoire' => 'obligatoire',
-  'conseillé' => 'conseillé'
+  'Obligatoire' => 'Obligatoire',
+  'Recommandé' => 'Recommandé'
 );
 if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];

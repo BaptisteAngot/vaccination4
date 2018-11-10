@@ -9,6 +9,10 @@ include ('inc/header_back.php');
 <div class="content">
   <div class="container-fluid">
     <div class="row">
+      <?php
+        $users=returnusers();
+        Affichertableauuser($users,"Liste des utilisateurs", "Ceci est la liste des utilisateurs");
+       ?>
     </div>
   </div>
 

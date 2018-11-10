@@ -21,7 +21,7 @@
   <div class="wrapper ">
     <div class="sidebar" data-color="azure" data-background-color="black">
       <div class="logo">
-        <a href="./dashboard.php" class="simple-text logo-normal">
+        <a href="./index_back.php" class="simple-text logo-normal">
           DASHBOARD ADMIN
         </a>
       </div>

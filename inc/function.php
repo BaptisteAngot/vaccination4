@@ -14,3 +14,36 @@ function afficherelement($element,$pagename){
   echo '</a>';
   echo '</li>';
 }
+
+function br()
+{
+  echo '<br />';
+}
+
+function debug($array)
+{
+  echo '<pre>';
+    print_r($array);
+  echo '</pre>';
+}
+
+function labelText($name, $title)
+{
+  echo '<label for="'.$name.'">'.$title.'</label>';
+  br();
+  echo '<input type="text" name="'.$name.'" value="';
+  if(!empty($_POST[$name])){
+    echo $_POST[$name];
+  }
+  echo '">';
+
+}
+
+function afficherErreur($error, $name)
+{
+  echo '<span class="error">';
+    if (!empty($error[$name])) {
+        echo $error[$name];
+     }
+  echo '</span>';
+}

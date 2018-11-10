@@ -21,6 +21,39 @@ function afficherelement($element,$pagename){
   echo '</li>';
 }
 
+<<<<<<< HEAD
+function br()
+{
+  echo '<br />';
+}
+
+function debug($array)
+{
+  echo '<pre>';
+    print_r($array);
+  echo '</pre>';
+}
+
+function labelText($name, $title)
+{
+  echo '<label for="'.$name.'">'.$title.'</label>';
+  br();
+  echo '<input type="text" name="'.$name.'" value="';
+  if(!empty($_POST[$name])){
+    echo $_POST[$name];
+  }
+  echo '">';
+
+}
+
+function afficherErreur($error, $name)
+{
+  echo '<span class="error">';
+    if (!empty($error[$name])) {
+        echo $error[$name];
+     }
+  echo '</span>';
+=======
 function Afficherinfovaccins($vaccin){
   echo '<tr>';
     echo '<td>' . $vaccin['nom'] . '</td>';
@@ -72,6 +105,7 @@ function Affichertableauvaccin($vaccins,$title,$description){
 function transformdate($date){
   $newdate= date("d-m-Y", strtotime($date['created_at']));
   return $newdate;
+>>>>>>> 103c26e9f35e60506be97de7fb83d4b16094782a
 }
 
 function validationText($error,$data,$min,$max,$key,$empty = true){

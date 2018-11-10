@@ -23,14 +23,14 @@ function afficherelement($element,$pagename){
 function Affichertableauvaccin($vaccins,$title,$description){
   echo '<div class="col-md-12">';
     echo '<div class="card">';
-      echo '<div class="card-header card-header-primary">';
+      echo '<div class="card-header card-header-info">';
         echo '<h4 class="card-title ">' . $title . '</h4>';
         echo '<p class="card-category">' . $description . '</p>';
       echo '</div>';
       echo '<div class="card-body">';
         echo '<div class="table-responsive">';
           echo '<table class="table">';
-            echo '<thead class=" text-primary">';
+            echo '<thead class=" text-info">';
               echo '<th> Nom </th>';
               echo '<th> Description </th>';
               echo '<th> Age </th>';

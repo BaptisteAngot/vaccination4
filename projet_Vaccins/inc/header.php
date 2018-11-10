@@ -21,8 +21,8 @@
               <li><a href="#">Acceuil</a></li>
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Nous contacter</a></li>
-              <li><a href="./connexion.php">Se connecter</a></li>
-              <li><a href="./inscription.php">S'inscrire</a></li>
+              <li><a href="#">Se connecter</a></li>
+              <li><a href="#">S'inscrire</a></li>
             </ul>
           </nav>
         </div>

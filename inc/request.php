@@ -134,6 +134,18 @@ function deletevaccin($id){
   $query -> execute();
 }
 
+
+//Fonction pour récupérer les données d'un vaccin en fonction d'un id
+function recovervaccindata($id){
+  global $pdo;
+
+  $sql ="SELECT id,nom, description, age, dosage, created_at, status, condition_requise FROM vaccin WHERE id=$id";
+  $query = $pdo -> prepare($sql);
+  $query -> execute();
+  $resultat = $query -> fetch();
+  return $resultat;
+}
+
 //Envois toutes les infos d'un vaccin
 function envoyerinfovaccin($name,$desc,$age,$dosage,$status,$condition){
   global $pdo;
@@ -146,5 +158,21 @@ function envoyerinfovaccin($name,$desc,$age,$dosage,$status,$condition){
   $query->bindValue(':dosage',$dosage,PDO::PARAM_INT);
   $query->bindValue(':status',$status,PDO::PARAM_STR);
   $query->bindValue(':condition_requise',$condition,PDO::PARAM_STR);
+  $query->execute();
+}
+function updatevaccindata($id,$name,$desc,$age,$dosage,$status,$condition){
+  global $pdo;
+
+  $sql ="UPDATE vaccin SET nom=:name,description=:desc,age=:age,dosage=:dosage,status=:status, condition_requise=:condition WHERE id=:id";
+
+  $query = $pdo->prepare($sql);
+  $query ->bindValue(':name',$name, PDO::PARAM_STR);
+  $query ->bindValue(':desc',$desc, PDO::PARAM_STR);
+  $query ->bindValue(':age',$age, PDO::PARAM_INT);
+  $query ->bindValue(':dosage',$dosage, PDO::PARAM_INT);
+  $query ->bindValue(':status',$status, PDO::PARAM_STR);
+  $query ->bindValue(':condition',$condition, PDO::PARAM_STR);
+  $query ->bindValue(':id',$id, PDO::PARAM_INT);
+
   $query->execute();
 }

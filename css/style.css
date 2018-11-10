@@ -9,30 +9,28 @@ body
   background-color: #ecf0f3;
 }
 
-.wrap
-{
+.wrap {
+  max-width: 1040px;
   width: 100%;
-  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 #header .medicalFond{
   background-image: url("../images/medicalFond.jpg");
   max-width:100%;
   background-size: 100%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 
 #header img{
-  width: 25%;
+  width:20%;
   margin: 5% 0 0 10%;
   float : left;
 }
 
 #header .navbar{
   background-color: #8EA2C6;
-  min-height: 70px;
+  min-height: 60px;
 }
 
 #header nav{
@@ -43,7 +41,7 @@ body
 #header nav ul li{
   background-color: #8EA2C6;
   float: left;
-  margin-top:2.5%;
+  margin-top:2%;
 }
 
 #header nav ul li a {
@@ -62,13 +60,17 @@ body
 
 .intro{
   text-align: center;
-  font-size: 1.4em;
   margin-top: 5%;
   color: #FFF;
 }
 
+.intro p{
+  font-size: 1.8em;
+}
+
 
 .inscription {
+  font-size: 1.4em;
   width: 50%;
   float: right;
   margin: 10% 0 0 0;
@@ -76,6 +78,7 @@ body
 }
 
 .connexion{
+  font-size: 1.4em;
   width: 50%;
   float: left;
   margin: 10% 0 0 0;
@@ -83,32 +86,36 @@ body
 }
 
 .intro .inscription a, .connexion a{
-  border-radius: 2%;
-  transition: all 1.5s;
-  background-color: #8EA2C6;
+  border-radius: 30px;
+  transition: all 0.5s;
+  background-color:none;
   padding: 3%;
   text-decoration: none;
   color: #FFF;
-  text-transform: uppercase;
   border-style: solid;
   border-width: 2px;
-  border-color: #56739A;
+  border-color: #FFF;
 }
 
 .intro a:hover{
-  background-color: #56739A;
+  background-color: #FFF;
+  color: #008fcf;
 }
-.questions{
-  font-size: 1.2em;
+#FAQ{
   background-color: #56739A;
   height: 100%;
   color : #FFF;
   padding: 5%;
 }
 
-.corps .boiteQuestion1, .boiteQuestion2, .boiteQuestion3, .boiteQuestion4{
+#FAQ ul{
+  font-size: 1.2em;
+}
+
+.boiteQuestion{
   background-color: #8EA2C6;
   text-align: center;
+  border-radius: 100px;
 }
 
 
@@ -126,12 +133,6 @@ h3 {
   font-style: italic;
 }
 
-.wrap {
-  max-width: 1040px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .ligne {
   width:60px; height:2px; margin: 10px auto; background-color: #000; opacity: 0.6;
 }
@@ -141,11 +142,11 @@ h3 {
   padding-top: 20px;
   padding-bottom: 50px;
   text-align: center;
-  background-image: url("images/medical.jpg");
+  background-image: url("../images/medical.jpg");
 }
 
 #equipe h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: white;}
-
+#FAQ h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: #FFF;}
 #partenaires {
   background-color: #56739A;
   padding-top: 20px;
@@ -169,22 +170,22 @@ h3 {
   width : 48px;
   height : 48px;
   display : inline-block; /*Très important, sinon les dimensions ne sont pas prises en compte*/
-  background : url("images/logo_twitter_grey.png") no-repeat;
+  background : url("../images/logo_twitter_grey.png") no-repeat;
 }
 
 .bouton1:hover {
-  background-image: url('images/logo_twitter.png');
+  background-image: url('../images/logo_twitter.png');
 }
 
 .bouton2 {
   width : 48px;
   height : 48px;
   display : inline-block;
-  background : url("images/logo_fb_grey.png") no-repeat;
+  background : url("../images/logo_fb_grey.png") no-repeat;
 }
 
 .bouton2:hover {
-  background-image: url('images/logo_fb.png');
+  background-image: url('../images/logo_fb.png');
 }
 
 .twitter:hover {
@@ -196,6 +197,7 @@ h3 {
   width: 25%;
   padding-top: 50px;
   color: black;
+    transition: all 1s;
 }
 
 .section1:hover {
@@ -207,6 +209,7 @@ h3 {
   float: left;
   width: 25%;
   padding-top: 50px;
+
 }
 
 .section2 img {
@@ -244,7 +247,7 @@ form {
   margin: 0 auto;
 }
 
-#form_contact {padding: 0px 10px 20px 10px; background-color: #ECF0F3; background-image: url('../images/medical2.jpg');}
+#form_contact {padding: 0px 10px 20px 10px; background-color: #ECF0F3; background-image: url('../images/medical2.jpg'); background-size: 100%;}
 #form_contact p.textintro {text-align: center; margin: 10px 0 0px 0;}
 #form_contact h2 {text-align: center;}
 

@@ -133,3 +133,18 @@ function deletevaccin($id){
   $query ->bindValue(':id',$id, PDO::PARAM_INT);
   $query -> execute();
 }
+
+//Envois toutes les infos d'un vaccin
+function envoyerinfovaccin($name,$desc,$age,$dosage,$status,$condition){
+  global $pdo;
+  $sql= "INSERT INTO vaccin(nom,description,age,dosage,created_at,status,condition_requise) VALUES (:name,:description,:age,:dosage,NOW(),:status,:condition_requise)";
+
+  $query=$pdo->prepare($sql);
+  $query->bindValue(':name',$name,PDO::PARAM_STR);
+  $query->bindValue(':description',$desc,PDO::PARAM_STR);
+  $query->bindValue(':age',$age,PDO::PARAM_INT);
+  $query->bindValue(':dosage',$dosage,PDO::PARAM_INT);
+  $query->bindValue(':status',$status,PDO::PARAM_STR);
+  $query->bindValue(':condition_requise',$condition,PDO::PARAM_STR);
+  $query->execute();
+}

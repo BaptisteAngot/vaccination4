@@ -73,3 +73,34 @@ function transformdate($date){
   $newdate= date("d-m-Y", strtotime($date['created_at']));
   return $newdate;
 }
+
+function validationText($error,$data,$min,$max,$key,$empty = true){
+  if(!empty($data)){
+    if(strlen($data)<$min){
+      $error[$key]= 'Minimum '.$min .' caractères';
+    }
+    elseif (strlen($data)>$max) {
+      $error[$key]= 'Maximum '.$max.' caractères';
+    }
+  }
+  else{
+    if($empty){
+      $error[$key]='Veuillez renseigner ce champ';
+    }
+  }
+  return $error;
+}
+
+function validationChiffre($error,$data,$key,$empty = true){
+  if(!empty($data)){
+    if(!is_numeric($data)){
+      $error[$key]= 'Ce champ veuillez saisir un chiffre';
+    }
+  }
+  else{
+    if($empty){
+      $error[$key]='Veillez renseigner ce champ';
+    }
+  }
+  return $error;
+}

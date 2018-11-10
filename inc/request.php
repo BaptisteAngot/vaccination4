@@ -82,3 +82,54 @@ function lastvaccin(){
   $newdate= date("d-m-Y", strtotime($lastvaccin['created_at']));
   return $newdate;
 }
+
+
+//Fonction qui compte de nombre de personne connecté
+function countconnect(){
+  global $pdo;
+  $sql = "SELECT COUNT(status) FROM user WHERE status='Connecté'";
+  $query = $pdo->prepare($sql);
+  $query -> execute();
+  $nbconnect=$query->fetch();
+  return $nbconnect['COUNT(status)'];
+}
+
+// Fonction compte le nombre de personne deconnecté
+function countdisconnect(){
+  global $pdo;
+  $sql = "SELECT COUNT(status) FROM user WHERE status='Deconnecté'";
+  $query = $pdo->prepare($sql);
+  $query -> execute();
+  $nbdisconnect=$query->fetch();
+  return $nbdisconnect['COUNT(status)'];
+}
+
+//Fonction qui compte le nombre d'utilisateurs banni
+function countbanned(){
+  global $pdo;
+  $sql = "SELECT COUNT(status) FROM user WHERE status='Banni'";
+  $query = $pdo->prepare($sql);
+  $query -> execute();
+  $nbban=$query->fetch();
+  return $nbban['COUNT(status)'];
+}
+
+// Fonction qui retourne la liste de tout les vaccins
+function returnvaccins(){
+  global $pdo;
+  $sql= "SELECT * FROM vaccin";
+  $query=$pdo->prepare($sql);
+  $query->execute();
+  $vaccins=$query->fetchAll();
+  return $vaccins;
+}
+
+// Fonction pour effacer un vaccin en fonction de son id
+function deletevaccin($id){
+  global $pdo;
+
+  $sql="DELETE FROM vaccin WHERE id=:id";
+  $query = $pdo -> prepare($sql);
+  $query ->bindValue(':id',$id, PDO::PARAM_INT);
+  $query -> execute();
+}

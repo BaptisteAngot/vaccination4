@@ -48,8 +48,7 @@ function afficherErreur($error, $name)
         echo $error[$name];
      }
   echo '</span>';
-<<<<<<< HEAD
-=======
+
 }
 
 function Afficherinfovaccins($vaccin){
@@ -64,7 +63,6 @@ function Afficherinfovaccins($vaccin){
     echo '<td><a href="editvaccin.php?id=' . $vaccin['id'] . '"><i class="material-icons">edit</i></a></td>';
     echo '<td><a href="deletevaccin.php?id=' . $vaccin['id'] . '"><i class="material-icons">delete</i></a></td>';
   echo '</tr>';
->>>>>>> 42cc155843e56969542ca8bbda304bd6f33018c8
 }
 function labelTextArea($name, $title, $rows, $cols)
 {
@@ -72,7 +70,6 @@ function labelTextArea($name, $title, $rows, $cols)
   br();
   echo '<textarea name="'.$name.'" rows="'.$rows.'" cols="'.$cols.'"></textarea>';
 }
-<<<<<<< HEAD
 function inputButton($value)
 {
   echo '<input type="submit" name="submitted" value="'.$value.'">';
@@ -177,7 +174,7 @@ function validationpassword($error,$password1,$password2,$min,$max,$empty = true
   }
   else {
     $error['password'] = 'Erreur : password vide';
-=======
+}
 
 function transformdate($date){
   $newdate= date("d-m-Y", strtotime($date['created_at']));
@@ -211,7 +208,6 @@ function validationChiffre($error,$data,$key,$empty = true){
     if($empty){
       $error[$key]='Veillez renseigner ce champ';
     }
->>>>>>> 42cc155843e56969542ca8bbda304bd6f33018c8
   }
   return $error;
 }

@@ -13,7 +13,6 @@
 <!-- Le header contient la navbar, le logo, la liste cliquable et l'intro-->
   <header id="header">
     <!-- <h1>InfoVaccins.com</h1> -->
-
       <div class="medicalFond">
         <div class="navbar">
           <nav>
@@ -47,9 +46,8 @@
           </div>
 
           <div class="clear"></div>
-
         </div>
       </div>
-      </header>
-    <div class="clear"></div>
+  </header>
+  <div class="clear"></div>
   <body>

@@ -2,20 +2,23 @@
 
       <div class="corps">
         <div class="wrap">
-          <div class="img1"><img src="img/imgVaccin3.jpg" alt="imgVaccin3"></div>
-          <div class="clear"></div>
-          <div class="img2"><img src="img/tableauvaccin.jpeg" alt="tableauvaccin"></div>
+          <!-- <div class="img1"><img src="img/imgVaccin3.jpg" alt="imgVaccin3"></div> -->
+          <!-- <div class="clear"></div> -->
+          <!-- <div class="img2"><img src="img/tableauvaccin.jpeg" alt="tableauvaccin"></div> -->
           <div class="questions">
+
+              <h3>Questions fréquentes</h2>
+              <div class="ligne"></div>
             <ul>
-              <div class="boite1"> <li>Qu'est-ce que InfoVaccins.com?</li> </div>
+              <div class="boiteQuestion1"> <li>Qu'est-ce que InfoVaccins.com?</li> </div>
               <p>InfoVaccins.com est un carnet de santé connecté accessible sous toutes les patformes.</p><br>
-              <div class="boite2"> <li>À quoi sert-il?</li> </div>
+              <div class="boiteQuestion2"> <li>À quoi sert-il?</li> </div>
               <p>Il permet de consulter les informations des différents vaccins mais également de s'y tenir
                  informé.Après inscription InfoVaccins.com vous avertira des prochains vaccins vous concernant personnellement.
               </p><br>
-              <div class="boite3"> <li>Qui sont les concernés?</li> </div>
+              <div class="boiteQuestion3"> <li>Qui sont les concernés?</li> </div>
               <p>InfoVaccins.com concerne tous le monde.</p><br>
-              <div class="boite4"> <li>Quels sont les avantages?</li> </div>
+              <div class="boiteQuestion4"> <li>Quels sont les avantages?</li> </div>
               <p>InfoVaccins.com permet une de s'informer rapidement et efficacement sans avoir besoins de consulter un médecin
               car toutes nos informations on était vérifié par des spécialiste en matière de vaccination.</p>
             </ul>
@@ -31,22 +34,22 @@
           <h2>Notre équipe</h2>
           <div class="ligne"></div>
           <div class="section1">
-            <img src="images/mini_TEST2.png" alt="Un membre d'InfoVaccins.">
+            <img src="images/logoAcceuil.png" alt="Un membre d'InfoVaccins.">
             <h3>Un membre de l'équipe</h3>
             <p>Description du membre</p>
           </div>
           <div class="section1">
-            <img src="images/mini_TEST2.png" alt="Un membre d'InfoVaccins.">
+            <img src="images/logoAcceuil.png" alt="Un membre d'InfoVaccins.">
             <h3>Un membre de l'équipe</h3>
             <p>Description du membre</p>
           </div>
           <div class="section1">
-            <img src="images/mini_TEST2.png" alt="Un membre d'InfoVaccins.">
+            <img src="images/logoAcceuil.png" alt="Un membre d'InfoVaccins.">
             <h3>Un membre de l'équipe</h3>
             <p>Description du membre</p>
           </div>
           <div class="section1">
-            <img src="images/mini_TEST2.png" alt="Un membre d'InfoVaccins.">
+            <img src="images/logoAcceuil.png" alt="Un membre d'InfoVaccins.">
             <h3>Un membre de l'équipe</h3>
             <p>Description du membre</p>
           </div>
@@ -61,28 +64,28 @@
           <h2>Nos partenaires</h2>
           <div class="ligne"></div>
           <div class="section2">
-            <a href="#"><img src="images/mini_TEST2.png" alt="Un partenaire d'InfoVaccins."></a>
+            <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
           <div class="section2">
-            <a href="#"><img src="images/mini_TEST2.png" alt="Un partenaire d'InfoVaccins."></a>
+            <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
           <div class="section2">
-            <a href="#"><img src="images/mini_TEST2.png" alt="Un partenaire d'InfoVaccins."></a>
+            <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
           <div class="section2">
-            <a href="#"><img src="images/mini_TEST2.png" alt="Un partenaire d'InfoVaccins."></a>
+            <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
           <div class="section2">
-            <a href="#"><img src="images/mini_TEST2.png" alt="Un partenaire d'InfoVaccins."></a>
+            <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
           <div class="section2">
-            <a href="#"><img src="images/mini_TEST2.png" alt="Un partenaire d'InfoVaccins."></a>
+            <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
           <div class="section2">
-            <a href="#"><img src="images/mini_TEST2.png" alt="Un partenaire d'InfoVaccins."></a>
+            <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
           <div class="section2">
-            <a href="#"><img src="images/mini_TEST2.png" alt="Un partenaire d'InfoVaccins."></a>
+            <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
         </div>
         <div class="clear"></div>

@@ -3,7 +3,7 @@
     <div class="section3">
       <img src="images/mini_TEST2.png" alt="">
       <h3>Nos réseaux:</h3>
-      <a href="#" class='bouton1'></a>
+      <a href="#" class='bouton1'> <img src="../images/logo_fb.png" alt=""> </a>
       <a href="#" class='bouton2'></a>
     </div>
     <div class="section3">

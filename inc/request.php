@@ -203,7 +203,7 @@ function updatevaccindata($id,$name,$desc,$age,$dosage,$status,$condition){
 function updateuserdata($id,$login,$status,$role,$mail){
   global $pdo;
 
-  $sql="UPDATE user SET login=:login,status=:status,role=:role,mail=:mail,updated_at=NOW() WHERE id=:id";
+  $sql="UPDATE user SET login=:login,status=:status,role=:role,email=:mail,modified_at=NOW() WHERE id=:id";
   $query=$pdo->prepare($sql);
   $query -> bindValue(':login',$login,PDO::PARAM_STR);
   $query -> bindValue(':status',$status,PDO::PARAM_STR);

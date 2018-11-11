@@ -15,6 +15,7 @@ $roles=array(
   'user' => 'user'
 
 );
+
 if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
   $id = $_GET['id'];
   $data=recoveruserdata($id);
@@ -23,8 +24,8 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
       //Faille XSS
 
       //Champ login
-      $login=trim(strip_tags($_POST['login']));
-      $error=validationText($error,$login,2,50,'login');
+      $login=trim(strip_tags($_POST['nameuser']));
+      $error=validationText($error,$login,2,50,'nameuser');
 
       //Champ status
       $status=trim(strip_tags($_POST['status']));
@@ -37,6 +38,8 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
       //Champ mail
       $mail=trim(strip_tags($_POST['email']));
       $error=vmail($error,$mail,'email');
+
+      echo count($error);
 
       if(count($error)==0){
         updateuserdata($id,$login,$status,$role,$mail);
@@ -75,8 +78,8 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
           </div>
           <!-- Champs role -->
           <div class="form-group">
-            <label for="status">Statut:</label>
-            <select class="form-control" id="status" name="status">
+            <label for="role">Role:</label>
+            <select class="form-control" id="role" name="role">
               <?php
               foreach ($roles as $role) {
                   echo '<option>' . $role . '</option>';

@@ -101,9 +101,36 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
                  <span class="bmd-help"><?php if(!empty($error['condition'])){echo $error['condition'];}else echo "Veuillez saisir une condition.";?></span>
               </div>
               <!-- Submit -->
-              <div class="form-group text-center">
+              <!-- <div class="form-group text-center">
                 <input type="submit" class="btn btn-info" name="submitted" value="Envoyer">
+              </div> -->
+              <div class="form-group text-center">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                  Envoyer
+                </button>
               </div>
+
+                        <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Êtes vous sûr ?</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Êtes vous sûr de vouloir modifier ces différents champs ?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                      <input type="submit" class="btn btn-info" name="submitted" value="Envoyer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </form>
         </div>
       </div>

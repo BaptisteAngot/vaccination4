@@ -130,7 +130,7 @@ function returnvaccins(){
 function deletevaccin($id){
   global $pdo;
 
-  $sql="DELETE * FROM vaccin WHERE id=:id";
+  $sql="DELETE FROM vaccin WHERE id=:id";
   $query = $pdo -> prepare($sql);
   $query ->bindValue(':id',$id, PDO::PARAM_INT);
   $query -> execute();
@@ -139,7 +139,7 @@ function deletevaccin($id){
 function deleteuser($id){
   global $pdo;
 
-  $sql="DELETE * FROM user WHERE id=:id";
+  $sql="DELETE FROM user WHERE id=:id";
   $query = $pdo ->prepare($sql);
   $query -> bindValue(':id',$id,PDO::PARAM_INT);
   $query -> execute();

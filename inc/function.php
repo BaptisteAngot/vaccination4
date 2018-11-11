@@ -215,6 +215,7 @@ function validationpassword($error,$password1,$password2,$min,$max,$empty = true
       $error['password'] = 'Erreur : password vide';
   }
 }
+
 function transformdate($date){
   $newdate= date("d-m-Y", strtotime($date['created_at']));
   return $newdate;
@@ -270,12 +271,11 @@ function Afficherinfo($user){
     echo '<td>' . $user['id'] . '</td>';
     echo '<td>' . $user['login'] . '</td>';
     echo '<td>' . $user['status'] . '</td>';
-    echo '<td>' . $user['created_at'] . '</td>';
+    echo '<td>' . $user['email'] . '</td>';
+    echo '<td>' . date("d-m-Y",strtotime($user['created_at'])) . '</td>';
     echo '<td>' . $user['role'] . '</td>';
-    echo '<td>
-                <a class="material-icons" href="edit_user_back.php?id=' . $user['id'] . '"><i class="material-icons">edit</i></a>
-          </td>';
-    echo '<td><a href="deleteuser_back.php?id=' . $user['id'] . '"><i class="material-icons">delete</i></a></td>';
+    echo '<td><a class="material-icons" href="edit_user_back.php?id=' . $user['id'] . '"><i class="material-icons">edit</i></a></td>';
+    echo '<td><a href="deleteuser_back.php?id=' . $user['id'] . '" data-toggle="modal" data-target="#exampleModal"><i class="material-icons">delete</i></a></td>';
     echo '</tr>';
 }
 
@@ -294,6 +294,7 @@ function Affichertableauuser($users,$title,$description){
               echo '<th> ID </th>';
               echo '<th> Login </th>';
               echo '<th> Status </th>';
+              echo '<th> Email: </th>';
               echo '<th> Date de création </th>';
               echo '<th> Rôle </th>';
               echo '<th> Edit </th>';

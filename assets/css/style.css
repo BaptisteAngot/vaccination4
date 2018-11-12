@@ -6,7 +6,7 @@ body
 	font-family: 'Arvo', serif;
 	font-size: 17px;
   background-image: url("../../images/medicalFond.jpg");
-  background-size: 100% 30%;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-color: #56739A;
 }
@@ -205,7 +205,7 @@ body {
   float: right;
   margin: 10% 0 0 0;
   border-radius: 3px;
-}
+  }
 
 .connexion{
   font-size: 1.4em;
@@ -238,6 +238,8 @@ body {
   border-radius: 100px;
   margin-top: 20%;
 }
+
+#FAQ h2{text-align: center;}
 
 #FAQ ul{
   font-size: 1.2em;

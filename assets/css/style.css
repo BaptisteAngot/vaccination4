@@ -8,7 +8,7 @@ body
   background-image: url("../../images/medicalFond.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-color: #ecf0f3;
+  background-color: #56739A;
 }
 
 .wrap {
@@ -137,6 +137,8 @@ body {
   overflow: hidden;
 }
 
+#header .menufixed {position: fixed;background-color: #56739A;width: 100%;padding:10px 10px;}
+
 #header nav ul li a {
   float: left;
   display: block;
@@ -198,7 +200,6 @@ body {
   }
 }
 
-
 .inscription {
  margin: 10% 0 0 0;
  color: white;
@@ -218,8 +219,19 @@ body {
   text-decoration: none;
   display: inline-block;
   width: 50%;
+  }
+
+@media screen and (min-width: 767px) {
+  .connexion{
+    font-size: 30px;
+  }
 }
 
+@media screen and (min-width: 767px) {
+  .inscription{
+    font-size: 30px;
+  }
+}
 .intro .inscription a, .connexion a{
   border-radius: 30px;
   transition: all 0.5s;
@@ -238,7 +250,8 @@ body {
 }
 #FAQ{
   color: #777777;
-  margin-top: 30%;
+  margin-top:10%;
+  background-color: #ecf0f3;
 }
 
 #FAQ h2{text-align: center;}
@@ -340,9 +353,13 @@ h3 {
 .section1 {
   float: left;
   width: 25%;
-  padding-top: 50px;
-  color: black;
-    transition: all 1s;
+  padding-top: 100px;
+  color: #FFF;
+  transition: all 0.5s;
+}
+
+.section1 img{
+  border-radius: 100%;
 }
 
 .section1:hover {
@@ -381,6 +398,9 @@ h3 {
   padding-top: 0px;
 }
 
+.section4 h2{
+border-radius: 100px; background-color: #3FB3A6; text-align: center; color: #FFF;width: 50%;
+}
 
 form {
   max-width: 1040px;
@@ -413,6 +433,7 @@ input[type=submit]:hover {color: #fff;background-color:#6FA7C7;}
 
 
 footer {
+  position: fixed;
   padding-top: 0px;
   padding-bottom: 0px;
   text-align: center;

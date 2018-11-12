@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfosVaccins.com</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/logoOnglet.png">
   </head>
 
 <!-- Le header contient la navbar, le logo, la liste cliquable et l'intro-->
   <header id="header">
     <!-- <h1>InfoVaccins.com</h1> -->
-      <div class="navbar">
+      <div class="navbar" id="myTopnav">
         <nav>
           <ul><?php if (!isLogged()) { ?>
             <li><a href="index.php" class="active">Acceuil</a></li>
@@ -22,6 +24,12 @@
           <?php } ?>
             <li><a href="#FAQ">FAQ</a></li>
             <li><a href="#form_contact">Nous contacter</a></li>
+<<<<<<< HEAD
+            <li><a href="./connexion.php">Se connecter</a></li>
+            <li><a href="./inscription.php">S'inscrire</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="menuBurger()">
+            <i class="fa fa-bars"></i> </a>
+=======
             <?php if (isLogged()) { ?>
               <li><a href="deconnexion.php">Déconnexion</a></li>
               <?php if (isAdmin()) { ?>
@@ -34,6 +42,7 @@
 
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i> </a>
+>>>>>>> aa9557baf5019fbfbd91580484d9a9d0da4b0d52
           </ul>
         </nav>
       </div>

@@ -6,7 +6,7 @@ body
 	font-family: 'Arvo', serif;
 	font-size: 17px;
   background-image: url("../../images/medicalFond.jpg");
-  background-size: 100% ;
+  background-size: 100% 30%;
   background-repeat: no-repeat;
   background-color: #56739A;
 }
@@ -127,9 +127,9 @@ body {
   line-height: 0;
 }
 #header img{
-  width:20%;
-  margin: 5% 0 0 10%;
-  float : left;
+  width:30%;
+  margin: 5% 10% 0 0;
+  float : right;
 }
 
 #header .navbar{
@@ -164,10 +164,31 @@ body {
   background-color: #8EA2C6;
 }
 
+/* @media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  } */
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 
 .intro{
   text-align: center;
-  margin-top: 8%;
+  margin-top: 15%;
   color: #FFF;
 }
 
@@ -212,12 +233,10 @@ body {
 }
 #FAQ{
   background-color: #56739A;
-  /* height: 100%; */
   color : #FFF;
   padding: 4%;
   border-radius: 100px;
-  margin-top: 150px;
-  margin-bottom: 15px;
+  margin-top: 20%;
 }
 
 #FAQ ul{
@@ -264,7 +283,7 @@ h3 {
   padding-top: 20px;
   padding-bottom: 50px;
   text-align: center;
-  background-image: url("../images/medical.jpg");
+  background-image: url("../../images/medical.jpg");
 }
 
 #equipe h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: white;}
@@ -292,22 +311,22 @@ h3 {
   width : 48px;
   height : 48px;
   display : inline-block; /*Très important, sinon les dimensions ne sont pas prises en compte*/
-  background : url("../images/logo_twitter_grey.png") no-repeat;
+  background : url("../../images/logo_twitter_grey.png") no-repeat;
 }
 
 .bouton1:hover {
-  background-image: url('../images/logo_twitter.png');
+  background-image: url('../../images/logo_twitter.png');
 }
 
 .bouton2 {
   width : 48px;
   height : 48px;
   display : inline-block;
-  background : url("../images/logo_fb_grey.png") no-repeat;
+  background : url("../../images/logo_fb_grey.png") no-repeat;
 }
 
 .bouton2:hover {
-  background-image: url('../images/logo_fb.png');
+  background-image: url('../../images/logo_fb.png');
 }
 
 .twitter:hover {
@@ -369,7 +388,7 @@ form {
   margin: 0 auto;
 }
 
-#form_contact {padding: 0px 10px 20px 10px; background-color: #ECF0F3; background-image: url('../images/medical2.jpg'); background-size: 100%;}
+#form_contact {padding: 0px 10px 20px 10px; background-color: #ECF0F3; background-image: url('../../images/medical2.jpg'); background-size: 100%;}
 #form_contact p.textintro {text-align: center; margin: 10px 0 0px 0;}
 #form_contact h2 {text-align: center;}
 

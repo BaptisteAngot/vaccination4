@@ -149,7 +149,7 @@ function deleteuser($id){
 function recovervaccindata($id){
   global $pdo;
 
-  $sql ="SELECT id,nom, description, age, dosage, created_at, status, condition_requise FROM vaccin WHERE id=$id";
+  $sql ="SELECT id,nom, description, limit_age, dosage, created_at, status, condition_requise FROM vaccin WHERE id=$id";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $resultat = $query -> fetch();

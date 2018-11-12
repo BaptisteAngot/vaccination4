@@ -20,6 +20,21 @@ function afficherelement($element,$pagename){
   echo '</a>';
   echo '</li>';
 }
+function Afficherinfovaccins($vaccin){
+  echo '<tr>';
+    echo '<td>' . $vaccin['nom'] . '</td>';
+    echo '<td>' . $vaccin['description'] . '</td>';
+    echo '<td>' . $vaccin['limit_age'] . '</td>';
+    echo '<td>' . $vaccin['dosage'] . '</td>';
+    echo '<td>' . $vaccin['status'] . '</td>';
+    echo '<td class="text-info">' . $vaccin['condition_requise'] . '</td>';
+    echo '<td>' . date("d-m-Y",strtotime($vaccin['created_at'])) . '</td>';
+    echo '<td>'. date("d-m-Y",strtotime($vaccin['updated_at'])) . '</td>';
+    echo '<td><a href="editvaccin.php?id=' . $vaccin['id'] . '"><i class="material-icons">edit</i></a></td>';
+    echo '<td><a href="deletevaccin.php?id=' . $vaccin['id'] . '"><i class="material-icons">delete</i></a></td>';
+  echo '</tr>';
+}
+
 function Affichertableauvaccin($vaccins,$title,$description){
   echo '<div class="col-md-12">';
     echo '<div class="card">';
@@ -35,9 +50,10 @@ function Affichertableauvaccin($vaccins,$title,$description){
               echo '<th> Description </th>';
               echo '<th> Age </th>';
               echo '<th> Dosage </th>';
-              echo '<th> Date </th>';
               echo '<th> Status </th>';
-              echo '<th> condition_requise </th>';
+              echo '<th> Condition requise </th>';
+              echo '<th> Créer le: </th>';
+              echo '<th> Modifier le: </th>';
               echo '<th> Edit </th>';
               echo '<th> Delete </th>';
             echo '</thead>';
@@ -85,19 +101,7 @@ function afficherErreur($error, $name)
 
 }
 
-function Afficherinfovaccins($vaccin){
-  echo '<tr>';
-    echo '<td>' . $vaccin['nom'] . '</td>';
-    echo '<td>' . $vaccin['description'] . '</td>';
-    echo '<td>' . $vaccin['age'] . '</td>';
-    echo '<td>' . $vaccin['dosage'] . '</td>';
-    echo '<td>' . transformdate($vaccin) . '</td>';
-    echo '<td>' . $vaccin['status'] . '</td>';
-    echo '<td class="text-info">' . $vaccin['condition_requise'] . '</td>';
-    echo '<td><a href="editvaccin.php?id=' . $vaccin['id'] . '"><i class="material-icons">edit</i></a></td>';
-    echo '<td><a href="deletevaccin.php?id=' . $vaccin['id'] . '"><i class="material-icons">delete</i></a></td>';
-  echo '</tr>';
-}
+
 
 function labelTextArea($name, $title, $rows, $cols)
 {
@@ -276,9 +280,6 @@ function Afficherinfo($user){
     echo '<td>' . $user['role'] . '</td>';
     echo '<td>' . date("d-m-Y",strtotime($user['created_at'])) . '</td>';
     echo '<td>' . date("d-m-Y",strtotime($user['modified_at'])) . '</td>';
-    echo '<td>' . $user['nom'] . '</td>';
-    echo '<td>' . $user['prenom'] . '</td>';
-    echo '<td>' . $user['age'] . '</td>';
     echo '<td><a class="material-icons" href="edit_user_back.php?id=' . $user['id'] . '"><i class="material-icons">edit</i></a></td>';
     echo '<td><a href="deleteuser_back.php?id=' . $user['id'] . '"><i class="material-icons">delete</i></a></td>';
     echo '</tr>';
@@ -303,9 +304,6 @@ function Affichertableauuser($users,$title,$description){
               echo '<th> Rôle </th>';
               echo '<th> Date de création </th>';
               echo '<th> Dernière modification </th>';
-              echo '<th> Nom: </th>';
-              echo '<th> Prénom: </th>';
-              echo '<th> Age: </th>';
               echo '<th> Edit </th>';
               echo '<th> Delete </th>';
             echo '</thead>';
@@ -319,4 +317,24 @@ function Affichertableauuser($users,$title,$description){
       echo '</div>';
     echo '</div>';
   echo '</div>';
+}
+
+function isAdmin(){
+  if (isLogged()) {
+    if ($_SESSION['user']['role'] == 'admin') {
+      return TRUE;
+    }
+  }
+  return FALSE;
+}
+
+function isLogged(){
+  if (!empty($_SESSION['user']['id']) && !empty($_SESSION['user']['pseudo']) && !empty($_SESSION['user']['email']) && !empty($_SESSION['user']['role']) && !empty($_SERVER['REMOTE_ADDR'])) {
+    if (is_numeric($_SESSION['user']['id'])) {
+      if ($_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
+        return TRUE;
+      }
+    }
+  }
+  return FALSE;
 }

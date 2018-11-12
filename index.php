@@ -1,21 +1,21 @@
 <?php include 'inc/header.php'; ?>
 
-<div class="intro">
-  <p>Bienvenu sur notre site InfoVaccins.com </br>
-    Si vous souhaitez consulter vos informations concernant vos vaccins, </br>
-    inscrivez-vous dès maintenant !</p>
-  <div class="wrap">
-    <!-- Bouton connexion -->
-    <div class="connexion">
-      <a href="connexion.php">Se connecter</a>
+  <div class="intro">
+    <p>Bienvenue sur notre site InfoVaccins.com </br>
+      Si vous souhaitez consulter vos informations concernant vos vaccins, </br>
+      inscrivez-vous dès maintenant !</p>
+    <div class="wrap">
+      <!-- Bouton connexion -->
+      <div class="connexion">
+        <a href="connexion.php">Se connecter</a>
+      </div>
+      <!-- Bouton inscription -->
+      <div class="inscription">
+        <a href="inscription.php">S'inscrire</a>
+      </div>
     </div>
-    <!-- Bouton inscription -->
-    <div class="inscription">
-      <a href="inscription.php">S'inscrire</a>
-    </div>
+    <div class="clear"></div>
   </div>
-  <div class="clear"></div>
-</div>
 
         <div class="wrap">
           <!-- <div class="img1"><img src="img/imgVaccin3.jpg" alt="imgVaccin3"></div> -->
@@ -26,13 +26,13 @@
               <div class="ligne"></div>
             <ul>
               <div class="boiteQuestion"> <li>Qu'est-ce que InfoVaccins.com?</li> </div>
-              <p>InfoVaccins.com est un carnet de santé connecté accessible sous toutes les patformes.</p><br>
+              <p>InfoVaccins.com est un carnet de santé connecté accessible sous toutes les patformes.</p>
               <div class="boiteQuestion"> <li>À quoi sert-il?</li> </div>
               <p>Il permet de consulter les informations des différents vaccins mais également de s'y tenir
                  informé.Après inscription InfoVaccins.com vous avertira des prochains vaccins vous concernant personnellement.
               </p><br>
               <div class="boiteQuestion"> <li>Qui sont les concernés?</li> </div>
-              <p>InfoVaccins.com concerne tous le monde.</p><br>
+              <p>InfoVaccins.com concerne tous le monde.</p>
               <div class="boiteQuestion"> <li>Quels sont les avantages?</li> </div>
               <p>InfoVaccins.com permet une de s'informer rapidement et efficacement sans avoir besoins de consulter un médecin
               car toutes nos informations on était vérifié par des spécialiste en matière de vaccination.</p>

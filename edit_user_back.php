@@ -62,7 +62,7 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
           <!-- Champs login -->
           <div class="form-group label-floating">
             <label for="nameuser" class="bmd-label-floating">Login de l'utilisateur</label>
-            <input type="text" class="form-control" id="nameuser" name="nameuser" value="<?php if(!empty($data['login'])){echo $data['login'];} ?>">
+            <input type="text" class="form-control" id="nameuser" name="nameuser" value="<?php if(!empty($data['pseudo'])){echo $data['pseudo'];} ?>">
             <span class="bmd-help"><?php if(!empty($error['login'])){echo $error['login'];}else echo "Nom de votre utilisateurs à modifier."?></span>
           </div>
           <!-- Champs status -->
@@ -124,7 +124,7 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
             </div>
           </div>
 
-          
+
         </form>
       </div>
     </div>

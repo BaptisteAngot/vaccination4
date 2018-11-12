@@ -13,42 +13,19 @@
 <!-- Le header contient la navbar, le logo, la liste cliquable et l'intro-->
   <header id="header">
     <!-- <h1>InfoVaccins.com</h1> -->
-      <div class="medicalFond">
-        <div class="navbar">
-          <nav>
-            <ul>
-              <li><a href="index.php">Acceuil</a></li>
-              <li><a href="#FAQ">FAQ</a></li>
-              <li><a href="#form_contact">Nous contacter</a></li>
-              <li><a href="./connexion.php">Se connecter</a></li>
-              <li><a href="./inscription.php">S'inscrire</a></li>
-            </ul>
-          </nav>
-        </div>
-        <a href="#"><img src="images/logoAcceuil.png" alt="Logo InfosVaccin.com"></a>
-        <div class="clear"></div>
-
-        <div class="intro">
-          <p>Bienvenu sur notre site InfoVaccins.com </br>
-            Si vous souhaitez consulter vos informations concernant vos vaccins, </br>
-            inscrivez-vous dès maintenant !</p>
-
-          <div class="wrap">
-
-            <!-- Bouton connexion -->
-            <div class="connexion">
-              <a href="#">Se connecter</a>
-            </div>
-            <!-- Bouton inscription -->
-            <div class="inscription">
-              <a href="#">S'inscrire</a>
-            </div>
-
-          </div>
-
-          <div class="clear"></div>
-        </div>
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="index.php">Acceuil</a></li>
+            <li><a href="#FAQ">FAQ</a></li>
+            <li><a href="#form_contact">Nous contacter</a></li>
+            <li><a href="./connexion.php">Se connecter</a></li>
+            <li><a href="./inscription.php">S'inscrire</a></li>
+          </ul>
+        </nav>
       </div>
-  </header>
-  <div class="clear"></div>
-  <body>
+      <a href="#"><img src="images/logoAcceuil.png" alt="Logo InfosVaccin.com"></a>
+      <div class="clear"></div>
+    </header>
+    <div class="clear"></div>
+    <body>

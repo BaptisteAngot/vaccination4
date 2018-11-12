@@ -24,11 +24,10 @@
           <?php } ?>
             <li><a href="#FAQ">FAQ</a></li>
             <li><a href="#form_contact">Nous contacter</a></li>
-            <li><a href="./connexion.php">Se connecter</a></li>
-            <li><a href="./inscription.php">S'inscrire</a></li>
             <a href="javascript:void(0);" class="icon" onclick="menuBurger()">
             <i class="fa fa-bars"></i> </a>
             <?php if (isLogged()) { ?>
+              <li><a href="user_profil.php">Mon Profil</a></li>
               <li><a href="deconnexion.php">Déconnexion</a></li>
               <?php if (isAdmin()) { ?>
                 <li><a href="index_back.php">Admin</a></li>
@@ -37,7 +36,6 @@
               <li><a href="inscription.php">Inscription</a></li>
               <li><a href="connexion.php">Connexion</a></li>
             <?php } ?>
-
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i> </a>
           </ul>

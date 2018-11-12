@@ -1,7 +1,8 @@
-<?php include 'inc/pdo.php';
-      include 'inc/function.php';
-      include 'inc/request.php';
-      include 'inc/header.php';
+<?php
+  include 'inc/pdo.php';
+  include 'inc/function.php';
+  include 'inc/request.php';
+  include 'inc/header.php';
 ?>
 
   <div class="intro">
@@ -17,12 +18,13 @@
       <div class="inscription">
         <a href="inscription.php">S'inscrire</a>
       </div>
+      <div class="clear"></div>
     </div>
-    <div class="clear"></div>
   </div>
 
-        <div class="wrap">
+
           <div id ="FAQ">
+            <div class="wrap">
               <h2>Questions fréquentes</h2>
               <div class="ligne"></div>
             <ul>

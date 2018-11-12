@@ -3,13 +3,7 @@ $pagename="statistique";
 include 'inc/pdo.php';
 include 'inc/function.php';
 include 'inc/request.php';
-isLogged();
-if(isAdmin()){
 
-}
-else{
-  header("Location: page403.php");
-}
 
 include ('inc/header_back.php');
  ?>

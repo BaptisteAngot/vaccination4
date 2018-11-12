@@ -48,7 +48,7 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
         $query -> bindValue(':new_token', $new_token);
         $query -> bindValue(':hash', $hash);
         $query -> execute();
-        header('Location: index.php');
+        //header('Location: index.php');
       }
 
     }

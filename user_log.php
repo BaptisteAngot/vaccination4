@@ -1,5 +1,7 @@
 <?php
 include 'inc/pdo.php';
 include 'inc/function.php';
-pre($_SESSION);
+include 'inc/request.php';
+include 'inc/header.php';
  ?>
+ <?php include 'inc/footer.php'; ?>

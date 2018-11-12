@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="en-tête">
-    <meta name="author" content="Dufresne Nicolas">
+    <meta name="author" content="Dufresne TRUPIN ANGOT">
     <meta name="robots" content="all|(no)follow|(no)index|none">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfosVaccins.com</title>
@@ -17,14 +17,32 @@
     <!-- <h1>InfoVaccins.com</h1> -->
       <div class="navbar" id="myTopnav">
         <nav>
-          <ul>
+          <ul><?php if (!isLogged()) { ?>
             <li><a href="index.php" class="active">Acceuil</a></li>
+          <?php }else{ ?>
+            <li><a href="user_log.php" class="active">Acceuil</a></li>
+          <?php } ?>
             <li><a href="#FAQ">FAQ</a></li>
             <li><a href="#form_contact">Nous contacter</a></li>
+<<<<<<< HEAD
             <li><a href="./connexion.php">Se connecter</a></li>
             <li><a href="./inscription.php">S'inscrire</a></li>
             <a href="javascript:void(0);" class="icon" onclick="menuBurger()">
             <i class="fa fa-bars"></i> </a>
+=======
+            <?php if (isLogged()) { ?>
+              <li><a href="deconnexion.php">Déconnexion</a></li>
+              <?php if (isAdmin()) { ?>
+                <li><a href="index_back.php">Admin</a></li>
+              <?php } ?>
+            <?php } else { ?>
+              <li><a href="inscription.php">Inscription</a></li>
+              <li><a href="connexion.php">Connexion</a></li>
+            <?php } ?>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i> </a>
+>>>>>>> aa9557baf5019fbfbd91580484d9a9d0da4b0d52
           </ul>
         </nav>
       </div>

@@ -3,13 +3,12 @@ $pagename="statistique";
 include 'inc/pdo.php';
 include 'inc/function.php';
 include 'inc/request.php';
-pre($_SESSION);
 isLogged();
 if(isAdmin()){
 
 }
 else{
-  die('403');
+  include ('inc/page403.php');
 }
 
 include ('inc/header_back.php');

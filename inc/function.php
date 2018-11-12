@@ -267,15 +267,20 @@ function validationChiffre($error,$data,$key,$empty = true){
 
 //Fonction pour afficher des infos d'un user
 function Afficherinfo($user){
+
   echo '<tr>';
     echo '<td>' . $user['id'] . '</td>';
-    echo '<td>' . $user['login'] . '</td>';
+    echo '<td>' . $user['pseudo'] . '</td>';
     echo '<td>' . $user['status'] . '</td>';
     echo '<td>' . $user['email'] . '</td>';
-    echo '<td>' . date("d-m-Y",strtotime($user['created_at'])) . '</td>';
     echo '<td>' . $user['role'] . '</td>';
+    echo '<td>' . date("d-m-Y",strtotime($user['created_at'])) . '</td>';
+    echo '<td>' . date("d-m-Y",strtotime($user['modified_at'])) . '</td>';
+    echo '<td>' . $user['nom'] . '</td>';
+    echo '<td>' . $user['prenom'] . '</td>';
+    echo '<td>' . $user['age'] . '</td>';
     echo '<td><a class="material-icons" href="edit_user_back.php?id=' . $user['id'] . '"><i class="material-icons">edit</i></a></td>';
-    echo '<td><a href="deleteuser_back.php?id=' . $user['id'] . '" data-toggle="modal" data-target="#exampleModal"><i class="material-icons">delete</i></a></td>';
+    echo '<td><a href="deleteuser_back.php?id=' . $user['id'] . '"><i class="material-icons">delete</i></a></td>';
     echo '</tr>';
 }
 
@@ -295,8 +300,12 @@ function Affichertableauuser($users,$title,$description){
               echo '<th> Login </th>';
               echo '<th> Status </th>';
               echo '<th> Email: </th>';
-              echo '<th> Date de création </th>';
               echo '<th> Rôle </th>';
+              echo '<th> Date de création </th>';
+              echo '<th> Dernière modification </th>';
+              echo '<th> Nom: </th>';
+              echo '<th> Prénom: </th>';
+              echo '<th> Age: </th>';
               echo '<th> Edit </th>';
               echo '<th> Delete </th>';
             echo '</thead>';

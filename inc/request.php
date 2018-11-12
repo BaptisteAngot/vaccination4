@@ -3,7 +3,7 @@
 function countinscrit(){
   global $pdo;
 
-  $sql = "SELECT COUNT(id) FROM user";
+  $sql = "SELECT COUNT(id) FROM v4_user";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $nbid=$query->fetch();
@@ -14,7 +14,7 @@ function countinscrit(){
 function countadmin(){
   global $pdo;
 
-  $sql= "SELECT COUNT(role) FROM user WHERE role='admin'";
+  $sql= "SELECT COUNT(role) FROM v4_user WHERE role='admin'";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $nbidadmin=$query->fetch();
@@ -25,7 +25,7 @@ function countadmin(){
 function countuser(){
   global $pdo;
 
-  $sql= "SELECT COUNT(role) FROM user WHERE role='user'";
+  $sql= "SELECT COUNT(role) FROM v4_user WHERE role='user'";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $nbiduser=$query->fetch();
@@ -35,7 +35,7 @@ function countuser(){
 //Fonction pour afficher la date du dernier utilisateur inscrit
 function lastsign(){
   global $pdo;
-  $sql= "SELECT created_at FROM user ORDER BY created_at ASC";
+  $sql= "SELECT created_at FROM v4_user ORDER BY created_at ASC";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $lastuser=$query->fetch();
@@ -46,7 +46,7 @@ function lastsign(){
 //Fonction pour compter le nombre de vaccins dans la BDD
 function countvaccins(){
   global $pdo;
-  $sql = "SELECT COUNT(id) FROM vaccin";
+  $sql = "SELECT COUNT(id) FROM v4_vaccin";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $nbvaccins=$query->fetch();
@@ -55,7 +55,7 @@ function countvaccins(){
 //Fonction pour compter le nombre de vaccins obligatoire
 function countmandatoryvaccins(){
   global $pdo;
-  $sql= "SELECT COUNT(status) FROM vaccin WHERE status='Obligatoire'";
+  $sql= "SELECT COUNT(status) FROM v4_vaccin WHERE status='Obligatoire'";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $nbvaccinsobligatoire=$query->fetch();
@@ -65,7 +65,7 @@ function countmandatoryvaccins(){
 // Fonction pour compter le nombre de vaccins recommandé
 function countrecommendedvaccins(){
   global $pdo;
-  $sql= "SELECT COUNT(status) FROM vaccin WHERE status='Recommandé'";
+  $sql= "SELECT COUNT(status) FROM v4_vaccin WHERE status='Recommandé'";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $nbvaccinsobligatoire=$query->fetch();
@@ -75,7 +75,7 @@ function countrecommendedvaccins(){
 //Fonction pour afficher la date du dernier vaccins inscrit en BDD
 function lastvaccin(){
   global $pdo;
-  $sql= "SELECT created_at FROM vaccin ORDER BY created_at ASC";
+  $sql= "SELECT created_at FROM v4_vaccin ORDER BY created_at ASC";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $lastvaccin=$query->fetch();
@@ -87,7 +87,7 @@ function lastvaccin(){
 //Fonction qui compte de nombre de personne connecté
 function countconnect(){
   global $pdo;
-  $sql = "SELECT COUNT(status) FROM user WHERE status='Connecté'";
+  $sql = "SELECT COUNT(status) FROM v4_user WHERE status='Connecté'";
   $query = $pdo->prepare($sql);
   $query -> execute();
   $nbconnect=$query->fetch();
@@ -97,7 +97,7 @@ function countconnect(){
 // Fonction compte le nombre de personne deconnecté
 function countdisconnect(){
   global $pdo;
-  $sql = "SELECT COUNT(status) FROM user WHERE status='Deconnecté'";
+  $sql = "SELECT COUNT(status) FROM v4_user WHERE status='Deconnecté'";
   $query = $pdo->prepare($sql);
   $query -> execute();
   $nbdisconnect=$query->fetch();
@@ -107,7 +107,7 @@ function countdisconnect(){
 //Fonction qui compte le nombre d'utilisateurs banni
 function countbanned(){
   global $pdo;
-  $sql = "SELECT COUNT(status) FROM user WHERE status='Banni'";
+  $sql = "SELECT COUNT(status) FROM v4_user WHERE status='Banni'";
   $query = $pdo->prepare($sql);
   $query -> execute();
   $nbban=$query->fetch();
@@ -117,7 +117,7 @@ function countbanned(){
 // Fonction qui retourne la liste de tout les vaccins
 function returnvaccins(){
   global $pdo;
-  $sql= "SELECT * FROM vaccin";
+  $sql= "SELECT * FROM v4_vaccin";
   $query=$pdo->prepare($sql);
   $query->execute();
   $vaccins=$query->fetchAll();
@@ -130,7 +130,7 @@ function returnvaccins(){
 function deletevaccin($id){
   global $pdo;
 
-  $sql="DELETE FROM vaccin WHERE id=:id";
+  $sql="DELETE FROM v4_vaccin WHERE id=:id";
   $query = $pdo -> prepare($sql);
   $query ->bindValue(':id',$id, PDO::PARAM_INT);
   $query -> execute();
@@ -139,7 +139,7 @@ function deletevaccin($id){
 function deleteuser($id){
   global $pdo;
 
-  $sql="DELETE FROM user WHERE id=:id";
+  $sql="DELETE FROM v4_user WHERE id=:id";
   $query = $pdo ->prepare($sql);
   $query -> bindValue(':id',$id,PDO::PARAM_INT);
   $query -> execute();
@@ -149,7 +149,7 @@ function deleteuser($id){
 function recovervaccindata($id){
   global $pdo;
 
-  $sql ="SELECT id,nom, description, limit_age, dosage, created_at, status, condition_requise FROM vaccin WHERE id=$id";
+  $sql ="SELECT id,nom, description, limit_age, dosage, created_at, status, condition_requise FROM v4_vaccin WHERE id=$id";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $resultat = $query -> fetch();
@@ -160,7 +160,7 @@ function recovervaccindata($id){
 function recoveruserdata($id){
   global $pdo;
 
-  $sql="SELECT id,pseudo,status,role,email, created_at,modified_at,age,nom,prenom FROM user WHERE id=$id";
+  $sql="SELECT id,pseudo,status,role,email, created_at,modified_at,age,nom,prenom FROM v4_user WHERE id=$id";
   $query= $pdo->prepare($sql);
   $query -> execute();
   $resultat = $query ->fetch();
@@ -170,7 +170,7 @@ function recoveruserdata($id){
 //Envois toutes les infos d'un vaccin
 function envoyerinfovaccin($name,$desc,$age,$dosage,$status,$condition){
   global $pdo;
-  $sql= "INSERT INTO vaccin(nom,description,limit_age,dosage,created_at,status,condition_requise) VALUES (:name,:description,:age,:dosage,NOW(),:status,:condition_requise)";
+  $sql= "INSERT INTO v4_vaccin(nom,description,limit_age,dosage,created_at,status,condition_requise) VALUES (:name,:description,:age,:dosage,NOW(),:status,:condition_requise)";
 
   $query=$pdo->prepare($sql);
   $query->bindValue(':name',$name,PDO::PARAM_STR);
@@ -186,7 +186,7 @@ function envoyerinfovaccin($name,$desc,$age,$dosage,$status,$condition){
 function updatevaccindata($id,$name,$desc,$age,$dosage,$status,$condition){
   global $pdo;
 
-  $sql ="UPDATE vaccin SET nom=:name,description=:desc,age=:age,dosage=:dosage,status=:status, condition_requise=:condition, updated_at=NOW() WHERE id=:id";
+  $sql ="UPDATE v4_vaccin SET nom=:name,description=:desc,age=:age,dosage=:dosage,status=:status, condition_requise=:condition, updated_at=NOW() WHERE id=:id";
 
   $query = $pdo->prepare($sql);
   $query ->bindValue(':name',$name, PDO::PARAM_STR);
@@ -203,7 +203,7 @@ function updatevaccindata($id,$name,$desc,$age,$dosage,$status,$condition){
 function updateuserdata($id,$login,$status,$role,$mail){
   global $pdo;
 
-  $sql="UPDATE user SET login=:login,status=:status,role=:role,email=:mail,modified_at=NOW() WHERE id=:id";
+  $sql="UPDATE v4_user SET login=:login,status=:status,role=:role,email=:mail,modified_at=NOW() WHERE id=:id";
   $query=$pdo->prepare($sql);
   $query -> bindValue(':login',$login,PDO::PARAM_STR);
   $query -> bindValue(':status',$status,PDO::PARAM_STR);
@@ -218,7 +218,7 @@ function updateuserdata($id,$login,$status,$role,$mail){
 function returnusers(){
   global $pdo;
 
-  $sql= "SELECT * FROM user";
+  $sql= "SELECT * FROM v4_user";
   $query=$pdo->prepare($sql);
   $query->execute();
   $users=$query->fetchAll();

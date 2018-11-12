@@ -234,20 +234,13 @@ function connect($login_mail,$password){
   $query -> bindValue(':login_mail',$login_mail);
   $query -> execute();
   $user = $query -> fetch();
-  if (!empty($user)) {
-    if (!password_verify($password, $user['password'])) {
-      $error['password'] = 'Mot de passe incorrect';
-    }
-  }
-  else {
-    $error['login_mail'] = 'Identifiant incorrect';
-  }
-  return $error;
+  return $user;
 }
 
 //Fonction pour se register
 function register($pseudo,$email,$hash,$token){
   global $pdo;
+
   $sql = "INSERT INTO v4_user(pseudo, email, password, created_at, token) VALUES (:pseudo, :email, :password, NOW(), :token)";
   $query = $pdo -> prepare($sql);
   $query -> bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
@@ -255,6 +248,8 @@ function register($pseudo,$email,$hash,$token){
   $query -> bindValue(':password', $hash, PDO::PARAM_STR);
   $query -> bindValue(':token', $token, PDO::PARAM_STR);
   $query -> execute();
+  $user = $query -> fetch();
+  return $user;
 }
 
 //Fonction pour vérifier si l'idverif est dans la BDD
@@ -283,7 +278,7 @@ function verifpassword($password){
   global $pdo;
   $sql="SELECT password FROM v4_user WHERE password = :password";
   $query=$pdo->prepare($sql);
-  $query->bindValue(':password',$password1,PDO::PARAM_STR);
+  $query->bindValue(':password',$password,PDO::PARAM_STR);
   $query->execute();
   $resultatpassword = $query->fetch();
   return $resultatpassword;

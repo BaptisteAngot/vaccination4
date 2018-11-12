@@ -1,9 +1,10 @@
+<!-- <?php include 'inc/function.php'; ?> -->
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="en-tête">
-    <meta name="author" content="Dufresne Nicolas">
+    <meta name="author" content="Dufresne TRUPIN ANGOT">
     <meta name="robots" content="all|(no)follow|(no)index|none">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfosVaccins.com</title>
@@ -19,10 +20,18 @@
             <li><a href="index.php" class="active">Acceuil</a></li>
             <li><a href="#FAQ">FAQ</a></li>
             <li><a href="#form_contact">Nous contacter</a></li>
-            <li><a href="./connexion.php">Se connecter</a></li>
-            <li><a href="./inscription.php">S'inscrire</a></li>
+            <?php if (isLogged()) { ?>
+              <li><a href="deconnexion.php">Déconnexion</a></li>
+              <?php if (isAdmin()) { ?>
+                <li><a href="index_back.php">Admin</a></li>
+              <?php } ?>
+            <?php } else { ?>
+              <li><a href="inscription.php">Inscription</a></li>
+              <li><a href="connexion.php">Connexion</a></li>
+            <?php } ?>
+
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i> </a>
+              <i class="fa fa-bars"></i> </a>
           </ul>
         </nav>
       </div>

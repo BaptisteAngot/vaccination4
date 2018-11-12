@@ -306,7 +306,8 @@ function Affichertableauuser($users,$title,$description){
   echo '</div>';
 }
 
-function isAdmin(){
+function isAdmin()
+{
   if (isLogged()) {
     if ($_SESSION['user']['role'] == 'admin') {
       return TRUE;
@@ -314,8 +315,8 @@ function isAdmin(){
   }
   return FALSE;
 }
-
-function isLogged(){
+function isLogged()
+{
   if (!empty($_SESSION['user']['id']) && !empty($_SESSION['user']['pseudo']) && !empty($_SESSION['user']['email']) && !empty($_SESSION['user']['role']) && !empty($_SERVER['REMOTE_ADDR'])) {
     if (is_numeric($_SESSION['user']['id'])) {
       if ($_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {

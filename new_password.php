@@ -11,7 +11,6 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $user = $query->fetch();
-  debug($user);
   if (!empty($user))
   {
     if (!empty($_POST['submitted']))

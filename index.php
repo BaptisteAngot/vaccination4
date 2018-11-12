@@ -23,15 +23,13 @@
       <div class="inscription">
         <a href="inscription.php">S'inscrire</a>
       </div>
+      <div class="clear"></div>
     </div>
-    <div class="clear"></div>
   </div>
 
-        <div class="wrap">
-          <!-- <div class="img1"><img src="img/imgVaccin3.jpg" alt="imgVaccin3"></div> -->
-          <!-- <div class="clear"></div> -->
-          <!-- <div class="img2"><img src="img/tableauvaccin.jpeg" alt="tableauvaccin"></div> -->
+
           <div id ="FAQ">
+            <div class="wrap">
               <h2>Questions fréquentes</h2>
               <div class="ligne"></div>
             <ul>

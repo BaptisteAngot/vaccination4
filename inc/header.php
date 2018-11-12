@@ -36,6 +36,8 @@
               <li><a href="inscription.php">Inscription</a></li>
               <li><a href="connexion.php">Connexion</a></li>
             <?php } ?>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i> </a>
           </ul>
         </nav>
       </div>

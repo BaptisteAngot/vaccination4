@@ -24,7 +24,7 @@ if (!empty($_POST['submitted']))
     }
     else {
       if (!empty($user)) {
-         $body = '<p>Cliquez <a href=new_password.php?email='.urlencode($user['email']).'&token='.urlencode($user['token']).'">ICI<?php"></a></p>';
+         $body = '<p>Cliquez <a href="new_password.php?email='.urlencode($user['email']).'&token='.urlencode($user['token']).'">ICI<?php"></a></p>';
         // echo $body;
         mail($mail, "Réinitialisation mot de passe!", $body, $header);
         $success = '<div class="alert-success" role="alert">

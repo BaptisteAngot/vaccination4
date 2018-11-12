@@ -2,7 +2,12 @@
   include 'inc/pdo.php';
   include 'inc/function.php';
   include 'inc/request.php';
+
+  if (isLogged()) {
+    header('Location: user_log.php');
+  }
   include 'inc/header.php';
+
 ?>
 
   <div class="intro">

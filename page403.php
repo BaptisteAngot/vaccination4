@@ -30,7 +30,7 @@
 
 	<div id="notfound">
 		<div class="notfound">
-			<img src="images/logoAcceuil.png" alt="Logo d'InfoVaccin">
+			<img src="images/iconeVaccinlogo.png" alt="Logo d'InfoVaccin">
 			<div class="notfound-404">
 				<h3>Oups! Page interdite</h3>
 				<h1><span>4</span><span>0</span><span>3</span></h1>

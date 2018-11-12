@@ -110,6 +110,8 @@ body
   font-size: 1.2em;
 }
 
+#FAQ h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: #FFF;}
+
 .boiteQuestion{
   background-color: #8EA2C6;
   text-align: center;
@@ -138,13 +140,13 @@ h3 {
 #equipe {
   background-color: #3FB3A6;
   padding-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   text-align: center;
   background-image: url("../images/medical.jpg");
 }
 
 #equipe h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: white;}
-#FAQ h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: #FFF;}
+
 #partenaires {
   background-color: #56739A;
   padding-top: 20px;

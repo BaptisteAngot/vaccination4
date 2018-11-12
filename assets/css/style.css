@@ -97,6 +97,11 @@ body {
   margin-bottom: 25px;
 }
 
+.notfound img {
+  width: 100%;
+  padding-bottom: 100px;
+}
+
 @media only screen and (max-width: 767px) {
   .notfound .notfound-404 {
     height: 200px;
@@ -120,12 +125,6 @@ body {
   }
 }
 
-.star-ratings-sprite {
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
-  font-size: 0;
-  height: 21px;
-  line-height: 0;
-}
 #header img{
   width:30%;
   margin: 5% 10% 0 0;
@@ -284,10 +283,13 @@ h3 {
   padding-bottom: 50px;
   text-align: center;
   background-image: url("../../images/medical.jpg");
+  overflow: auto;
 }
 
 #equipe h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: white;}
+
 #FAQ h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: #FFF;}
+
 #partenaires {
   background-color: #56739A;
   padding-top: 20px;
@@ -348,8 +350,9 @@ h3 {
 
 .section2 {
   float: left;
-  width: 25%;
+  width: 33%;
   padding-top: 50px;
+  padding-bottom: 20px;
 
 }
 
@@ -388,7 +391,7 @@ form {
   margin: 0 auto;
 }
 
-#form_contact {padding: 0px 10px 20px 10px; background-color: #ECF0F3; background-image: url('../../images/medical2.jpg'); background-size: 100%;}
+#form_contact {padding: 0px 10px 20px 10px; background-color: #ECF0F3; background-image: url('../../images/medical2.jpg'); background-size: 100%; background-repeat: no-repeat;}
 #form_contact p.textintro {text-align: center; margin: 10px 0 0px 0;}
 #form_contact h2 {text-align: center;}
 

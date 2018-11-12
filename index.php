@@ -71,7 +71,10 @@
 
       </section>
 
+
+
       <section id="partenaires">
+
 
         <div class="wrap">
           <h2>Nos partenaires</h2>
@@ -129,9 +132,9 @@
 
           if (!empty($email)){
               if(strlen($email) < 3 ) {
-          $error['email'] = 'Votre titre est trop court. (minimum 3 caractères)';
+          $error['email'] = 'Votre email est trop court. (minimum 3 caractères)';
         } elseif(strlen($email) > 220) {
-          $error['email'] = 'Votre titre est trop long.';
+          $error['email'] = 'Votre email est trop long.';
         }
 
           } else {
@@ -140,11 +143,11 @@
 
           if (!empty($message)){
               if(strlen($message) < 3 ) {
-          $error['message'] = 'Votre contenu est trop court. (minimum 3 caractères)';
+          $error['message'] = 'Votre message est trop court. (minimum 3 caractères)';
         }
 
           } else {
-            $error['message'] = 'Veuillez renseigner un contenu';
+            $error['message'] = 'Veuillez renseigner un message';
           }
 
           if (count($error) == 0){

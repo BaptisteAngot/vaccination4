@@ -139,7 +139,6 @@ function generateRandomString($length) {
 }
 
 function validationpseudo($error,$pseudo,$min,$max,$empty = true){
-  global $pdo;
   if (!empty($pseudo)) {
     if(strlen($pseudo)<$min){
       $error['pseudo']= 'minimum '.$min .' caractères';
@@ -150,11 +149,7 @@ function validationpseudo($error,$pseudo,$min,$max,$empty = true){
     else{
       //Verification si idverif existe déjà
         //Selection de $idverif de $table de la $bdd
-        $sql="SELECT pseudo FROM user WHERE pseudo = :pseudo";
-        $query=$pdo->prepare($sql);
-        $query->bindValue(':pseudo',$pseudo,PDO::PARAM_STR);
-        $query->execute();
-        $resultat = $query->fetch();
+        $resultat=verifuser($pseudo);
         if(!empty($resultat)){
           $error['pseudo']='Pseudo déjà utilisé';
         }
@@ -172,11 +167,7 @@ function validationemail($error,$mail,$empty=true){
   global $pdo;
   if(!empty($mail)){
     if (filter_var($mail, FILTER_VALIDATE_EMAIL)){
-        $sql="SELECT email FROM user WHERE email = :email";
-        $query=$pdo->prepare($sql);
-        $query->bindValue(':email',$mail,PDO::PARAM_STR);
-        $query->execute();
-        $resultatmail = $query->fetch();
+      $resultatmail= verifmail($mail);
         if(!empty($resultatmail)){
           $error['mail']='Mail déjà utilisé';
         }
@@ -205,11 +196,7 @@ function validationpassword($error,$password1,$password2,$min,$max,$empty = true
       else{
         //Verification si idverif existe déjà
           //Selection de $idverif de $table de la $bdd
-          $sql="SELECT password FROM user WHERE password = :password";
-          $query=$pdo->prepare($sql);
-          $query->bindValue(':password',$password1,PDO::PARAM_STR);
-          $query->execute();
-          $resultatpassword = $query->fetch();
+          $resultatpassword=verifpassword($password1);
           if(!empty($resultatpassword)){
             $error['password']='Pseudo déjà utilisé';
           }

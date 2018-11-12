@@ -224,3 +224,67 @@ function returnusers(){
   $users=$query->fetchAll();
   return $users;
 }
+
+//Fonction pour select user bdd
+function connect($login_mail,$password){
+  global $pdo;
+
+  $sql = "SELECT * FROM v4_user WHERE pseudo = :login_mail OR email = :login_mail";
+  $query = $pdo -> prepare($sql);
+  $query -> bindValue(':login_mail',$login_mail);
+  $query -> execute();
+  $user = $query -> fetch();
+  if (!empty($user)) {
+    if (!password_verify($password, $user['password'])) {
+      $error['password'] = 'Mot de passe incorrect';
+    }
+  }
+  else {
+    $error['login_mail'] = 'Identifiant incorrect';
+  }
+  return $error;
+}
+
+//Fonction pour se register
+function register($pseudo,$email,$hash,$token){
+  global $pdo;
+  $sql = "INSERT INTO v4_user(pseudo, email, password, created_at, token) VALUES (:pseudo, :email, :password, NOW(), :token)";
+  $query = $pdo -> prepare($sql);
+  $query -> bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
+  $query -> bindValue(':email', $email, PDO::PARAM_STR);
+  $query -> bindValue(':password', $hash, PDO::PARAM_STR);
+  $query -> bindValue(':token', $token, PDO::PARAM_STR);
+  $query -> execute();
+}
+
+//Fonction pour vérifier si l'idverif est dans la BDD
+function verifuser($pseudo){
+  global $pdo;
+  $sql="SELECT pseudo FROM v4_user WHERE pseudo = :pseudo";
+  $query=$pdo->prepare($sql);
+  $query->bindValue(':pseudo',$pseudo,PDO::PARAM_STR);
+  $query->execute();
+  $resultat = $query->fetch();
+  return $resultat;
+}
+
+//Vérification mail existant bdd
+function verifmail($mail){
+  global $pdo;
+  $sql="SELECT email FROM v4_user WHERE email = :email";
+  $query=$pdo->prepare($sql);
+  $query->bindValue(':email',$mail,PDO::PARAM_STR);
+  $query->execute();
+  $resultatmail = $query->fetch();
+  return $resultatmail;
+}
+
+function verifpassword($password){
+  global $pdo;
+  $sql="SELECT password FROM v4_user WHERE password = :password";
+  $query=$pdo->prepare($sql);
+  $query->bindValue(':password',$password1,PDO::PARAM_STR);
+  $query->execute();
+  $resultatpassword = $query->fetch();
+  return $resultatpassword;
+}

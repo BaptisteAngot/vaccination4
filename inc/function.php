@@ -128,6 +128,22 @@ if (!empty($data)){
   return $error;
 }
 
+//Fonction pour vérifier une date
+function validationdate($error,$date,$key,$empty = true){
+  $newdate  = explode('-', $date);
+  if (count($newdate) == 3) {
+    if (!checkdate($newdate[1], $newdate[2], $newdate[0])) {
+      //problem
+      $error[$key]='Probleme de date';
+    }
+  }
+  else {
+    // problem with input ...
+    $error[$key]='Probleme de format';
+  }
+  return $error;
+}
+
 function generateRandomString($length) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
@@ -325,4 +341,11 @@ function isLogged()
     }
   }
   return FALSE;
+}
+
+function cheminURL()
+{
+  //header('Location: new_password.php');
+  $adresse = "http://".$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
+  return $adresse;
 }

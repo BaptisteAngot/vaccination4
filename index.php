@@ -1,7 +1,13 @@
-<?php include 'inc/pdo.php';
-      include 'inc/function.php';
-      include 'inc/request.php';
-      include 'inc/header.php';
+<?php
+  include 'inc/pdo.php';
+  include 'inc/function.php';
+  include 'inc/request.php';
+
+  if (isLogged()) {
+    header('Location: user_log.php');
+  }
+  include 'inc/header.php';
+
 ?>
 
   <div class="intro">
@@ -15,12 +21,13 @@
       <div class="inscription">
         <a href="inscription.php">S'inscrire</a>
       </div>
+      <div class="clear"></div>
     </div>
-    <div class="clear"></div>
   </div>
 
-        <div class="wrap">
+
           <div id ="FAQ">
+            <div class="wrap">
               <h2>Questions fréquentes</h2>
               <div class="ligne"></div>
             <ul>
@@ -79,7 +86,7 @@
         <div class="wrap">
           <h2>Nos partenaires</h2>
           <div class="ligne"></div>
-          <div class="section2">
+          <!-- <div class="section2">
             <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
           <div class="section2">
@@ -102,7 +109,7 @@
           </div>
           <div class="section2">
             <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
-          </div>
+          </div> -->
         </div>
         <div class="clear"></div>
 
@@ -163,11 +170,12 @@
       }
 
    ?>
-
+   <div class="clear"></div>
           <div class="section4">
             <section id="form_contact">
               <div class="wrap2">
                 <h2>Contact</h2>
+                <div class="clear"></div>
                 <div class="ligne"></div>
                 <p class="textintro">Si vous souhaitez nous contacter pour des informations complémentaires, remplissez le formulaire suivant :</p>
 

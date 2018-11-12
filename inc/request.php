@@ -281,3 +281,14 @@ function verifpassword($password){
   $resultatpassword = $query->fetch();
   return $resultatpassword;
 }
+
+function recuperationlistevaccin(){
+  global $pdo;
+
+  $sql="SELECT nom FROM v4_vaccin";
+  $query=$pdo->prepare($sql);
+  $query->execute();
+  $resultat = $query->fetchAll();
+  return $resultat;
+
+}

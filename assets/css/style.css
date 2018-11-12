@@ -22,11 +22,6 @@ body
           box-sizing: border-box;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-}
-
 #notfound {
   position: relative;
   height: 100vh;
@@ -128,7 +123,7 @@ body {
 }
 #header img{
   width:30%;
-  margin: 5% 10% 0 0;
+  margin: 8% 10% 0 0;
   float : right;
 }
 
@@ -137,7 +132,7 @@ body {
   overflow: hidden;
 }
 
-#header .menufixed {position: fixed;background-color: #56739A;width: 100%;padding:10px 10px;}
+#header .menufixed {position: fixed;background-color: #56739A;width: 100%;padding:12px 10px;}
 
 #header nav ul li a {
   float: left;
@@ -146,7 +141,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   transition: all 1.5s;
 }
 #header .active {
@@ -190,7 +185,7 @@ body {
 
 .intro{
   text-align: center;
-  margin-top: 15%;
+  margin-top: 20%;
   color: #FFF;
 }
 
@@ -248,32 +243,30 @@ body {
   background-color: #FFF;
   color: #008fcf;
 }
+
 #FAQ{
   color: #777777;
-  margin-top:10%;
+  margin-top:7.5%;
   background-color: #ecf0f3;
+  text-align: center;
+  font-size: 1.4em;
 }
 
-#FAQ h2{text-align: center;}
-
-#FAQ ul{
-  font-size: 1.2em;
+#FAQ h2 {
+  background-color: #4caf50;
+  text-align: center;
+  color: #FFF;
 }
 
-#FAQ ul li, #FAQ ul p {
-margin-top: 3%;
-}
-
-@media screen and (min-width: 601px) {
-  #FAQ ul p {
-    font-size: 20px;
-  }
-}
 
 .boiteQuestion{
+  color : #FFF;
   background-color: #8EA2C6;
   text-align: center;
   border-radius: 100px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
 }
 
 
@@ -304,7 +297,6 @@ h3 {
 }
 
 #equipe h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: white;}
-#FAQ h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: #FFF;}
 #partenaires {
   background-color: #56739A;
   padding-top: 20px;
@@ -522,14 +514,10 @@ select::-ms-expand {
 }
 
 footer {
-  position: fixed;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  text-align: center;
-  font-size: 1.0625em;
+  width: 100%;
   background-color: #56739A;
   color: white;
-  height: 200px;
+  text-align: center;
 }
 
 footer p {

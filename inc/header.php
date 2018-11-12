@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfosVaccins.com</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/logoOnglet.png">
   </head>
 
 <!-- Le header contient la navbar, le logo, la liste cliquable et l'intro-->
   <header id="header">
     <!-- <h1>InfoVaccins.com</h1> -->
-      <div class="navbar">
+      <div class="navbar" id="myTopnav">
         <nav>
           <ul>
             <li><a href="index.php" class="active">Acceuil</a></li>
@@ -21,7 +23,7 @@
             <li><a href="#form_contact">Nous contacter</a></li>
             <li><a href="./connexion.php">Se connecter</a></li>
             <li><a href="./inscription.php">S'inscrire</a></li>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="icon" onclick="menuBurger()">
             <i class="fa fa-bars"></i> </a>
           </ul>
         </nav>

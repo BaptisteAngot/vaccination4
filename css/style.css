@@ -6,20 +6,15 @@ body
 	font-family: 'Arvo', serif;
 	font-size: 17px;
 	border-top: 5px #000 solid;
-  background-color: #ecf0f3;
+  background-image: url("../images/medicalFond.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .wrap {
   max-width: 1040px;
   width: 100%;
   margin: 0 auto;
-}
-
-#header .medicalFond{
-  background-image: url("../images/medicalFond.jpg");
-  max-width:100%;
-  background-size: 100%;
-  /* background-repeat: no-repeat; */
 }
 
 #header img{
@@ -62,6 +57,9 @@ body
   text-align: center;
   margin-top: 5%;
   color: #FFF;
+  /* background-color: #56739A;
+  height: 100%; */
+
 }
 
 .intro p{

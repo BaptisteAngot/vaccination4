@@ -1,5 +1,21 @@
 <?php include 'inc/header.php'; ?>
 
+<div class="intro">
+  <p>Bienvenu sur notre site InfoVaccins.com </br>
+    Si vous souhaitez consulter vos informations concernant vos vaccins, </br>
+    inscrivez-vous dès maintenant !</p>
+  <div class="wrap">
+    <!-- Bouton connexion -->
+    <div class="connexion">
+      <a href="connexion.php">Se connecter</a>
+    </div>
+    <!-- Bouton inscription -->
+    <div class="inscription">
+      <a href="inscription.php">S'inscrire</a>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
 
         <div class="wrap">
           <!-- <div class="img1"><img src="img/imgVaccin3.jpg" alt="imgVaccin3"></div> -->
@@ -43,7 +59,7 @@
           </div>
           <div class="section1">
             <img src="images/logoAcceuil.png" alt="Un membre d'InfoVaccins.">
-            <h3>Jean-Baptiste ?</h3>
+            <h3>Jean-Baptiste de Sain-Léger</h3>
             <p>Développeur WEB à NFactory</p>
           </div>
           <div class="section1">

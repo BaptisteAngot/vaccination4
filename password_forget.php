@@ -1,8 +1,10 @@
 <?php
 include 'inc/pdo.php';
 include 'inc/function.php';
+include 'inc/request.php';
+include 'config.php';
 
-$adresse = "http://".$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
+//$adresse = cheminURL();
 $header="MIME-Version: 1.0\r\n";
 $header.='From:"InfosVaccins.com"<support@infosvaccins.com>'."\n";
 $header.='Content-Type:text/html; charset="uft-8"'."\n";
@@ -25,7 +27,7 @@ if (!empty($_POST['submitted']))
     }
     else {
       if (!empty($user)) {
-         $body = '<p>Cliquez <a href="http://localhost/vaccination4/new_password.php?email='.urlencode($user['email']).'&token='.urlencode($user['token']).'">ICI<?php"></a></p>';
+         $body = '<p>Cliquez <a href="http://localhost/vaccination4/new_password?email='.urlencode($user['email']).'&token='.urlencode($user['token']).'">ICI<?php"></a></p>';
         // echo $body;
         mail($mail, "Réinitialisation mot de passe!", $body, $header);
         $success = '<div class="alert-success" role="alert">

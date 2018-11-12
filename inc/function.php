@@ -326,3 +326,10 @@ function isLogged()
   }
   return FALSE;
 }
+
+function cheminURL()
+{
+  //header('Location: new_password.php');
+  $adresse = "http://".$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
+  return $adresse;
+}

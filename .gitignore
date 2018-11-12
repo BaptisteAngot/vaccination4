@@ -3,3 +3,4 @@
 inc/pdo.php
 *.json
 *.js
+config.php

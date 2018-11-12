@@ -8,7 +8,7 @@ if(isAdmin()){
 
 }
 else{
-  die('403');
+  include ('inc/page403.php');
 }
 
 include ('inc/header_back.php');

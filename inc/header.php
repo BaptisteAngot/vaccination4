@@ -7,7 +7,7 @@
     <meta name="robots" content="all|(no)follow|(no)index|none">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfosVaccins.com</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
 
 <!-- Le header contient la navbar, le logo, la liste cliquable et l'intro-->
@@ -16,15 +16,17 @@
       <div class="navbar">
         <nav>
           <ul>
-            <li><a href="index.php">Acceuil</a></li>
+            <li><a href="index.php" class="active">Acceuil</a></li>
             <li><a href="#FAQ">FAQ</a></li>
             <li><a href="#form_contact">Nous contacter</a></li>
             <li><a href="./connexion.php">Se connecter</a></li>
             <li><a href="./inscription.php">S'inscrire</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i> </a>
           </ul>
         </nav>
       </div>
-      <a href="#"><img src="images/logoAcceuil.png" alt="Logo InfosVaccin.com"></a>
+      <a href="#"><img src="images/IconeVaccinlogo.png" alt="Logo InfosVaccin.com"></a>
       <div class="clear"></div>
     </header>
     <div class="clear"></div>

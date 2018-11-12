@@ -24,12 +24,12 @@
           <?php } ?>
             <li><a href="#FAQ">FAQ</a></li>
             <li><a href="#form_contact">Nous contacter</a></li>
-<<<<<<< HEAD
+
             <li><a href="./connexion.php">Se connecter</a></li>
             <li><a href="./inscription.php">S'inscrire</a></li>
             <a href="javascript:void(0);" class="icon" onclick="menuBurger()">
             <i class="fa fa-bars"></i> </a>
-=======
+
             <?php if (isLogged()) { ?>
               <li><a href="deconnexion.php">Déconnexion</a></li>
               <?php if (isAdmin()) { ?>
@@ -42,7 +42,7 @@
 
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i> </a>
->>>>>>> aa9557baf5019fbfbd91580484d9a9d0da4b0d52
+
           </ul>
         </nav>
       </div>

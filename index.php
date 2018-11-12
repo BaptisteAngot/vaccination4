@@ -9,11 +9,9 @@
       Si vous souhaitez consulter vos informations concernant vos vaccins, </br>
       inscrivez-vous dès maintenant !</p>
     <div class="wrap">
-      <!-- Bouton connexion -->
       <div class="connexion">
         <a href="connexion.php">Se connecter</a>
       </div>
-      <!-- Bouton inscription -->
       <div class="inscription">
         <a href="inscription.php">S'inscrire</a>
       </div>
@@ -22,9 +20,6 @@
   </div>
 
         <div class="wrap">
-          <!-- <div class="img1"><img src="img/imgVaccin3.jpg" alt="imgVaccin3"></div> -->
-          <!-- <div class="clear"></div> -->
-          <!-- <div class="img2"><img src="img/tableauvaccin.jpeg" alt="tableauvaccin"></div> -->
           <div id ="FAQ">
               <h2>Questions fréquentes</h2>
               <div class="ligne"></div>
@@ -63,7 +58,7 @@
           </div>
           <div class="section1">
             <img src="images/logoAcceuil.png" alt="Un membre d'InfoVaccins.">
-            <h3>Jean-Baptiste de Sain-Léger</h3>
+            <h3>Jean-Baptiste de Saint-Léger</h3>
             <p>Développeur WEB à NFactory</p>
           </div>
           <div class="section1">
@@ -116,15 +111,11 @@
 
   $error = array();
 
-      // si le formulaire est soumis
       if ( !empty($_POST['submitnewpost']) ) {
-          // Protection XSS
           $name = trim(strip_tags($_POST['name']));
           $email = trim(strip_tags($_POST['email']));
-          // ?????? Voir ici si pas mieux htmlspecialchar ??? pour garder les balise html ++++
           $message = trim(strip_tags($_POST['message']));
 
-          //verification auteur
           if (!empty($name)){
               if(strlen($name) < 3 ) {
           $error['name'] = 'Votre nom est trop court. (minimum 3 caractères)';
@@ -136,7 +127,6 @@
             $error['name'] = 'Veuillez entrer votre nom';
           }
 
-          //verification title
           if (!empty($email)){
               if(strlen($email) < 3 ) {
           $error['email'] = 'Votre titre est trop court. (minimum 3 caractères)';
@@ -148,7 +138,6 @@
             $error['email'] = 'Veuillez renseigner un titre';
           }
 
-          //verification content
           if (!empty($message)){
               if(strlen($message) < 3 ) {
           $error['message'] = 'Votre contenu est trop court. (minimum 3 caractères)';
@@ -158,23 +147,16 @@
             $error['message'] = 'Veuillez renseigner un contenu';
           }
 
-          // Si aucune error
           if (count($error) == 0){
-              $sql = "INSERT INTO /*articles (title,content,auteur,created_at,updated_at,status) VALUES (:title, :content, :auteur ,NOW(),NULL, 1);*/";
-              // preparation de la requête
+              $sql = "INSERT INTO ";
               $query = $pdo->prepare($sql);
 
-              // Protection injections SQL
               $query->bindValue(':name',$name, PDO::PARAM_STR);
               $query->bindValue(':email',$email, PDO::PARAM_STR);
               $query->bindValue(':message',$message, PDO::PARAM_STR);
 
-              // execution de la requête preparé
               $query->execute();
-              // redirection vers page dashboard
-
           }
-
       }
 
    ?>

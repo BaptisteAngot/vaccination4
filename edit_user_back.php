@@ -19,7 +19,6 @@ $roles=array(
 if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
   $id = $_GET['id'];
   $data=recoveruserdata($id);
-  pre($data);
   if(!empty($data)){
     if ( !empty($_POST['submitted']) ){
       //Faille XSS

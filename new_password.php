@@ -1,17 +1,17 @@
 <?php
 include 'inc/pdo.php';
 include 'inc/function.php';
+include 'inc/request.php';
 
 $error = array();
 if (!empty($_GET['email']) && !empty($_GET['token'])) {
   $mail = urldecode($_GET['email']);
   $token = urldecode($_GET['token']);
 
-  $sql = "SELECT * FROM user WHERE email = '$mail' AND token = '$token'";
+  $sql = "SELECT * FROM v4_user WHERE email = '$mail' AND token = '$token'";
   $query = $pdo -> prepare($sql);
   $query -> execute();
   $user = $query->fetch();
-  debug($user);
   if (!empty($user))
   {
     if (!empty($_POST['submitted']))
@@ -42,7 +42,7 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
       {
         $hash = password_hash($password, PASSWORD_DEFAULT);
         $new_token = generateRandomString(50);
-        $sql = "UPDATE user SET token = :new_token , password = :hash, updated_at = NOW() WHERE id = :id";
+        $sql = "UPDATE v4_user SET token = :new_token , password = :hash, updated_at = NOW() WHERE id = :id";
         $query = $pdo -> prepare($sql);
         $query -> bindValue(':id', $user['id']);
         $query -> bindValue(':new_token', $new_token);

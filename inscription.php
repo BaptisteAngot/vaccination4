@@ -1,6 +1,7 @@
 <?php
 include 'inc/pdo.php';
 include 'inc/function.php';
+include 'inc/request.php';
 
 $error = array();
 if (!empty($_POST['submitted']))
@@ -25,13 +26,7 @@ if (!empty($_POST['submitted']))
     // Inscrire un post dans la BDD
     $hash = password_hash($mdp, PASSWORD_DEFAULT);
     $token = generateRandomString(50);
-    $sql = "INSERT INTO user(pseudo, email, password, created_at, token) VALUES (:pseudo, :email, :password, NOW(), :token)";
-    $query = $pdo -> prepare($sql);
-    $query -> bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
-    $query -> bindValue(':email', $mail, PDO::PARAM_STR);
-    $query -> bindValue(':password', $hash, PDO::PARAM_STR);
-    $query -> bindValue(':token', $token, PDO::PARAM_STR);
-    $query -> execute();
+    register($pseudo,$mail,$hash,$token);
 
     // redirection
     header('Location: index.php');

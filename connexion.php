@@ -1,6 +1,7 @@
 <?php
 include 'inc/pdo.php';
 include 'inc/function.php';
+include 'inc/request.php';
 
 $error = array();
 if (!empty($_POST['submitted']))
@@ -8,11 +9,8 @@ if (!empty($_POST['submitted']))
   $login_mail = trim(strip_tags($_POST['login_mail']));
   $password = trim(strip_tags($_POST['password']));
 
-  $sql = "SELECT * FROM user WHERE pseudo = :login_mail OR email = :login_mail";
-  $query = $pdo -> prepare($sql);
-  $query -> bindValue(':login_mail',$login_mail);
-  $query -> execute();
-  $user = $query -> fetch();
+  $user=connect($login_mail,$password);
+
   if (!empty($user)) {
     if (!password_verify($password, $user['password'])) {
       $error['password'] = 'Mot de passe incorrect';
@@ -21,8 +19,6 @@ if (!empty($_POST['submitted']))
   else {
     $error['login_mail'] = 'Identifiant incorrect';
   }
-
-
   if(count($error) == 0)
   {
     $_SESSION['user'] = array(

@@ -9,6 +9,7 @@ $error=array();
 $id=$_SESSION['user']['id'];
 if(!empty($_GET['id']) && is_numeric($_GET['id'])){
   if($_SESSION['user']['id'] == $_GET['id']){
+
   }
   else{
     header('Location: page403.php');
@@ -31,8 +32,14 @@ else{
     $date=trim(strip_tags($_POST['date']));
     $error=validationdate($error,$date,'date');
 
-    pre($error);
+    //Champs reaction
+    $reaction=trim(strip_tags($_POST['reaction']));
+    $error=validationText($error,$reaction,2,100,'reaction');
 
+    if(count($error)==0){
+      envoyervaccinuser($_SESSION['id'],$title,$date,$reaction);
+      header('Location: user_log.php');
+    }
   }
 
 

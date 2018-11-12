@@ -290,5 +290,10 @@ function recuperationlistevaccin(){
   $query->execute();
   $resultat = $query->fetchAll();
   return $resultat;
-
 }
+
+
+// Insere un vaccin d'un user dans la table mesvaccins
+// envoyervaccinuser($id,$title,$date,$reaction){
+//   global $pdo;
+// }

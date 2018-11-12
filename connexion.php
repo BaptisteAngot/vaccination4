@@ -9,7 +9,16 @@ if (!empty($_POST['submitted']))
   $login_mail = trim(strip_tags($_POST['login_mail']));
   $password = trim(strip_tags($_POST['password']));
 
-  $error=connect($login_mail,$password);
+  $user=connect($login_mail,$password);
+
+  if (!empty($user)) {
+    if (!password_verify($password, $user['password'])) {
+      $error['password'] = 'Mot de passe incorrect';
+    }
+  }
+  else {
+    $error['login_mail'] = 'Identifiant incorrect';
+  }
   if(count($error) == 0)
   {
     $_SESSION['user'] = array(

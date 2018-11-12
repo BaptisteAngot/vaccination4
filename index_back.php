@@ -3,6 +3,7 @@ $pagename="statistique";
 include 'inc/pdo.php';
 include 'inc/function.php';
 include 'inc/request.php';
+pre($_SESSION);
 isLogged();
 if(isAdmin()){
 

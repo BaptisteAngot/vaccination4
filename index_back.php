@@ -8,7 +8,7 @@ if(isAdmin()){
 
 }
 else{
-  include ('inc/page403.php');
+  header("Location: page403.php");
 }
 
 include ('inc/header_back.php');

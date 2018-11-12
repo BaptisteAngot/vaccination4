@@ -85,7 +85,7 @@
         <div class="wrap">
           <h2>Nos partenaires</h2>
           <div class="ligne"></div>
-          <div class="section2">
+          <!-- <div class="section2">
             <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
           <div class="section2">
@@ -108,7 +108,7 @@
           </div>
           <div class="section2">
             <a href="#"><img src="images/logoAcceuil.png" alt="Un partenaire d'InfoVaccins."></a>
-          </div>
+          </div> -->
         </div>
         <div class="clear"></div>
 

@@ -7,6 +7,7 @@ $header.='From:"InfosVaccins.com"<support@infosvaccins.com>'."\n";
 $header.='Content-Type:text/html; charset="uft-8"'."\n";
 $header.='Content-Transfer-Encoding: 8bit';
 
+$success = '';
 $error = array();
 if (!empty($_POST['submitted']))
 {
@@ -26,6 +27,9 @@ if (!empty($_POST['submitted']))
          $body = '<p>Cliquez <a href="http://localhost/vaccination4/new_password.php?email='.urlencode($user['email']).'&token='.urlencode($user['token']).'">ICI<?php"></a></p>';
         // echo $body;
         mail($mail, "Réinitialisation mot de passe!", $body, $header);
+        $success = '<div class="alert-success" role="alert">
+                Réusi! Veuillez consulter vos mails!
+              </div>';
         // header('Location: new_password.php');
       }
       else {
@@ -44,12 +48,10 @@ include 'inc/header.php';
   <input type="email" name="mail" value="<?php if (!empty($_POST['email'])) {
     echo $_POST['email'];
   } ?>">
-  <?php
-
-   ?>
   <input type="submit" name="submitted" value="Envoyer">
   <?php
   afficherErreur($error, 'mail');
+  echo $success;
   br(); ?>
 
 </form>

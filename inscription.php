@@ -29,7 +29,7 @@ if (!empty($_POST['submitted']))
     register($pseudo,$mail,$hash,$token);
 
     // redirection
-    // header('Location: index.php');
+    header('Location: index.php');
   }
   debug($error);
 }

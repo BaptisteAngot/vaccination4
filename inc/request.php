@@ -248,8 +248,6 @@ function register($pseudo,$email,$hash,$token){
   $query -> bindValue(':password', $hash, PDO::PARAM_STR);
   $query -> bindValue(':token', $token, PDO::PARAM_STR);
   $query -> execute();
-  $user = $query -> fetch();
-  return $user;
 }
 
 //Fonction pour vérifier si l'idverif est dans la BDD

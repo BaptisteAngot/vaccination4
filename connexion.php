@@ -34,7 +34,7 @@ if (!empty($_POST['submitted']))
       'role' => $user['role'],
       'ip' => $_SERVER['REMOTE_ADDR']
     );
-    header('Location: index.php');
+    header('Location: user_log.php');
   }
  }
 

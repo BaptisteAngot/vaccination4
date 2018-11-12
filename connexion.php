@@ -17,7 +17,6 @@ if (!empty($_POST['submitted']))
     if (!password_verify($password, $user['password'])) {
       $error['password'] = 'Mot de passe incorrect';
     }
-
   }
   else {
     $error['login_mail'] = 'Identifiant incorrect';
@@ -34,7 +33,7 @@ if (!empty($_POST['submitted']))
       'role' => $user['role'],
       'ip' => $_SERVER['REMOTE_ADDR']
     );
-    header('Location: index.php');
+    header('Location: user_log.php');
   }
  }
 

@@ -15,8 +15,11 @@
     <!-- <h1>InfoVaccins.com</h1> -->
       <div class="navbar">
         <nav>
-          <ul>
+          <ul><?php if (!isLogged()) { ?>
             <li><a href="index.php" class="active">Acceuil</a></li>
+          <?php }else{ ?>
+            <li><a href="user_log.php" class="active">Acceuil</a></li>
+          <?php } ?>
             <li><a href="#FAQ">FAQ</a></li>
             <li><a href="#form_contact">Nous contacter</a></li>
             <?php if (isLogged()) { ?>

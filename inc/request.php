@@ -160,7 +160,7 @@ function recovervaccindata($id){
 function recoveruserdata($id){
   global $pdo;
 
-  $sql="SELECT id,login,status,role,email FROM user WHERE id=$id";
+  $sql="SELECT id,pseudo,status,role,email, created_at,modified_at,age,nom,prenom FROM user WHERE id=$id";
   $query= $pdo->prepare($sql);
   $query -> execute();
   $resultat = $query ->fetch();
@@ -170,7 +170,7 @@ function recoveruserdata($id){
 //Envois toutes les infos d'un vaccin
 function envoyerinfovaccin($name,$desc,$age,$dosage,$status,$condition){
   global $pdo;
-  $sql= "INSERT INTO vaccin(nom,description,age,dosage,created_at,status,condition_requise) VALUES (:name,:description,:age,:dosage,NOW(),:status,:condition_requise)";
+  $sql= "INSERT INTO vaccin(nom,description,limit_age,dosage,created_at,status,condition_requise) VALUES (:name,:description,:age,:dosage,NOW(),:status,:condition_requise)";
 
   $query=$pdo->prepare($sql);
   $query->bindValue(':name',$name,PDO::PARAM_STR);

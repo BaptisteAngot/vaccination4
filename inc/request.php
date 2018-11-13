@@ -293,9 +293,15 @@ function recuperationlistevaccin(){
 }
 
 
+
 // Insere un vaccin d'un user dans la table mesvaccins
 /*
 envoyervaccinuser($id,$title,$date,$reaction){
   global $pdo;
 }
 */
+
+// // Insere un vaccin d'un user dans la table mesvaccins
+// envoyervaccinuser($id,$title,$date,$reaction){
+//   global $pdo;
+// }

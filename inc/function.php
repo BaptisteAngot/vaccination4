@@ -81,16 +81,44 @@ function debug($array)
     print_r($array);
   echo '</pre>';
 }
-function labelText($name, $title)
+function labelText($name, $title, $resultat)
 {
   echo '<label for="'.$name.'">'.$title.'</label>';
   br();
   echo '<input type="text" name="'.$name.'" value="';
-  if(!empty($_POST[$name])){
-    echo $_POST[$name];
+  if(!empty($resultat[$name])){
+    echo $resultat[$name];
+    // foreach ($resultat as $key) {
+    //   echo $key[$name];
+    // }
   }
   echo '">';
 }
+
+function labelEmail($name, $title, $resultat)
+{
+  echo '<label for="'.$name.'">'.$title.'</label>';
+  br();
+  echo '<input type="email" name="'.$name.'" value="';
+  if(!empty($resultat[$name])){
+    echo $resultat[$name];
+
+  }
+  echo '">';
+}
+
+function labelPassword($name, $title, $resultat)
+{
+  echo '<label for="'.$name.'">'.$title.'</label>';
+  br();
+  echo '<input type="password" name="'.$name.'" value="';
+  if(!empty($resultat[$name])){
+    echo $resultat[$name];
+
+  }
+  echo '">';
+}
+
 function afficherErreur($error, $name)
 {
   echo '<span class="error">';

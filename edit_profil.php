@@ -13,22 +13,23 @@
         if (!empty($_POST['submitted']))
         {
           $pseudo = trim(strip_tags($_POST['pseudo']));
-          validationpseudo($error,$pseudo,3,100);
+          $error = validationpseudoProfil($error,$pseudo,3,100);
           $email = trim(strip_tags($_POST['email']));
-          validationemail($error,$email);
+          $error = validationemail($error,$email);
           $password1 = trim(strip_tags($_POST['password1']));
           $password2 = trim(strip_tags($_POST['password2']));
-          validationpassword($error,$password1,$password2,3,50);
+          $error = validationpassword($error,$password1,$password2,3,50);
           $nom = trim(strip_tags($_POST['nom']));
-          validationTexte($error, $nom, 3, 50, 'nom');
+          $error = validationTexte($error, $nom, 3, 50, 'nom');
           $prenom = trim(strip_tags($_POST['prenom']));
-          validationTexte($error, $prenom, 3, 50, 'nom');
+          $error = validationTexte($error, $prenom, 3, 50, 'prenom');
           $age = trim(strip_tags($_POST['age']));
-          validationChiffre($error,$age,'age');
+          $error = validationChiffre($error,$age,'age');
           if (count($error) == 0) {
-            updateUserDataProfil($id,$pseudo,$email, $nom, $prenom, $age);
+            $hash = password_hash($password1, PASSWORD_DEFAULT);
+            updateUserDataProfil($id,$pseudo,$email, $nom, $prenom, $age, $hash);
             // redirection
-            //header('Location: user_profil.php?id='.$id.'');
+            header('Location: user_profil.php');
           }
         }
         // Modifier un post dans la BDD

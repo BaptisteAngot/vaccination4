@@ -6,7 +6,7 @@
     <meta name="author" content="vaccination4">
     <meta name="robots" content="all|(no)follow|(no)index|none">
     <title>InfosVaccins.com</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="./images/logoOnglet.png">
   </head>

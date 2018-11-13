@@ -40,7 +40,7 @@ else{
 
     //Champs reaction
     $reaction=trim(strip_tags($_POST['reaction']));
-    $error=validationText($error,$reaction,2,100,'reaction');
+    $error=validationText($error,$reaction,0,100,'reaction');
 
     $idtitle=returnidfromvname($title,$vaccinsexistants);
 
@@ -74,12 +74,12 @@ else{
       </tbody>
     </table>
   </div>
-  <div class="newvaccin wrap">
+  <div class="newvaccin">
     <form class="" method="post">
       <h1>Ajout d'un nouveau vaccin</h1>
-        <label for="vaccin ">Votre vaccin a ajouté: </label>
+        <label class="label" for="vaccin">Votre vaccin a ajouté: </label>
         <!-- Champs select -->
-        <div class="select section3">
+        <div class="select">
           <select class="" name="vaccin">
             <?php foreach ($vaccinsexistants as $vaccinexistant) {
               echo '<option>' . $vaccinexistant['nom'] . '</option>';
@@ -88,11 +88,11 @@ else{
         </div>
         <br>
         <!-- Champs Date -->
-        <label for="date">Date de votre vaccin:</label>
+        <label class="label" for="date">Date de votre vaccin:</label>
         <input type="date" name="date" value="">
         <br>
         <!-- Champs reaction -->
-        <label for="reaction">Une réaction ?</label>
+        <label class="label" for="reaction">Une réaction ?</label>
         <input type="text" name="reaction" value="">
         <br>
         <span>Si aucune, veuillez laisser ce champs vide.</span>

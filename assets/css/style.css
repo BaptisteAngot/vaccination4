@@ -451,7 +451,9 @@ input[type="date"] {
     padding:5px;
     display: inline-block !important;
     visibility: visible !important;
-    width: 50%;
+    width: 15%;
+    border-radius: 5px;
+    float: left;
 }
 
 input[type="date"], focus {
@@ -531,21 +533,26 @@ footer p {
 }
 
 .newvaccin{
-  background-color: #FFF;
-  border: 2px solid black;
+  background-color: #f4e7d3;
+  border: 2px solid rgb(4, 113, 152);
   float:right;
   width: 48%;
   margin: 0 20px 0 20px;
   padding: 0 5px 0 5px;
   display: inline;
+  overflow: hidden;
+  border-radius: 10px;
+  text-align: center;
 }
+
 
 .myvaccin{
   background-color: #FFF;
-  border: 2px solid black;
+  border: 2px solid rgb(4, 113, 152);
   float: left;
   width: 46%;
   margin: 0 20px 0 20px;
+  border-radius: 10px;
 }
 
 .myvaccin table{
@@ -557,7 +564,7 @@ footer p {
 }
 
 .myvaccin td{
-  padding: 15px;
+  padding: 5px;
 }
 
 .myvaccin tbody td{
@@ -570,6 +577,29 @@ footer p {
   table-layout:fixed;
 }
 
+.myvaccin h1{
+  text-align: center;
+  margin: 5px 0 5px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .userlog{
   float: left;
+}
+
+.label{
+  float: left;
+  clear: both;
+  text-align: center;
+}
+
+.formnewvaccin{
+  padding: 5px 0 5px 0
+}
+
+.formnewvaccin h1{
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
 }

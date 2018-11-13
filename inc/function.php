@@ -156,6 +156,7 @@ if (!empty($data)){
   return $error;
 }
 
+
 //Fonction pour vérifier une date
 function validationdate($error,$date,$key,$empty = true){
   $newdate  = explode('-', $date);

@@ -3,12 +3,12 @@
   include 'inc/function.php';
   include 'inc/request.php';
 
+  $id = $_SESSION['user']['id'];
   $error = array();
   $resultat = array();
-  if(!empty($_GET['id']) && is_numeric($_GET['id'])){
-    $id = $_GET['id'];
-    if($_SESSION['user']['id'] == $_GET['id']){
-      $resultat = recoveruserdata($_GET['id']);
+  if(!empty($id) && is_numeric($id)){
+    if($_SESSION['user']['id'] == $id){
+      $resultat = recoveruserdata($id);
       if (!empty($resultat)) {
         if (!empty($_POST['submitted']))
         {

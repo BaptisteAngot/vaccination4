@@ -7,7 +7,6 @@
     <meta name="robots" content="all|(no)follow|(no)index|none">
     <title>InfosVaccins.com</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/slicknav/slicknav.css" />
     <link rel="shortcut icon" href="./images/logoOnglet.png">
   </head>
 
@@ -17,16 +16,13 @@
     <div class="menufixed">
       <div class="navbar" id="myTopnav">
         <nav>
-          <ul id="menu"><?php if (!isLogged()) { ?>
+          <ul id="menu">
             <li><a href="index.php" class="active">Accueil</a></li>
-          <?php }else{ ?>
-            <li><a href="user_log.php?id=<?php echo $_SESSION['user']['id'] ?>" class="active">Acceuil</a></li>
-          <?php } ?>
             <li><a href="index.php#FAQ">FAQ</a></li>
-            <i class="fa fa-bars"></i> </a>
+            <li><a href="index.php#form_contact">Nous contacter</a></li>
             <?php if (isLogged()) { ?>
               <li><a href="user_log.php">Mon carnet</a></li>
-              <li><a href="user_profil.php?id=<?php echo $_SESSION['user']['id']; ?>">Mon Profil</a></li>
+              <li><a href="user_profil.php">Mon Profil</a></li>
               <li><a href="deconnexion.php">Déconnexion</a></li>
               <?php if (isAdmin()) { ?>
                 <li><a href="index_back.php">Admin</a></li>
@@ -35,7 +31,7 @@
               <li><a href="inscription.php">Inscription</a></li>
               <li><a href="connexion.php">Connexion</a></li>
             <?php } ?>
-              <i class="fa fa-bars"></i> </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           </ul>
         </nav>
       </div>
@@ -44,6 +40,7 @@
       <div class="clear"></div>
     </header>
     <div class="clear"></div>
+<<<<<<< HEAD
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -56,4 +53,6 @@
     $bg.css({'background': 'red'});
   });
 </script>
+=======
+>>>>>>> ca49418f54022325fd26953dc7d393c0e922a46d
     <body>

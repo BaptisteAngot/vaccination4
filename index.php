@@ -27,9 +27,10 @@
 
 
           <div id ="FAQ">
-            <div class="wrap">
+
               <h2>Questions fréquentes</h2>
               <div class="ligne"></div>
+                <div class="wrap">
             <ul>
               <div class="boiteQuestion"> <li>Qu'est-ce que InfoVaccins.com?</li> </div>
               <p>InfoVaccins.com est un carnet de santé connecté accessible sous toutes les patformes.</p>

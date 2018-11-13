@@ -1,3 +1,11 @@
+<?php
+isLogged();
+if(isAdmin()){
+
+}
+else{
+  header("Location: page403.php");
+} ?>
 <!DOCTYPE html>
 <html lang="fr">
 

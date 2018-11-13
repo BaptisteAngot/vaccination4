@@ -30,7 +30,7 @@
             <a href="javascript:void(0);" class="icon" onclick="menuBurger()">
             <i class="fa fa-bars"></i> </a>
             <?php if (isLogged()) { ?>
-              <li><a href="user_profil.php">Mon Profil</a></li>
+              <li><a href="user_profil.php?id=<?php echo $_SESSION['user']['id']; ?>">Mon Profil</a></li>
               <li><a href="deconnexion.php">Déconnexion</a></li>
               <?php if (isAdmin()) { ?>
                 <li><a href="index_back.php">Admin</a></li>

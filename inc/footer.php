@@ -1,4 +1,5 @@
 <footer id="footer">
+
   <section class='wrap'>
     <div class="section3">
       <img src="images/mini_TEST2.png" alt="">

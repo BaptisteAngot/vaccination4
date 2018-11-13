@@ -24,8 +24,8 @@
           <?php }else{ ?>
             <li><a href="user_log.php?id=<?php echo $_SESSION['user']['id'] ?>" class="active">Acceuil</a></li>
           <?php } ?>
-            <li><a href="#FAQ">FAQ</a></li>
-            <li><a href="#form_contact">Nous contacter</a></li>
+            <li><a href="index.php#FAQ">FAQ</a></li>
+            <li><a href="index.php#form_contact">Nous contacter</a></li>
             <a href="javascript:void(0);" class="icon" onclick="menuBurger()">
             <i class="fa fa-bars"></i> </a>
             <?php if (isLogged()) { ?>

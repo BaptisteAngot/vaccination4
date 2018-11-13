@@ -13,22 +13,22 @@
         if (!empty($_POST['submitted']))
         {
           $pseudo = trim(strip_tags($_POST['pseudo']));
-          $error = validationpseudo($error,$pseudo,3,100);
+          validationpseudo($error,$pseudo,3,100);
           $email = trim(strip_tags($_POST['email']));
-          $error = validationemail($error,$email);
+          validationemail($error,$email);
           $password1 = trim(strip_tags($_POST['password1']));
           $password2 = trim(strip_tags($_POST['password2']));
-          $error = validationpassword($error,$password1,$password2,3,50);
+          validationpassword($error,$password1,$password2,3,50);
           $nom = trim(strip_tags($_POST['nom']));
-          $error = validationTexte($error, $nom, 3, 50, 'nom');
+          validationTexte($error, $nom, 3, 50, 'nom');
           $prenom = trim(strip_tags($_POST['prenom']));
-          $error = validationTexte($error, $prenom, 3, 50, 'nom');
+          validationTexte($error, $prenom, 3, 50, 'nom');
           $age = trim(strip_tags($_POST['age']));
-          $error = validationChiffre($error,$age,'age');
+          validationChiffre($error,$age,'age');
           if (count($error) == 0) {
             updateUserDataProfil($id,$pseudo,$email, $nom, $prenom, $age);
             // redirection
-            //  header('Location: user_profil.php');
+            //header('Location: user_profil.php?id='.$id.'');
           }
         }
         // Modifier un post dans la BDD
@@ -42,6 +42,7 @@
 
   include 'inc/header.php';
  ?>
+ <h3>Modifer votre profil</h3>
  <form class="" method="post">
    <?php
       labelText('pseudo', 'Pseudo :', $resultat);
@@ -51,10 +52,10 @@
       afficherErreur($error, 'email');
       br();
       labelPassword('password1', 'Mot de passe :', $resultat);
-      afficherErreur($error, 'password1');
       br();
+      afficherErreur($error, 'password1');
       labelPassword('password2', 'Confirmer mot de passe :', $resultat);
-      afficherErreur($error, 'password2');
+      afficherErreur($error, 'password1');
       br();
       labelText('nom', 'Nom :', $resultat);
       afficherErreur($error, 'nom');
@@ -68,5 +69,6 @@
    ?>
    <input type="submit" name="submitted" value="Modifier">
  </form>
+
 <?php
   include 'inc/footer.php';

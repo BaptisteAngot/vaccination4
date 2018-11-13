@@ -7,6 +7,7 @@
     <meta name="robots" content="all|(no)follow|(no)index|none">
     <title>InfosVaccins.com</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/slicknav/slicknav.css" />
     <link rel="shortcut icon" href="./images/logoOnglet.png">
   </head>
 

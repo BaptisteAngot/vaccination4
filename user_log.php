@@ -53,6 +53,7 @@ else{
       <thead class="thead">
           <th>Nom du vaccin</th>
           <th>Date de vaccination: </th>
+          <th>Commentaire: </th>
           <th>Edit :</th>
       </thead>
       <tbody>
@@ -61,6 +62,7 @@ else{
           echo '<tr>';
             echo '<td>' .$vaccin['nom'] . '</td>';
             echo '<td>' .date("d-m-Y",strtotime($vaccin['date'])) . '</td>';
+            echo '<td>' . $vaccin['reaction'] . '</td>';
             echo '<td> <a href="editvaccinuser.php?iduser='.$_SESSION['user']['id'].'"> Modifier votre vaccin</a> </td>';
           echo '</tr>';
         }

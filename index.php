@@ -59,28 +59,6 @@
       <section id="equipe">
           <h2>Notre équipe</h2>
           <div class="ligne"></div>
-
-          <div class="section1">
-            <img src="images/Equipe/BaptisteAngot.jpg" alt="Un membre d'InfoVaccins.">
-            <h3>Baptiste Angot </h3>
-            <p>Développeur WEB à NFactory</p>
-          </div>
-          <div class="section1">
-            <img src="images/Equipe/TurpinPaul.jpg" alt="Un membre d'InfoVaccins.">
-            <h3>Paul Turpin</h3>
-            <p>Développeur WEB à NFactory</p>
-          </div>
-          <div class="section1">
-            <img src="images/logoAcceuil.png" alt="Un membre d'InfoVaccins.">
-            <h3>Jean-Baptiste de Saint-Léger</h3>
-            <p>Développeur WEB à NFactory</p>
-          </div>
-          <div class="section1">
-            <img src="images/Equipe/NicolasDufresne.jpg" alt="Un membre d'InfoVaccins.">
-            <h3>Nicolas Dufresne</h3>
-            <p>Développeur WEB à NFactory</p>
-          </div>
-
           <div class="wrap">
             <div class="section1">
               <img src="images/Equipe/BaptisteAngot.jpg" alt="Un membre d'InfoVaccins.">
@@ -94,7 +72,7 @@
             </div>
             <div class="section1">
               <img src="images/Equipe/Jean-BaptisteDeSaint-Léger.jpg" alt="Un membre d'InfoVaccins.">
-              <h3>Jean-Baptiste de Sain-Léger</h3>
+              <h3>Jean-Baptiste de Saint-Léger</h3>
               <p>Développeur WEB à NFactory</p>
             </div>
             <div class="section1">
@@ -109,12 +87,10 @@
 
       <section id="partenaires">
 
-
+      <h2>Nos partenaires</h2>
         <div class="wrap">
-      <div class="clear"></div>
+          <div class="clear"></div>
 
-      <section id="partenaires">
-          <h2>Nos partenaires</h2>
           <div class="wrap">
           <div class="ligne"></div>
           <div class="section2">
@@ -189,16 +165,14 @@
       }
 
    ?>
-   <div class="clear"></div>
-          <div class="section4">
-            <section id="form_contact">
-              <div class="wrap2">
-                <h2>Contact</h2>
-                <div class="clear"></div>
+
 
    <div class="section4">
      <h2>Contact</h2>
-            <section id="form_contact">
+   <div class="wrap">
+   <section id="form_contact">
+
+
                 <div class="ligne"></div>
                 <p class="textintro">Si vous souhaitez nous contacter pour des informations complémentaires, remplissez le formulaire suivant :</p>
 
@@ -220,7 +194,8 @@
 
                   <input type="submit" name="submit" value="Envoyer">
                 </form>
-            </section>
-          </div>
+    </section>
+    </div>
         <div class="clear"></div>
+   </div>
   <?php include 'inc/footer.php'; ?>

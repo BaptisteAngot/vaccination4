@@ -547,10 +547,9 @@ footer p {
   font-size: 1.05em;
 }
 
-<<<<<<< HEAD
 input::placeholder {
   color : white;
-=======
+}
 .newvaccin{
   background-color: #f4e7d3;
   border: 2px solid rgb(4, 113, 152);
@@ -621,5 +620,4 @@ input::placeholder {
   padding-bottom: 20px;
   font-weight: bold;
   font-size: 1.2em;
->>>>>>> be5489e958b6ea9d1a72a7e975340708ef44f41f
 }

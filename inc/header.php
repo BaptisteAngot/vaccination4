@@ -40,7 +40,6 @@
       <div class="clear"></div>
     </header>
     <div class="clear"></div>
-<<<<<<< HEAD
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -53,6 +52,4 @@
     $bg.css({'background': 'red'});
   });
 </script>
-=======
->>>>>>> ca49418f54022325fd26953dc7d393c0e922a46d
     <body>

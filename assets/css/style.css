@@ -451,6 +451,7 @@ input[type="date"] {
     padding:5px;
     display: inline-block !important;
     visibility: visible !important;
+    width: 50%;
 }
 
 input[type="date"], focus {
@@ -527,4 +528,48 @@ footer p {
 .derniere_phrase {
   padding-top: 70px;
   font-size: 1.05em;
+}
+
+.newvaccin{
+  background-color: #FFF;
+  border: 2px solid black;
+  float:right;
+  width: 48%;
+  margin: 0 20px 0 20px;
+  padding: 0 5px 0 5px;
+  display: inline;
+}
+
+.myvaccin{
+  background-color: #FFF;
+  border: 2px solid black;
+  float: left;
+  width: 46%;
+  margin: 0 20px 0 20px;
+}
+
+.myvaccin table{
+  width: 100%;
+}
+
+.myvaccin thead{
+  background-color: #e4e4e4;
+}
+
+.myvaccin td{
+  padding: 15px;
+}
+
+.myvaccin tbody td{
+  border-bottom: 1px solid #eaeaea;
+}
+
+.myvaccin thead,tbody tr{
+  display:table;
+  width:100%;
+  table-layout:fixed;
+}
+
+.userlog{
+  float: left;
 }

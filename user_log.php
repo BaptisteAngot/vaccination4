@@ -4,9 +4,15 @@ include 'inc/function.php';
 include 'inc/request.php';
 include 'inc/header.php';
 $vaccinsexistants= recuperationlistevaccin();
+
 $error=array();
 //Vérification USER exist
-$id=$_SESSION['user']['id'];
+$iduser=$_SESSION['user']['id'];
+
+$listevaccinfromiduser=recupvaccinsfromid($iduser);
+
+
+
 if(!empty($_GET['id']) && is_numeric($_GET['id'])){
   if($_SESSION['user']['id'] == $_GET['id']){
 
@@ -36,9 +42,11 @@ else{
     $reaction=trim(strip_tags($_POST['reaction']));
     $error=validationText($error,$reaction,2,100,'reaction');
 
+    $idtitle=returnidfromvname($title,$vaccinsexistants);
+
     if(count($error)==0){
-      envoyervaccinuser($_SESSION['id'],$title,$date,$reaction);
-      header('Location: user_log.php');
+      insertvaccinfromid($idtitle,$iduser,$date,$reaction);
+      header('Location: user_log.php?id='.$_SESSION['user']['id'].'');
     }
   }
 
@@ -47,14 +55,31 @@ else{
 <div class="userlog">
 
   <div class="myvaccin">
-
+    <h1>Liste de vos différents vaccins</h1>
+    <table>
+      <thead class="thead">
+          <th>Nom du vaccin</th>
+          <th>Date de vaccination: </th>
+          <th>Edit :</th>
+      </thead>
+      <tbody>
+        <?php
+        foreach ($listevaccinfromiduser as $vaccin) {
+          echo '<tr>';
+            echo '<td>' .$vaccin['nom'] . '</td>';
+            echo '<td>' .date("d-m-Y",strtotime($vaccin['date'])) . '</td>';
+          echo '</tr>';
+        }
+         ?>
+      </tbody>
+    </table>
   </div>
-  <div class="newvaccin">
+  <div class="newvaccin wrap">
     <form class="" method="post">
       <h1>Ajout d'un nouveau vaccin</h1>
-        <label for="vaccin">Votre vaccin a ajouté: </label>
+        <label for="vaccin ">Votre vaccin a ajouté: </label>
         <!-- Champs select -->
-        <div class="select">
+        <div class="select section3">
           <select class="" name="vaccin">
             <?php foreach ($vaccinsexistants as $vaccinexistant) {
               echo '<option>' . $vaccinexistant['nom'] . '</option>';

@@ -4,7 +4,7 @@
   include 'inc/request.php';
 
   if (isLogged()) {
-    header('Location: user_log.php');
+    // header('Location: user_log.php');
   }
   include 'inc/header.php';
 
@@ -15,6 +15,7 @@
       Si vous souhaitez consulter vos informations concernant vos vaccins, </br>
       inscrivez-vous dès maintenant !</p>
     <div class="wrap">
+      <?php if(!isLogged()){ ?>
       <!-- Bouton connexion -->
       <div class="connexion">
         <a href="connexion.php">Se connecter</a>
@@ -24,6 +25,11 @@
         <a href="inscription.php">S'inscrire</a>
       </div>
       <div class="clear"></div>
+    <?php }else {?>
+      <div class="connexion">
+        <a href="deconnexion.php">Deconnexion</a>
+      </div>
+    <?php } ?>
     </div>
   </div>
 

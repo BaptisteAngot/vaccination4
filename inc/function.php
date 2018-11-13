@@ -349,3 +349,12 @@ function cheminURL()
   $adresse = "http://".$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
   return $adresse;
 }
+
+//test
+function returnidfromvname($title,$vaccinsexistants){
+  foreach ($vaccinsexistants as $vaccin) {
+    if($title == $vaccin['nom']){
+      return $vaccin['id'];
+    }
+  }
+}

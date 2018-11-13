@@ -11,18 +11,11 @@ $iduser=$_SESSION['user']['id'];
 
 $listevaccinfromiduser=recupvaccinsfromid($iduser);
 
+if(!empty($_SESSION['user']['id'])){
 
-
-if(!empty($_GET['id']) && is_numeric($_GET['id'])){
-  if($_SESSION['user']['id'] == $_GET['id']){
-
-  }
-  else{
-    header('Location: page403.php');
-  }
 }
 else{
-  header('Location: page404.php');
+  header('Location page403.php');
 }
 
 
@@ -68,6 +61,7 @@ else{
           echo '<tr>';
             echo '<td>' .$vaccin['nom'] . '</td>';
             echo '<td>' .date("d-m-Y",strtotime($vaccin['date'])) . '</td>';
+            echo '<td> <a href="editvaccinuser.php?iduser='.$_SESSION['user']['id'].'"> Modifier votre vaccin</a> </td>';
           echo '</tr>';
         }
          ?>
@@ -75,7 +69,7 @@ else{
     </table>
   </div>
   <div class="newvaccin">
-    <form class="" method="post">
+    <form class="formnewvaccin" method="post">
       <h1>Ajout d'un nouveau vaccin</h1>
         <label class="label" for="vaccin">Votre vaccin a ajouté: </label>
         <!-- Champs select -->

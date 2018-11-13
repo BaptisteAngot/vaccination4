@@ -542,7 +542,9 @@ footer p {
   display: inline;
   overflow: hidden;
   border-radius: 10px;
+  text-align: center;
 }
+
 
 .myvaccin{
   background-color: #FFF;
@@ -562,7 +564,7 @@ footer p {
 }
 
 .myvaccin td{
-  padding: 15px;
+  padding: 5px;
 }
 
 .myvaccin tbody td{
@@ -575,6 +577,13 @@ footer p {
   table-layout:fixed;
 }
 
+.myvaccin h1{
+  text-align: center;
+  margin: 5px 0 5px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .userlog{
   float: left;
 }
@@ -583,4 +592,14 @@ footer p {
   float: left;
   clear: both;
   text-align: center;
+}
+
+.formnewvaccin{
+  padding: 5px 0 5px 0
+}
+
+.formnewvaccin h1{
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
 }

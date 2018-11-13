@@ -52,6 +52,10 @@ body
   border-radius: 3px;
 }
 
+.sub_form {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
 
 .intro{
   text-align: center;

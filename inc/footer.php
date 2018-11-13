@@ -2,7 +2,7 @@
 
   <section class='wrap'>
     <div class="section3">
-      <img src="images/mini_TEST2.png" alt="">
+      <img src="images/iconeVaccinlogo.png" alt="">
       <h3>Nos réseaux:</h3>
       <a href="#" class='bouton1'> <img src="../images/logo_fb.png" alt=""> </a>
       <a href="https://www.facebook.com/InfoVaccins-763363707343739/" class='bouton2'></a>

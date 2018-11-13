@@ -5,7 +5,7 @@ body
   line-height: 1.5;
 	font-family: 'Arvo', serif;
 	font-size: 17px;
-  background-image: url("../images/medicalFond.jpg");
+  /*background-image: url("../../images/medicalFond.jpg");*/
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #56739A;
@@ -175,6 +175,20 @@ body
     right: 0;
     top: 0;
   } */
+
+.sub_form a {
+  float: right;
+}
+
+.logo_co_sub a {
+
+}
+
+.form_inscription {
+  background-image: url("../../images/medicalFond.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
   .navbar.responsive a {
     float: none;
@@ -516,6 +530,7 @@ footer {
   background-color: #56739A;
   color: white;
   text-align: center;
+  max-height: 200px;
 }
 
 footer p {

@@ -43,9 +43,11 @@
               <i class="fa fa-bars"></i> </a>
           </ul>
         </nav>
+
       </div>
         </div>
-      <a href="#"><img src="images/IconeVaccinlogo.png" alt="Logo InfosVaccin.com"></a>
+
+
       <div class="clear"></div>
     </header>
     <div class="clear"></div>

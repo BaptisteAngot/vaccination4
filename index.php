@@ -100,7 +100,7 @@
           <div class="section2">
             <a href="#"><img src="images/e-vaccine.png" alt="Un partenaire d'InfoVaccins."></a>
           </div>
-        
+
         </div>
       </section>
 
@@ -175,8 +175,8 @@
    ?>
 
    <div class="section4">
+     <h2>Contact</h2>
             <section id="form_contact">
-              <h2>Contact</h2>
                 <div class="ligne"></div>
                 <p class="textintro">Si vous souhaitez nous contacter pour des informations complémentaires, remplissez le formulaire suivant :</p>
 

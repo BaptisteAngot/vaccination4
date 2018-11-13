@@ -339,7 +339,8 @@ h3 {
 #partenaires .section2 {
   float: left;
   width: 25%;
-  padding-top: 50px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 #contact {
@@ -413,7 +414,7 @@ h3 {
 
 #form_contact {padding: 0px 10px 20px 10px; background-color: #ECF0F3; background-image: url('../../images/medical2.jpg'); background-size: 100%;}
 #form_contact p.textintro {text-align: center; margin: 10px 0 0px 0;}
-#form_contact h2
+.section4 h2
 {
   background-color: #4caf50;
   text-align: center;
@@ -421,6 +422,8 @@ h3 {
   font-size: 1.5em;
   font-weight: bold;
   width: 100%;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
 }
 
 label{ display: block;padding-left: 0px;margin-bottom: 5px;font-size: 1.2em;font-weight: bold;margin-top: 20px;}

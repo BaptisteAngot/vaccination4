@@ -31,7 +31,7 @@ else{
   <p>Pseudo : <?php echo $resultat['pseudo']?></p>
   <p>Email : <?php echo $resultat['email']?></p>
   <p>Pseudo : <?php echo $resultat['pseudo']?></p>
-  <button  type="button" name="button"><a href="edit_profil.php?id="<?php echo $resultat['pseudo']; ?>"">Modifer</a></button>
+  <button  type="button" name="button"><a href="edit_profil.php?id=<?php echo $_GET['id']; ?>"<?php echo $resultat['pseudo']; ?>"">Modifer</a></button>
 </div>
 <?php
   include 'inc/footer.php';

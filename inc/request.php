@@ -213,6 +213,20 @@ function updateuserdata($id,$login,$status,$role,$mail){
   $query->execute();
 }
 
+function updateUserDataProfil($id, $pseudo, $email, $nom, $prenom, $age){
+  global $pdo;
+
+  $sql="UPDATE v4_user SET pseudo=:login,nom=:nom,prenom=:prenom,email=:mail,age=:age,modified_at=NOW() WHERE id=:id";
+  $query=$pdo->prepare($sql);
+  $query -> bindValue(':login',$pseudo,PDO::PARAM_STR);
+  $query -> bindValue(':nom',$nom,PDO::PARAM_STR);
+  $query -> bindValue(':prenom',$prenom,PDO::PARAM_STR);
+  $query -> bindValue(':mail',$email,PDO::PARAM_STR);
+  $query ->bindValue(':id',$id, PDO::PARAM_INT);
+  $query ->bindValue(':age',$age, PDO::PARAM_INT);
+  $query->execute();
+}
+
 
 //Fonction qui retourne la liste de tout les users
 function returnusers(){

@@ -21,21 +21,13 @@
         <nav>
           <ul>
             <li><a href="index.php" class="active">Acceuil</a></li>
-<<<<<<< HEAD
-          <?php }else{ ?>
-            <li><a href="user_log.php?id=<?php echo $_SESSION['user']['id'] ?>" class="active">Acceuil</a></li>
-          <?php } ?>
             <li><a href="index.php#FAQ">FAQ</a></li>
             <li><a href="index.php#form_contact">Nous contacter</a></li>
-=======
-            <li><a href="#FAQ">FAQ</a></li>
-            <li><a href="#form_contact">Nous contacter</a></li>
->>>>>>> fcb98224a1ffc010db18d4c65dcde343d591452b
             <a href="javascript:void(0);" class="icon" onclick="menuBurger()">
             <i class="fa fa-bars"></i> </a>
             <?php if (isLogged()) { ?>
               <li><a href="user_log.php">Mon carnet</a></li>
-              <li><a href="user_profil.php?id=<?php echo $_SESSION['user']['id']; ?>">Mon Profil</a></li>
+              <li><a href="user_profil.php">Mon Profil</a></li>
               <li><a href="deconnexion.php">Déconnexion</a></li>
               <?php if (isAdmin()) { ?>
                 <li><a href="index_back.php">Admin</a></li>

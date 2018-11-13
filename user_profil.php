@@ -3,10 +3,11 @@
   include 'inc/function.php';
   include 'inc/request.php';
 
+  $id = $_SESSION['user']['id'];
   $resultat = array();
-  if(!empty($_GET['id']) && is_numeric($_GET['id'])){
-    if($_SESSION['user']['id'] == $_GET['id']){
-      $resultat = recoveruserdata($_GET['id']);
+  if(!empty($id) && is_numeric($id)){
+    if($_SESSION['user']['id'] == $id){
+      $resultat = recoveruserdata($id);
     }
     else{
       header('Location: page403.php');
@@ -33,7 +34,7 @@ else{
   <p>Nom : <?php echo $resultat['nom']?></p>
   <p>Prénom : <?php echo $resultat['prenom']?></p>
   <p>Age : <?php echo $resultat['age']?></p>
-  <button  type="button" name="button"><a href="edit_profil.php?id=<?php echo $_GET['id']; ?>">Modifer</a></button>
+  <button  type="button" name="button"><a href="edit_profil.php">Modifer</a></button>
 </div>
 <?php
   include 'inc/footer.php';

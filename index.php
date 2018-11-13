@@ -15,12 +15,13 @@
       Si vous souhaitez consulter les informations concernant vos vaccins, </br>
       inscrivez-vous dès maintenant !</p>
     <div class="wrap">
+
       <?php if(!isLogged()){ ?>
       <!-- Bouton connexion -->
+
       <div class="connexion">
         <a href="connexion.php">Se connecter</a>
       </div>
-      <!-- Bouton inscription -->
       <div class="inscription">
         <a href="inscription.php">S'inscrire</a>
       </div>
@@ -58,6 +59,28 @@
       <section id="equipe">
           <h2>Notre équipe</h2>
           <div class="ligne"></div>
+
+          <div class="section1">
+            <img src="images/Equipe/BaptisteAngot.jpg" alt="Un membre d'InfoVaccins.">
+            <h3>Baptiste Angot </h3>
+            <p>Développeur WEB à NFactory</p>
+          </div>
+          <div class="section1">
+            <img src="images/Equipe/TurpinPaul.jpg" alt="Un membre d'InfoVaccins.">
+            <h3>Paul Turpin</h3>
+            <p>Développeur WEB à NFactory</p>
+          </div>
+          <div class="section1">
+            <img src="images/logoAcceuil.png" alt="Un membre d'InfoVaccins.">
+            <h3>Jean-Baptiste de Saint-Léger</h3>
+            <p>Développeur WEB à NFactory</p>
+          </div>
+          <div class="section1">
+            <img src="images/Equipe/NicolasDufresne.jpg" alt="Un membre d'InfoVaccins.">
+            <h3>Nicolas Dufresne</h3>
+            <p>Développeur WEB à NFactory</p>
+          </div>
+
           <div class="wrap">
             <div class="section1">
               <img src="images/Equipe/BaptisteAngot.jpg" alt="Un membre d'InfoVaccins.">
@@ -82,6 +105,12 @@
         </div>
       </section>
 
+
+
+      <section id="partenaires">
+
+
+        <div class="wrap">
       <div class="clear"></div>
 
       <section id="partenaires">
@@ -111,15 +140,11 @@
 
   $error = array();
 
-      // si le formulaire est soumis
       if ( !empty($_POST['submitnewpost']) ) {
-          // Protection XSS
           $name = trim(strip_tags($_POST['name']));
           $email = trim(strip_tags($_POST['email']));
-          // ?????? Voir ici si pas mieux htmlspecialchar ??? pour garder les balise html ++++
           $message = trim(strip_tags($_POST['message']));
 
-          //verification auteur
           if (!empty($name)){
               if(strlen($name) < 3 ) {
           $error['name'] = 'Votre nom est trop court. (minimum 3 caractères)';
@@ -131,48 +156,45 @@
             $error['name'] = 'Veuillez entrer votre nom';
           }
 
-          //verification title
           if (!empty($email)){
               if(strlen($email) < 3 ) {
-          $error['email'] = 'Votre titre est trop court. (minimum 3 caractères)';
+          $error['email'] = 'Votre email est trop court. (minimum 3 caractères)';
         } elseif(strlen($email) > 220) {
-          $error['email'] = 'Votre titre est trop long.';
+          $error['email'] = 'Votre email est trop long.';
         }
 
           } else {
             $error['email'] = 'Veuillez renseigner un titre';
           }
 
-          //verification content
           if (!empty($message)){
               if(strlen($message) < 3 ) {
-          $error['message'] = 'Votre contenu est trop court. (minimum 3 caractères)';
+          $error['message'] = 'Votre message est trop court. (minimum 3 caractères)';
         }
 
           } else {
-            $error['message'] = 'Veuillez renseigner un contenu';
+            $error['message'] = 'Veuillez renseigner un message';
           }
 
-          // Si aucune error
           if (count($error) == 0){
-              $sql = "INSERT INTO /*articles (title,content,auteur,created_at,updated_at,status) VALUES (:title, :content, :auteur ,NOW(),NULL, 1);*/";
-              // preparation de la requête
+              $sql = "INSERT INTO ";
               $query = $pdo->prepare($sql);
 
-              // Protection injections SQL
               $query->bindValue(':name',$name, PDO::PARAM_STR);
               $query->bindValue(':email',$email, PDO::PARAM_STR);
               $query->bindValue(':message',$message, PDO::PARAM_STR);
 
-              // execution de la requête preparé
               $query->execute();
-              // redirection vers page dashboard
-
           }
-
       }
 
    ?>
+   <div class="clear"></div>
+          <div class="section4">
+            <section id="form_contact">
+              <div class="wrap2">
+                <h2>Contact</h2>
+                <div class="clear"></div>
 
    <div class="section4">
      <h2>Contact</h2>

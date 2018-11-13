@@ -30,13 +30,13 @@
 
 	<div id="notfound">
 		<div class="notfound">
-			<img src="images/logoAcceuil.png" alt="Logo d'InfoVaccin">
+			<img src="images/iconeVaccinlogo.png" alt="Logo d'InfoVaccin">
 			<div class="notfound-404">
 				<h3>Oups! Page introuvable</h3>
 				<h1><span>4</span><span>0</span><span>4</span></h1>
 			</div>
 			<h2>Nous sommes désolés, mais la page que vous recherchez est introuvable.<br/>
-			Cliquez <a href="index.php">ici</a> pour revenir à l'accueil.</h2>
+			Cliquez <a href="connexion.php">ici</a> pour revenir à l'accueil.</h2>
 		</div>
 	</div>
 

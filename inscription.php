@@ -36,8 +36,14 @@ if (!empty($_POST['submitted']))
 
 include 'inc/header.php';
  ?>
+ <section class="form_inscription">
 
-<form action="" method="post">
+  <div class="logo_co_sub">
+    <a href="#"><img src="images/IconeVaccinlogo.png" alt="Logo InfosVaccin.com"></a>
+  </div>
+
+
+<form class="sub_form" action="" method="post">
   <label for="pseudo">Pseudo :</label>
   <input type="text" name="pseudo" value="">
   <?php
@@ -61,6 +67,7 @@ include 'inc/header.php';
   <input type="submit" name="submitted" value="Envoyer">
 </form>
 
+ </section>
 
 <?php
 include 'inc/footer.php';

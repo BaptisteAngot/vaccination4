@@ -15,31 +15,14 @@
   <header id="header">
     <!-- <h1>InfoVaccins.com</h1> -->
     <div class="menufixed">
-
-
       <div class="navbar" id="myTopnav">
         <nav>
-<<<<<<< HEAD
           <ul id="menu"><?php if (!isLogged()) { ?>
             <li><a href="index.php" class="active">Accueil</a></li>
-=======
-          <ul>
-            <li><a href="index.php" class="active">Acceuil</a></li>
-<<<<<<< HEAD
->>>>>>> be5489e958b6ea9d1a72a7e975340708ef44f41f
           <?php }else{ ?>
             <li><a href="user_log.php?id=<?php echo $_SESSION['user']['id'] ?>" class="active">Acceuil</a></li>
           <?php } ?>
             <li><a href="index.php#FAQ">FAQ</a></li>
-            <li><a href="index.php#form_contact">Nous contacter</a></li>
-=======
-            <li><a href="#FAQ">FAQ</a></li>
-            <li><a href="#form_contact">Nous contacter</a></li>
-<<<<<<< HEAD
-=======
->>>>>>> fcb98224a1ffc010db18d4c65dcde343d591452b
-            <a href="javascript:void(0);" class="icon" onclick="menuBurger()">
->>>>>>> be5489e958b6ea9d1a72a7e975340708ef44f41f
             <i class="fa fa-bars"></i> </a>
             <?php if (isLogged()) { ?>
               <li><a href="user_log.php">Mon carnet</a></li>
@@ -56,7 +39,7 @@
           </ul>
         </nav>
       </div>
-        </div>
+    </div>
       <a href="#"><img src="images/IconeVaccinlogo.png" alt="Logo InfosVaccin.com"></a>
       <div class="clear"></div>
     </header>
@@ -68,7 +51,6 @@
     <script src="./assets/slicknav/jquery.slicknav.min.js"></script>
     <script>
     var $bg;
-
   $(function(){
     $('#menu').slicknav();
     $bg.css({'background': 'red'});

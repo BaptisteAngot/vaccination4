@@ -213,6 +213,20 @@ function updateuserdata($id,$login,$status,$role,$mail){
   $query->execute();
 }
 
+function updateUserDataProfil($id, $pseudo, $email, $nom, $prenom, $age){
+  global $pdo;
+
+  $sql="UPDATE v4_user SET pseudo=:login,nom=:nom,prenom=:prenom,email=:mail,age=:age,modified_at=NOW() WHERE id=:id";
+  $query=$pdo->prepare($sql);
+  $query -> bindValue(':login',$pseudo,PDO::PARAM_STR);
+  $query -> bindValue(':nom',$nom,PDO::PARAM_STR);
+  $query -> bindValue(':prenom',$prenom,PDO::PARAM_STR);
+  $query -> bindValue(':mail',$email,PDO::PARAM_STR);
+  $query ->bindValue(':id',$id, PDO::PARAM_INT);
+  $query ->bindValue(':age',$age, PDO::PARAM_INT);
+  $query->execute();
+}
+
 
 //Fonction qui retourne la liste de tout les users
 function returnusers(){
@@ -285,23 +299,33 @@ function verifpassword($password){
 function recuperationlistevaccin(){
   global $pdo;
 
-  $sql="SELECT nom FROM v4_vaccin";
+  $sql="SELECT id,nom FROM v4_vaccin";
   $query=$pdo->prepare($sql);
   $query->execute();
   $resultat = $query->fetchAll();
   return $resultat;
 }
 
-
-
-// Insere un vaccin d'un user dans la table mesvaccins
-/*
-envoyervaccinuser($id,$title,$date,$reaction){
+//Insérer un vaccin à l'id d'un utilisateur
+function insertvaccinfromid($idtitle,$iduser,$date,$reaction){
   global $pdo;
-}
-*/
 
-// // Insere un vaccin d'un user dans la table mesvaccins
-// envoyervaccinuser($id,$title,$date,$reaction){
-//   global $pdo;
-// }
+  $sql = "INSERT INTO v4_mesvaccins(id_vaccin,id_user,date,reaction,created_at) VALUES (:idtitle,:iduser,:date,:reaction,NOW())";
+  $query = $pdo->prepare($sql);
+  $query ->bindValue(':idtitle',$idtitle, PDO::PARAM_INT);
+  $query ->bindValue(':iduser',$iduser, PDO::PARAM_INT);
+  $query ->bindValue(':date',$date, PDO::PARAM_STR);
+  $query ->bindValue(':reaction',$reaction, PDO::PARAM_STR);
+  $query->execute();
+}
+
+//Récupère un vaccin d'un id
+function recupvaccinsfromid($id){
+  global $pdo;
+
+  $sql="SELECT * FROM v4_vaccin AS v LEFT JOIN v4_mesvaccins AS mv ON v.id = mv.id_vaccin WHERE mv.id_user = $id";
+  $query = $pdo->prepare($sql);
+  $query->execute();
+  $listevaccinid=$query->fetchAll();
+  return $listevaccinid;
+}

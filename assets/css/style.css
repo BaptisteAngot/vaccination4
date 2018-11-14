@@ -653,44 +653,6 @@ select::-ms-expand {
 }
 
 
-#footer {
-  background-color: #56739A;
-  width: 100%;
-  height: 150px;
-}
-
-#footer .bouton1 {
-  width : 48px;
-  height : 48px;
-  display : inline-block; /*Très important, sinon les dimensions ne sont pas prises en compte*/
-  background : url("../../images/logo_twitter_grey.png") no-repeat;
-}
-
-#footer .bouton1:hover {
-  background-image: url('../../images/logo_twitter.png');
-}
-
-#footer .bouton2 {
-  width : 48px;
-  height : 48px;
-  display : inline-block;
-  background : url("../../images/logo_fb_grey.png") no-repeat;
-}
-
-#footer .bouton2:hover {
-  background-image: url('../../images/logo_fb.png');
-}
-
-footer {
-  width: 100%;
-  background-color: #56739A;
-  color: white;
-  text-align: center;
-}
-
-footer p {
-  text-align: center;
-}
 
 
 .social-icons
@@ -763,9 +725,62 @@ footer p {
 
 }
 
-#footer .column
+#footer {
+  background-color: #56739A;
+  width: 100%;
+}
+
+#footer .bouton1 {
+  width : 48px;
+  height : 48px;
+  display : inline-block; /*Très important, sinon les dimensions ne sont pas prises en compte*/
+  background : url("../../images/logo_twitter_grey.png") no-repeat;
+}
+
+#footer .bouton1:hover {
+  background-image: url('../../images/logo_twitter.png');
+}
+
+#footer .bouton2 {
+  width : 48px;
+  height : 48px;
+  display : inline-block;
+  background : url("../../images/logo_fb_grey.png") no-repeat;
+}
+
+#footer .bouton2:hover {
+  background-image: url('../../images/logo_fb.png');
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: #56739A;
+  color: white;
+  /* text-align: center; */
+}
+
+footer p {
+  text-align: center;
+}
+
+#footer .column1
 {
   margin: 3% 0 0 0;
 	float: left;
-	width: 33.33333%;
+	width: 24%;
+}
+
+#footer .column2
+{
+  margin: 15px 0 0 0;
+	float: left;
+	width: 33.333333333333333333333%;
+}
+
+#footer .column3
+{
+  margin: 15px 0 0 0;
+	float: left;
+	width: 100%;
 }

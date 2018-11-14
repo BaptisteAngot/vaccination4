@@ -39,7 +39,7 @@ else{
 
     if(count($error)==0){
       insertvaccinfromid($idtitle,$iduser,$date,$reaction);
-      header('Location: user_log.php?id='.$_SESSION['user']['id'].'');
+      header('Location: user_log.php');
     }
   }
 
@@ -63,7 +63,7 @@ else{
             echo '<td>' .$vaccin['nom'] . '</td>';
             echo '<td>' .date("d-m-Y",strtotime($vaccin['date'])) . '</td>';
             echo '<td>' . $vaccin['reaction'] . '</td>';
-            echo '<td> <a href="editvaccinuser.php?iduser='.$_SESSION['user']['id'].'"> Modifier votre vaccin</a> </td>';
+            echo '<td> <a href="editvaccinuser.php?id='.$vaccin['id'].'"> Modifier votre vaccin</a> </td>';
           echo '</tr>';
         }
          ?>

@@ -574,7 +574,7 @@ input[type="date"] {
     padding:5px;
     display: inline-block !important;
     visibility: visible !important;
-    width: 15%;
+    width: 30%;
     border-radius: 5px;
     float: left;
 }
@@ -722,6 +722,35 @@ footer p {
 }
 
 .formnewvaccin h1{
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.modifvaccin{
+  float: left;
+  background-color: #e4e4e4;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  border: 2px solid rgb(4, 113, 152);
+}
+
+.modifvaccin input[type="date"]{
+  margin-left:  20px;
+}
+
+.modifvaccin input{
+  margin: 10px 0 10px 0;
+}
+
+.modifvaccin input[type="submit"]{
+  width: 50%;
+  margin-left: 25%;
+}
+
+.modifvaccin h1{
   padding-bottom: 20px;
   font-weight: bold;
   font-size: 1.2em;

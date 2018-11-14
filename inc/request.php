@@ -330,3 +330,37 @@ function recupvaccinsfromid($id){
   $listevaccinid=$query->fetchAll();
   return $listevaccinid;
 }
+
+//Récuperation info d'un vaccin en fonction d'un id
+function selectinfofromidvaccin($id){
+  global $pdo;
+
+  $sql="SELECT * FROM v4_mesvaccins WHERE id=$id";
+  $query = $pdo->prepare($sql);
+  $query->execute();
+  $infovaccin = $query->fetch();
+  return $infovaccin;
+}
+
+//Fonction qui récupère le nom d'un vaccin en fonction d'un id
+function selectnamefromidmesvaccin($id){
+  global $pdo;
+
+  $sql="SELECT nom FROM v4_vaccin LEFT JOIN v4_mesvaccins AS mv ON v4_vaccin.id=mv.id_vaccin WHERE mv.id=$id";
+  $query = $pdo->prepare($sql);
+  $query->execute();
+  $namevacin = $query->fetch();
+  return $namevacin;
+}
+
+//Function update un vaccin d'un user
+function updateinfovacinn($id,$date,$reaction){
+  global $pdo;
+
+  $sql="UPDATE v4v4_mesvaccins SET date=:date,reaction=:reaction WHERE id=:id";
+  $query = $pdo->prepare($sql);
+  $query ->bindValue(':date',$date, PDO::PARAM_STR);
+  $query ->bindValue(':reaction',$reaction, PDO::PARAM_STR);
+  $query ->bindValue(':id',$id, PDO::PARAM_STR);
+  $query->execute();
+}

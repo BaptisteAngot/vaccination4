@@ -1,6 +1,5 @@
 <footer id="footer">
 
-  <div class='wrap'>
     <div class="column">
       <p>Nos réseaux sociaux</p>
       <ul class="social-icons">
@@ -18,7 +17,7 @@
   <div class="column">
     <p>© Copyright InfoVaccins 2018 ®. All rights reserved.</p>
   </div>
-</div>
+
 
 </footer>
 </body>

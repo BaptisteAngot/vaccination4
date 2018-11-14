@@ -5,14 +5,14 @@ body
   line-height: 1.5;
 	font-family: 'Arvo', serif;
 	font-size: 17px;
-  /*background-image: url("../../images/medicalFond.jpg");*/
   background-size: 100%;
   background-repeat: no-repeat;
-
+  background-color: #56739A;
+  background-image: url("../../images/medicalFond.jpg");
 }
 
 .wrap {
-  max-width: 1040px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto;
 }
@@ -132,22 +132,22 @@ body
 }
 
 #header .menufixed {position: fixed;background-color: #56739A;width: 100%; border-bottom: solid black 1px;}
+
 .slicknav_menu {
 	display:none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 40em) {
 	/* #menu is the original menu */
 	#menu {
-  display: none;
+		display:none;
 	}
 
 	.slicknav_menu {
 		display:block;
-    position: fixed;
-    width: 100%;
 	}
 }
+
 #menu{
   background-color: #56739A;
 }
@@ -185,7 +185,6 @@ body
     display: block;
   }
 }
-
 @media screen and (max-width: 600px) {
   .navbar.responsive {position: relative;}
   .navbar.responsive a.icon {
@@ -219,7 +218,6 @@ body
   text-align: center;
   margin-top: 20%;
   color: #FFF;
-  background-image: url("../../images/medicalFond.jpg");
 }
 
 @media screen and (min-width: 601px) {
@@ -283,14 +281,13 @@ body
   background-color: #ecf0f3;
   text-align: center;
   font-size: 1.4em;
-  padding-bottom: 5%;
 }
 
 #FAQ h2 {
   background-color: #4caf50;
   text-align: center;
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
@@ -302,9 +299,8 @@ body
   background-color: #8EA2C6;
   text-align: center;
   border-radius: 100px;
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 5%;
+  width: 75%;
+  margin-left: 12.5%;
 }
 
 h3 {
@@ -317,22 +313,23 @@ h3 {
 }
 
 #equipe{
+  background-color: lime;
   width: 100%;
   height: 400px;
+  background-image: url("../../images/medical.jpg");
 }
 
 #equipe .section1 {
   float: left;
   width: 25%;
   padding-top: 50px;
-  color: #FFF;
+  color: #000;
   transition: all 0.5s;
   text-align: center;
-  background-image: url("../../images/medical.jpg");
   overflow: auto;
 }
 
-#equipe h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: white;}
+#equipe h2 { background-color: #3FB3A6; text-align: center; color: white;}
 
 #FAQ h2 { border-radius: 100px; background-color: #3FB3A6; text-align: center; color: #FFF;}
 
@@ -346,10 +343,10 @@ h3 {
 }
 
 #equipe h2 {
-  background-color: #4caf50;
+  background-color: #3FB3A6;
   text-align: center;
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 1.9em;
   font-weight: bold;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
@@ -357,33 +354,58 @@ h3 {
 
 
 #partenaires {
-  background-color: #56739A;
+  background-color: #ECF0F3;
   /* padding-top: 20px; */
   padding-bottom: 50px;
+  height: 500px;
   text-align: center;
   color: white;
 }
 
 #partenaires h2 {
-  background-color: #4caf50;
+  background-color: #3FB3A6;
   text-align: center;
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 1.9em;
   font-weight: bold;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
+  width: 100%;
 }
 
 #partenaires .section2 {
   float: left;
   width: 25%;
-  padding-top: 50px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+#box {
+    float: left;
+    margin-top: 50px;
+    width: 350px;
+    height: 350px;
+    border: 2px black solid;
+    overflow: hidden;
+    background-color: #F2F2F2;
+}
+#box img:hover {
+    transform: translate3d(0, 0px, 0);
+    cursor: pointer;
+}
+#box img {
+    transition: .5s ease-in;
+    transform: translate3d(0, -350px, 0);
+}
+
+#partenaires .flexslider{
+  margin-top: 10%;
+  float: right;
+  width: 50%;
+  height: 50%;
 }
 
 #contact {
-  background-color: #3FB3A6;
-  padding-top: 0px;
-  padding-bottom: 40px;
+  /* background-color: #3FB3A6; */
   color: #ECF0F3;
 }
 
@@ -391,25 +413,26 @@ h3 {
   padding-bottom: 20px;
 }
 
-#form_contact h2 {
+#from-contact h2 {
   background-color: #4caf50;
   text-align: center;
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 1.9em;
   font-weight: bold;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
 }
 
 #footer .bouton1 {
-  width : 48px;
-  height : 48px;
+  width : 49px;
+  height : 46px;
   display : inline-block; /*Très important, sinon les dimensions ne sont pas prises en compte*/
-  background : url("../../images/logo_twitter_grey.png") no-repeat;
+  background : url("../../images/logos_reseaux.png") 0 49px no-repeat;
+
 }
 
 #footer .bouton1:hover {
-  background-image: url('../../images/logo_twitter.png');
+  background-image: url('../../images/logo_twitter.png') 48px 0px;
 }
 
 #footer .bouton2 {
@@ -473,12 +496,7 @@ h3 {
   padding-top: 0px;
 }
 
-.section4 h2{
-border-radius: 100px; background-color: #3FB3A6; text-align: center; color: white;
-}
-
-
-#form_contact form {
+#form-contact form {
   max-width: 1040px;
   width: 100%;
   padding-top: 50px;
@@ -488,16 +506,29 @@ border-radius: 100px; background-color: #3FB3A6; text-align: center; color: whit
   margin: 0 auto;
 }
 
-#form_contact {padding: 0px 10px 20px 10px; background-color: #ECF0F3; background-image: url('../../images/medical2.jpg'); background-size: 100%; background-repeat: no-repeat;}
+#form-contact { background-image: url('../../images/medical2.jpg'); background-size: 100%;}
+
+#form-contact p.textintro {
+  color : #FFF;
+  background-color: #8EA2C6;
+  text-align: center;
+  border-radius: 100px;
+}
+
+#form-contact  h2
+#form_contact {padding: 0px 10px 20px 10px; background-image: url('../../images/medical2.jpg'); background-size: 100%; background-repeat: no-repeat;}
 #form_contact p.textintro {text-align: center; margin: 10px 0 0px 0;}
-#form_contact h2
+
+.section4 h2
 {
-  background-color: #4caf50;
+  background-color: #3FB3A6;
   text-align: center;
   color: #FFF;
   font-size: 1.5em;
   font-weight: bold;
   width: 100%;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
 }
 
 label{ display: block;padding-left: 0px;margin-bottom: 5px;font-size: 1.2em;font-weight: bold;margin-top: 20px;}
@@ -613,7 +644,7 @@ footer {
   background-color: #56739A;
   color: white;
   text-align: center;
-  max-height: 200px;
+  float: right;
 }
 
 footer p {
@@ -625,15 +656,12 @@ footer p {
   font-size: 1.05em;
 }
 
-input::placeholder {
-  color : white;
-}
 .newvaccin{
   background-color: #f4e7d3;
   border: 2px solid rgb(4, 113, 152);
-  float:right;
+  float:left;
   width: 48%;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 20 20px;
   padding: 0 5px 0 5px;
   display: inline;
   overflow: hidden;
@@ -646,7 +674,7 @@ input::placeholder {
   background-color: #FFF;
   border: 2px solid rgb(4, 113, 152);
   float: left;
-  width: 46%;
+  width: 47%;
   margin: 0 20px 0 20px;
   border-radius: 10px;
 }

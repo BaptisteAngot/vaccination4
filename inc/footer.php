@@ -37,9 +37,7 @@
 
 <div class="clear"></div>
 
-    <div class="column">
-      <p>Nos réseaux sociaux</p>
-  <div class='wrap'>
+
   <div class='wrap_footer'>
     <div class="column2">
       <h4>Nos réseaux sociaux</h4>

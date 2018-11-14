@@ -8,7 +8,7 @@ body
   /*background-image: url("../../images/medicalFond.jpg");*/
   background-size: 100%;
   background-repeat: no-repeat;
-  background-color: #56739A;
+
 }
 
 .wrap {
@@ -219,6 +219,7 @@ body
   text-align: center;
   margin-top: 20%;
   color: #FFF;
+  background-image: url("../../images/medicalFond.jpg");
 }
 
 @media screen and (min-width: 601px) {

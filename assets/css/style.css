@@ -7,8 +7,8 @@ body
 	font-size: 17px;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-color: #ecf0f3;
   background-image: url("../../images/medicalFond.jpg");
+  background-color: #ECF0F3;
 }
 
 .wrap {
@@ -129,9 +129,10 @@ body
 #header .navbar{
   background-color: #56739A;
   overflow: hidden;
+
 }
 
-#header .menufixed {position: fixed;background-color: #56739A;width: 100%; border-bottom: solid black 1px;}
+#header .menufixed {position: fixed;background-color: #56739A;width: 100%; border-bottom: solid black 1px;  z-index: 10;}
 
 .slicknav_menu {
 	display:none;
@@ -163,8 +164,7 @@ body
   transition: all 1.5s;
 }
 
-#menu li a.active,
-#menu li a.active:hover
+.active, .active:hover
 {
     background-color: #8fafd6;
     color: white;
@@ -293,11 +293,6 @@ body
   border-radius: 100px;
   width: 75%;
   margin-left: 12.5%;
-}
-
-h3 {
-  font-size: 1.1em;
-  font-weight: bold;
 }
 
 .ligne {
@@ -476,21 +471,15 @@ h3 {
   padding-bottom: 35px;
 }
 
-
-#form-contact {
-  background-color: #ECF0F3;
-  background-image: url('../../images/medical2.jpg');
-  background-size: 100%;
-  text-align: center;
-}
 .section4 {
   float: left;
   width: 100%;
   padding-top: 0px;
 }
 
-
 #form-contact { background-image: url('../../images/medical2.jpg'); background-size: 100%;}
+
+#form-contact { background-color: #ECF0F3; background-size: 100%;}
 
 .form-connexion{
   margin-top: 400px;
@@ -565,7 +554,7 @@ input[type="date"] {
     padding:5px;
     display: inline-block !important;
     visibility: visible !important;
-    width: 15%;
+    width: 30%;
     border-radius: 5px;
     float: left;
 }
@@ -660,6 +649,20 @@ footer p {
   text-align: center;
 }
 
+.modifprofil{
+  background-color: #f4e7d3;
+  border: 2px solid rgb(4, 113, 152);
+  float:left;
+  width: 70%;
+  margin-right: 25%;
+  margin-left: 15%;
+  padding: 0 5px 0 5px;
+  display: inline;
+  overflow: hidden;
+  border-radius: 10px;
+  text-align: center;
+  z-index: -1;
+}
 
 .myvaccin{
   background-color: #FFF;
@@ -707,6 +710,7 @@ footer p {
   float: left;
   clear: both;
   text-align: center;
+  padding-left: 20px;
 }
 
 .formnewvaccin{
@@ -719,24 +723,40 @@ footer p {
   font-size: 1.2em;
 }
 
+.modifvaccin{
+  float: left;
+  background-color: #e4e4e4;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  border: 2px solid rgb(4, 113, 152);
+}
+
+.modifvaccin input[type="date"]{
+  margin-left:  20px;
+}
+
+.modifvaccin input{
+  margin: 10px 0 10px 0;
+}
+
+.modifvaccin input[type="submit"]{
+  width: 50%;
+  margin-left: 25%;
+}
+
+.modifvaccin h1{
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
 
 #footer {
-  background-color: crimson;
+  background-color: #56739A;
   width: 100%;
-  height: 200px;
+  height: 150px;
 }
-
-
-#footer .section3 {
-  float: left;
-  width: 33%;
-  padding-top: 20px;
-}
-
-#footer .section3 h3 {
-  padding-bottom: 25px;
-}
-
 
 #footer .bouton1 {
   width : 48px;
@@ -760,7 +780,6 @@ footer p {
   background-image: url('../../images/logo_fb.png');
 }
 
-
 footer {
   width: 100%;
   background-color: #56739A;
@@ -776,6 +795,7 @@ footer p {
 .social-icons
 {
 	margin: 5px;
+  margin-left: 37%;
 }
 
 .social-icons li a
@@ -842,10 +862,11 @@ footer p {
 
 }
 
-.column
+#footer .column
 {
+  margin: 3% 0 0 0;
 	float: left;
 	width: 23%;
 	margin-right: 2%;
-
+	width: 33.33333%;
 }

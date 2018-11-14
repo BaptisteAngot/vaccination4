@@ -765,7 +765,6 @@ select::-ms-expand {
   background-image: url('../../images/logo_fb.png');
 }
 
-<<<<<<< HEAD
 footer {
   display : table-row;
   width: 100%;
@@ -783,8 +782,6 @@ footer p {
   text-align: center;
 }
 
-=======
->>>>>>> eebb84b03bbb126678e067f1e5d3301ebcd327c3
 #footer .column1
 {
   margin: 3% 0 0 0;

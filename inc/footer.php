@@ -1,9 +1,5 @@
 <footer id="footer">
-<<<<<<< HEAD
 <div class='wrap_footer'>
-=======
-
->>>>>>> eebb84b03bbb126678e067f1e5d3301ebcd327c3
   <div class="column1">
 				<ul class="footer__menu">
 					<h4>Le Carnet</h4>

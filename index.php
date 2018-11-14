@@ -3,10 +3,10 @@
   include 'inc/function.php';
   include 'inc/request.php';
   if (isLogged()) {
-    // header('Location: user_log.php');
   }
   include 'inc/header.php';
 ?>
+
 
   <div id= "intro">
     <p>Bienvenue sur notre site InfoVaccins.com </br>
@@ -31,11 +31,10 @@
     </div>
   </div>
 
-
   <div id ="FAQ">
   <h2>Questions fréquentes</h2>
   <div class="ligne"></div>
-    <div class="wrap">
+    <div class="wrap-FAQ">
       <ul>
         <div class="boiteQuestion"> <li>Qu'est-ce que InfoVaccins.com?</li> </div>
         <p>InfoVaccins.com est un carnet de santé connecté accessible sous toutes les patformes.</p>
@@ -89,29 +88,7 @@
     <div class="wrap">
         <div class="ligne"></div>
         <div id="box"><img height="700" src="images/partenaires.png" width="350"></div>
-
-
-
-    <!-- Place somewhere in the <body> of your page -->
-    <!-- <div class="flexslider">
-      <ul class="slides">
-        <li>
-          <img src="images/imgVaccin.jpg"/>
-        </li>
-        <li>
-          <img src="images/imgVaccin2.jpg"/>
-        </li>
-        <li>
-          <img src="images/imgVaccin3.jpg"/>
-        </li>
-      </ul>
     </div>
-  </div>
-  <div class="clear"></div>
-  </section>
-  <div class="clear"></div> -->
-
-
 
   <?php
   $titre = 'Nouveau message';
@@ -169,32 +146,27 @@
       }
    ?>
 
-   <section id="form-contact">
+   <div id="form-contact">
      <h2>Nous contacter</h2>
-                <div class="ligne"></div>
-
-                  <p class="textintro">Si vous souhaitez nous contacter pour des informations complémentaires, remplissez le formulaire suivant :</p>
-
-                  <form action="" method="post">
-                    <div class="w50">
-                      <label for="name">Votre Nom</label>
-                      <input class="inputerror" type="text" name="name" value="" placeholder="Ex: Pierre Martin">
-                    </div>
-
-                    <div class="w50">
-                      <label for="email">Votre Email</label>
-                      <input type="email" name="email" value="" placeholder="Ex: pierremartin@gmail.com">
-                    </div>
-
-                    <div class="w100">
-                      <label for="message">Votre Message</label>
-                      <textarea name="message" rows="8" cols="80" placeholder="Votre message..."></textarea>
-                    </div>
-
-                    <input type="submit" name="submit" value="Envoyer">
-                  </form>
-
+        <div class="ligne"></div>
+        <div class="wrap">
+        <p> Si vous souhaitez nous contacter pour des informations complémentaires, remplissez le formulaire suivant :</p>
+        <form action="" method="post">
+          <div class="w50">
+            <label for="name">Votre Nom</label>
+            <input class="inputerror" type="text" name="name" value="" placeholder="Ex: Pierre Martin">
           </div>
-        <div class="clear"></div>
+          <div class="w50">
+              <label for="email">Votre Email</label>
+              <input type="email" name="email" value="" placeholder="Ex: pierremartin@gmail.com">
+          </div>
+          <div class="w100">
+            <label for="message">Votre Message</label>
+            <textarea name="message" rows="8" cols="80" placeholder="Votre message..."></textarea>
+          </div>
+          <input type="submit" name="submit" value="Envoyer">
+        </form>
+      </div>
+    <div class="clear"></div>
 
   <?php include 'inc/footer.php'; ?>

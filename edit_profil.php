@@ -71,6 +71,6 @@
      <input type="submit" name="submitted" value="Modifier">
    </form>
  </div>
-
+<div class="clear"></div>
 <?php
   include 'inc/footer.php';

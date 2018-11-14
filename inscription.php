@@ -38,10 +38,6 @@ include 'inc/header.php';
  ?>
  <section class="form_inscription">
 
-  <div class="logo_co_sub">
-    <a href="#"><img src="images/IconeVaccinlogo.png" alt="Logo InfosVaccin.com"></a>
-  </div>
-
 
 <form class="sub_form" action="" method="post">
   <label for="pseudo">Pseudo :</label>

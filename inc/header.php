@@ -56,6 +56,6 @@
       $('#menu').on('click','a',function(){
         $('#menu a.active').removeClass('active');
         $(this).addClass('active');
-      }); -->
-    </script>
+      });
+    </script> -->
     <body>

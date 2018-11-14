@@ -553,9 +553,9 @@ input::placeholder {
 .newvaccin{
   background-color: #f4e7d3;
   border: 2px solid rgb(4, 113, 152);
-  float:right;
+  float:left;
   width: 48%;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 20 20px;
   padding: 0 5px 0 5px;
   display: inline;
   overflow: hidden;
@@ -568,7 +568,7 @@ input::placeholder {
   background-color: #FFF;
   border: 2px solid rgb(4, 113, 152);
   float: left;
-  width: 46%;
+  width: 47%;
   margin: 0 20px 0 20px;
   border-radius: 10px;
 }

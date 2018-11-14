@@ -497,7 +497,7 @@ input {height:50px;}
 
 input[type=text], input[type=email],textarea {border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:10px;background-color: #8FAFD6}
 textarea {padding-top: 10px;margin-bottom: 30px;resize: none;}
-input[type=submit] {cursor:pointer;border:none;display: block;margin: 15px auto; width:275px;font-size: 1.2em;border-radius:10px;background-color: #8FAFD6}
+input[type=submit] {cursor:pointer;border:none;display: block;margin: 15px auto; width:275px;font-size: 1.2em;border-radius:10px;background-color: #8FAFD6; transition: 0.5s;}
 input[type=submit]:hover {color: #fff;background-color:#6FA7C7;}
 .error {color:red;padding-left: 30px;}
 

@@ -65,7 +65,7 @@ else{
             echo '<td align="center">' .date("d-m-Y",strtotime($vaccin['date'])) . '</td>';
             echo '<td align="center">' . $vaccin['reaction'] . '</td>';
             echo '<td align="center"> <a href="editvaccinuser.php?id='.$vaccin['id'].'"> Modifier votre vaccin</a> </td>';
-            echo '<td align="center"> <a href="deletevaccinfromuser.php?id='.$vaccin['id'].'">Delete</a> </td>';
+            echo '<td align="center"> <a onclick="return confirm(\'Êtes vous sûr?\')" href="deletevaccinfromuser.php?id='.$vaccin['id'].'">Delete</a> </td>';
           echo '</tr>';
         }
          ?>

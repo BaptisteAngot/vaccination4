@@ -2,12 +2,10 @@
   include 'inc/pdo.php';
   include 'inc/function.php';
   include 'inc/request.php';
-
   if (isLogged()) {
     // header('Location: user_log.php');
   }
   include 'inc/header.php';
-
 ?>
 
   <div id= "intro">
@@ -135,59 +133,46 @@
 
       <div class="clear"></div>
   <?php
-
   $titre = 'Nouveau message';
-
   $error = array();
-
       if ( !empty($_POST['submitnewpost']) ) {
           $name = trim(strip_tags($_POST['name']));
           $email = trim(strip_tags($_POST['email']));
           $message = trim(strip_tags($_POST['message']));
-
           if (!empty($name)){
               if(strlen($name) < 3 ) {
           $error['name'] = 'Votre nom est trop court. (minimum 3 caractères)';
         } elseif(strlen($name) > 40) {
           $error['name'] = 'Votre nom est trop long.';
         }
-
           } else {
             $error['name'] = 'Veuillez entrer votre nom';
           }
-
           if (!empty($email)){
               if(strlen($email) < 3 ) {
           $error['email'] = 'Votre email est trop court. (minimum 3 caractères)';
         } elseif(strlen($email) > 220) {
           $error['email'] = 'Votre email est trop long.';
         }
-
           } else {
             $error['email'] = 'Veuillez renseigner un titre';
           }
-
           if (!empty($message)){
               if(strlen($message) < 3 ) {
           $error['message'] = 'Votre message est trop court. (minimum 3 caractères)';
         }
-
           } else {
             $error['message'] = 'Veuillez renseigner un message';
           }
-
           if (count($error) == 0){
               $sql = "INSERT INTO ";
               $query = $pdo->prepare($sql);
-
               $query->bindValue(':name',$name, PDO::PARAM_STR);
               $query->bindValue(':email',$email, PDO::PARAM_STR);
               $query->bindValue(':message',$message, PDO::PARAM_STR);
-
               $query->execute();
           }
       }
-
    ?>
    <div class="clear"></div>
           <div class="section4">

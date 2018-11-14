@@ -1,12 +1,12 @@
 <footer id="footer">
-<div class='wrap'>
+<div class='wrap_footer'>
   <div class="column1">
 				<ul class="footer__menu">
 					<h4>Le Carnet</h4>
           <li><a  href="#" title="Qui sommes-nous ?">Qui sommes-nous ?</a></li>
         <li><a href="#" title="Comment ça marche ?">Comment ça marche ?</a></li>
         <li><a href="#" title="Parutions presse">Parutions presse</a></li>
-        <li><a href=href="#" title="Mentions légales">Mentions légales</a></li>
+        <li><a href="#" title="Mentions légales">Mentions légales</a></li>
 				</ul>
 			</div>
       <div class="column1">
@@ -34,12 +34,13 @@
             						<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li>
             				</ul>
             			</div>
-</div>
+
 <div class="clear"></div>
 
     <div class="column">
       <p>Nos réseaux sociaux</p>
   <div class='wrap'>
+  <div class='wrap_footer'>
     <div class="column2">
       <h4>Nos réseaux sociaux</h4>
       <ul class="social-icons">
@@ -62,13 +63,14 @@
 
   <div class="clear"></div>
 
-  <div class='wrap'>
+  <div class='wrap_footer'>
     <div class="column3">
       <p>© Copyright InfoVaccins 2018 ®. All rights reserved.</p>
     </div>
   </div>
   <div class="clear"></div>
 
+</div>
 </footer>
 </body>
 </html>

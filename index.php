@@ -146,8 +146,8 @@
       }
    ?>
 
+   <h2>Nous contacter</h2>
    <div id="form-contact">
-     <h2>Nous contacter</h2>
         <div class="ligne"></div>
         <div class="wrap">
         <p> Si vous souhaitez nous contacter pour des informations complémentaires, remplissez le formulaire suivant :</p>
@@ -167,6 +167,7 @@
           <input type="submit" name="submit" value="Envoyer">
         </form>
       </div>
+    </div>
     <div class="clear"></div>
 
   <?php include 'inc/footer.php'; ?>

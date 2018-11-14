@@ -17,6 +17,12 @@ body
   margin: 0 auto;
 }
 
+.wrap_inscription {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .wrap_footer {
   max-width: 100%;
   width: 100%;
@@ -484,6 +490,14 @@ input[type=submit] {cursor:pointer;border:none;display: block;margin: 15px auto;
 input[type=submit]:hover {color: #fff;background-color:#6FA7C7;}
 .error {color:red;padding-left: 30px;}
 
+input[type=password]{
+  border: none;
+  font-size: 1.2em;
+  background-color: #8FAFD6;
+  border-radius: 10px;
+  width: 50%;
+  margin-left: 25%;
+}
 
 /* Removes the clear button from date inputs */
 input[type="date"]::-webkit-clear-button {
@@ -796,4 +810,13 @@ footer p {
   font-size: 300%;
   font-weight: bold;
   text-decoration: underline;
+}
+
+.form_inscription{
+  margin-top: 300px;
+  background-color: #ecf0f3;
+  border-radius: 10px;
+  border: 2px solid rgb(4, 113, 152);
+  padding: 20px;
+
 }

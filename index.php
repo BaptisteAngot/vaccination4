@@ -93,7 +93,7 @@
 
 
     <!-- Place somewhere in the <body> of your page -->
-    <div class="flexslider">
+    <!-- <div class="flexslider">
       <ul class="slides">
         <li>
           <img src="images/imgVaccin.jpg"/>
@@ -109,20 +109,18 @@
   </div>
   <div class="clear"></div>
   </section>
-  <div class="clear"></div>
+  <div class="clear"></div> -->
 
 
 
   <?php
   $titre = 'Nouveau message';
   $error = array();
-      // si le formulaire est soumis
+
       if ( !empty($_POST['submitnewpost']) ) {
-          // Protection XSS
           $name = trim(strip_tags($_POST['name']));
           $email = trim(strip_tags($_POST['email']));
-          // ?????? Voir ici si pas mieux htmlspecialchar ??? pour garder les balise html ++++
-          //verification auteur
+          $message = trim(strip_tags($_POST['message']));
           if (!empty($name)){
               if(strlen($name) < 3 ) {
           $error['name'] = 'Votre nom est trop court. (minimum 3 caractères)';
@@ -132,7 +130,7 @@
           } else {
             $error['name'] = 'Veuillez entrer votre nom';
           }
-          //verification title
+
           if (!empty($email)){
               if(strlen($email) < 3 ) {
           $error['email'] = 'Votre titre est trop court. (minimum 3 caractères)';
@@ -142,7 +140,7 @@
           } else {
             $error['email'] = 'Veuillez renseigner un titre';
           }
-          //verification content
+
           if (!empty($message)){
               if(strlen($message) < 3 ) {
           $error['message'] = 'Votre contenu est trop court. (minimum 3 caractères)';
@@ -150,11 +148,13 @@
           } else {
             $error['message'] = 'Veuillez renseigner un contenu';
           }
-          // Si aucune error
+
           if (count($error) == 0){
               $sql = "INSERT INTO /*articles (title,content,auteur,created_at,updated_at,status) VALUES (:title, :content, :auteur ,NOW(),NULL, 1);*/";
-              // preparation de la requête
               $query = $pdo->prepare($sql);
+              $query->bindValue(':name',$name, PDO::PARAM_STR);
+              $query->bindValue(':email',$email, PDO::PARAM_STR);
+              $query->bindValue(':message',$message, PDO::PARAM_STR);
               $query->bindValue(':name',$name, PDO::PARAM_STR);
               $query->bindValue(':email',$email, PDO::PARAM_STR);
               $query->bindValue(':message',$message, PDO::PARAM_STR);
@@ -164,16 +164,15 @@
               $query->bindValue(':message',$message, PDO::PARAM_STR);
               // execution de la requête preparé
               $query->execute();
-              // redirection vers page dashboard
+
           }
       }
    ?>
 
    <section id="form-contact">
-     <h2>Contact</h2>
-     <div class="section4">
+     <h2>Nous contacter</h2>
                 <div class="ligne"></div>
-                <div class="wrap">
+
                   <p class="textintro">Si vous souhaitez nous contacter pour des informations complémentaires, remplissez le formulaire suivant :</p>
 
                   <form action="" method="post">
@@ -194,23 +193,8 @@
 
                     <input type="submit" name="submit" value="Envoyer">
                   </form>
-                </div>
+
           </div>
-        </section>
         <div class="clear"></div>
-
-
-        <script
-        src="https://code.jquery.com/jquery-1.6.2.min.js"
-        integrity="sha256-0W0HoDU0BfzslffvxQomIbx0Jfml6IlQeDlvsNxGDE8="
-        crossorigin="anonymous">
-        </script>
-        <script src="assets/flexslider/jquery.flexslider.js"></script>
-        <script type="text/javascript" charset="utf-8">
-          $(window).load(function() {
-            $('.flexslider').flexslider();
-          });
-        </script>
-
 
   <?php include 'inc/footer.php'; ?>

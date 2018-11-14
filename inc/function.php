@@ -243,30 +243,35 @@ function validationemail($error,$mail,$empty=true){
   return $error;
 }
 
-function validationpassword($error,$password1,$password2,$min,$max,$empty = true){
-    global $pdo;
-    if (!empty($password1)) {
-      if($password1 != $password2){
-        $error['password'] = 'Erreur: Veuillez saisir le même mot de passe';
-        die('oui');
-      }
-      elseif(strlen($password1)<$min){
-        $error['password']= 'minimum '.$min .' caractères';
-      }
-      elseif (strlen($password1)>$max) {
-        $error['password']= 'maximum '.$max.' caractères';
-      }
-      else{
-        //Verification si idverif existe déjà
-          //Selection de $idverif de $table de la $bdd
-          $resultatpassword=verifpassword($password1);
-          if(!empty($resultatpassword)){
-            $error['password']='Pseudo déjà utilisé';
-          }
-      }
+function validationemailProfil($error,$mail,$empty=true){
+  global $pdo;
+  if(!empty($mail)){
+    if (filter_var($mail, FILTER_VALIDATE_EMAIL)){
+      $resultatmail= verifmail($mail);
+        if(!empty($resultatmail)){
+        }
+    } else {
+      $error['email'] = ' mail invalide';
     }
-    else {
-      $error['password'] = 'Erreur : password vide';
+  }
+  else {
+    $error['email'] = 'Erreur : mail vide';
+  }
+  return $error;
+}
+
+function validationpassword($error,$password1,$password2,$min,$max,$empty = true){
+  global $pdo;
+  if (!empty($password1)) {
+    if($password1 != $password2){
+      $error['password1'] = 'Erreur: Veuillez saisir le même mot de passe';
+    } elseif(strlen($password1)<$min){
+      $error['password1']= 'minimum '.$min .' caractères';
+    } elseif (strlen($password1)>$max) {
+      $error['password1']= 'maximum '.$max.' caractères';
+    }
+  } else {
+    $error['password1'] = 'Erreur : password vide';
   }
   return $error;
 }

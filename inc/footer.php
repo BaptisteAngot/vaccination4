@@ -1,5 +1,5 @@
 <footer id="footer">
-<div class='wrap'>
+
   <div class="column1">
 				<ul class="footer__menu">
 					<h4>Le Carnet</h4>
@@ -34,7 +34,7 @@
             						<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li>
             				</ul>
             			</div>
-</div>
+
 <div class="clear"></div>
 
     <div class="column">
@@ -67,7 +67,7 @@
     </div>
   </div>
   <div class="clear"></div>
-
+</div>
 </footer>
 </body>
 </html>

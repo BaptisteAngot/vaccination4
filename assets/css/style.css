@@ -787,6 +787,7 @@ footer {
   height: 300px;
   background-color: #56739A;
   color: white;
+  bottom:0;
   /* text-align: center; */
 }
 

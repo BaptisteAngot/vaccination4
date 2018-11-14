@@ -12,7 +12,7 @@ body
 }
 
 .wrap {
-  max-width: 1040px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto;
 }
@@ -132,22 +132,22 @@ body
 }
 
 #header .menufixed {position: fixed;background-color: #56739A;width: 100%; border-bottom: solid black 1px;}
+
 .slicknav_menu {
 	display:none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 40em) {
 	/* #menu is the original menu */
 	#menu {
-  display: none;
+		display:none;
 	}
 
 	.slicknav_menu {
 		display:block;
-    position: fixed;
-    width: 100%;
 	}
 }
+
 #menu{
   background-color: #56739A;
 }
@@ -282,14 +282,13 @@ body
   background-color: #ecf0f3;
   text-align: center;
   font-size: 1.4em;
-  padding-bottom: 5%;
 }
 
 #FAQ h2 {
   background-color: #4caf50;
   text-align: center;
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
@@ -301,9 +300,8 @@ body
   background-color: #8EA2C6;
   text-align: center;
   border-radius: 100px;
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 5%;
+  width: 75%;
+  margin-left: 12.5%;
 }
 
 h3 {
@@ -316,6 +314,7 @@ h3 {
 }
 
 #equipe{
+  background-color: lime;
   width: 100%;
   height: 400px;
   background-image: url("../../images/medical.jpg");
@@ -348,7 +347,7 @@ h3 {
   background-color: #3FB3A6;
   text-align: center;
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 1.9em;
   font-weight: bold;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
@@ -356,9 +355,14 @@ h3 {
 
 
 #partenaires {
+<<<<<<< HEAD
+  background-color: crimson;
+=======
   background-color: #ECF0F3;
   /* padding-top: 20px; */
+>>>>>>> 560c41b4e5d1c58fd5a9caf1234b2d6238651e2b
   padding-bottom: 50px;
+  height: 500px;
   text-align: center;
   color: white;
 }
@@ -367,7 +371,7 @@ h3 {
   background-color: #3FB3A6;
   text-align: center;
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 1.9em;
   font-weight: bold;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
@@ -379,12 +383,37 @@ h3 {
   width: 25%;
   padding-top: 35px;
   padding-bottom: 35px;
+<<<<<<< HEAD
+}
+#box {
+    float: left;
+    margin-top: 50px;
+    width: 350px;
+    height: 350px;
+    border: 2px black solid;
+    overflow: hidden;
+    background-color: #F2F2F2;
+}
+#box img:hover {
+    transform: translate3d(0, 0px, 0);
+    cursor: pointer;
+}
+#box img {
+    transition: .5s ease-in;
+    transform: translate3d(0, -350px, 0);
+}
+
+#partenaires .flexslider{
+  margin-top: 10%;
+  float: right;
+  width: 50%;
+  height: 50%;
+=======
+>>>>>>> 560c41b4e5d1c58fd5a9caf1234b2d6238651e2b
 }
 
 #contact {
-  background-color: #3FB3A6;
-  padding-top: 0px;
-  padding-bottom: 40px;
+  /* background-color: #3FB3A6; */
   color: #ECF0F3;
 }
 
@@ -392,11 +421,11 @@ h3 {
   padding-bottom: 20px;
 }
 
-#form_contact h2 {
+#from-contact h2 {
   background-color: #4caf50;
   text-align: center;
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 1.9em;
   font-weight: bold;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
@@ -468,14 +497,17 @@ h3 {
   padding-bottom: 25px;
 }
 
+<<<<<<< HEAD
+=======
 .section4 {
   float: left;
   width: 100%;
   padding-top: 0px;
 
 }
+>>>>>>> 560c41b4e5d1c58fd5a9caf1234b2d6238651e2b
 
-#form_contact form {
+#form-contact form {
   max-width: 1040px;
   width: 100%;
   padding-top: 50px;
@@ -485,10 +517,23 @@ h3 {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
+#form-contact { background-color: #ECF0F3; background-image: url('../../images/medical2.jpg'); background-size: 100%;}
+
+#form-contact p.textintro {
+  color : #FFF;
+  background-color: #8EA2C6;
+  text-align: center;
+  border-radius: 100px;
+}
+
+#form-contact  h2
+=======
 #form_contact {padding: 0px 10px 20px 10px; background-image: url('../../images/medical2.jpg'); background-size: 100%; background-repeat: no-repeat;}
 #form_contact p.textintro {text-align: center; margin: 10px 0 0px 0;}
 
 .section4 h2
+>>>>>>> 560c41b4e5d1c58fd5a9caf1234b2d6238651e2b
 {
   background-color: #3FB3A6;
   text-align: center;
@@ -624,9 +669,6 @@ footer p {
   font-size: 1.05em;
 }
 
-input::placeholder {
-  color : white;
-}
 .newvaccin{
   background-color: #f4e7d3;
   border: 2px solid rgb(4, 113, 152);

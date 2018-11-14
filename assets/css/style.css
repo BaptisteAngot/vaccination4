@@ -511,8 +511,6 @@ h2{
   padding-top: 0px;
 }
 
-#form-contact { background-image: url('../../images/medical2.jpg'); background-size: 100%;}
-
 .form-connexion{
   margin-top: 400px;
   padding-bottom: 100px;
@@ -520,7 +518,7 @@ h2{
 
 #form-contact {
   padding-bottom: 10px;
-  background-image: url('../../images/medical2.jpg');
+  background-image: url('../img/medical2.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   color: #777777;

@@ -35,7 +35,7 @@ else{
     <p>Nom : <?php echo $resultat['nom']?></p>
     <p>Prénom : <?php echo $resultat['prenom']?></p>
     <p>Age : <?php echo $resultat['age']?></p>
-    <button  type="button" name="button"><a href="edit_profil.php">Modifer</a></button>
+    <button  type="button" name="button" onclick="window.location.href='edit_profil.php'">Modifier</button>
   </div>
 </div>
 <?php

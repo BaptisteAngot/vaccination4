@@ -460,7 +460,8 @@ h2{
 }
 
 #form-contact {
-  padding-bottom: 10px;
+  margin-top: -10px;
+  padding: 0px 10px 20px 10px;
   background-image: url('../../images/medical2.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
@@ -479,12 +480,10 @@ input {height:50px;}
 
 input[type=text], input[type=email],textarea {border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:10px;background-color: #8FAFD6}
 textarea {padding-top: 10px;margin-bottom: 30px;resize: none;}
-input[type=submit] {color: #FFF;cursor:pointer;border:none;display: block;margin: 15px auto; width:275px;font-size: 1.2em;border-radius:10px;background-color: #8FAFD6; transition: 0.5s;}
-input[type=submit]:hover {color: #000;background-color:#6FA7C7;}
+input[type=submit] {cursor:pointer;border:none;display: block;margin: 15px auto; width:275px;font-size: 1.2em;border-radius:10px;background-color: #8FAFD6; transition: 0.5s;}
+input[type=submit]:hover {color: #fff;background-color:#6FA7C7;}
 .error {color:red;padding-left: 30px;}
-::placeholder {color: #FFF; opacity: 1;}
-:-ms-input-placeholder {color: #FFF;}
-::-ms-input-placeholder {color: #FFF;}
+
 
 /* Removes the clear button from date inputs */
 input[type="date"]::-webkit-clear-button {
@@ -766,6 +765,17 @@ select::-ms-expand {
   background-image: url('../../images/logo_fb.png');
 }
 
+footer {
+  width: 100%;
+  max-width: 100%;
+  height : 500px;
+  background-color: #56739A;
+  color: white;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
 
 footer p {
   text-align: center;

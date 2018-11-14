@@ -5,6 +5,25 @@
   if (isLogged()) {
   }
   include 'inc/header.php';
+
+  $titre = 'Nouveau message';
+  $error = array();
+
+      if ( !empty($_POST['submitted']) ) {
+          $name = trim(strip_tags($_POST['name']));
+          $email = trim(strip_tags($_POST['email']));
+          $message = trim(strip_tags($_POST['message']));
+
+          $error=validationText($error,$name,3,40,'name');
+          $error=validatemail($error,$email);
+          $error=validationText($error,$message,3,1000,'message');
+
+          pre($error);
+
+          if (count($error) == 0){
+            mail($email,$titre,$message);
+          }
+      }
 ?>
 
 
@@ -90,25 +109,6 @@
         <div id="box"><img height="700" src="images/partenaires.png" width="350"></div>
     </div>
 
-  <?php
-  $titre = 'Nouveau message';
-  $error = array();
-
-      if ( !empty($_POST['submitnewpost']) ) {
-          $name = trim(strip_tags($_POST['name']));
-          $email = trim(strip_tags($_POST['email']));
-          $message = trim(strip_tags($_POST['message']));
-
-          $error=validationText($error,$name,3,40);
-          $error=validatemail($error,$email);
-          $error=validationText($error,$message,3,1000);
-
-          if (count($error) == 0){
-            mail($email,$name,$message);
-          }
-      }
-   ?>
-
    <div id="form-contact">
      <h2>Nous contacter</h2>
         <div class="ligne"></div>
@@ -127,7 +127,7 @@
             <label for="message">Votre Message</label>
             <textarea name="message" rows="8" cols="80" placeholder="Votre message..."></textarea>
           </div>
-          <input type="submit" name="submit" value="Envoyer">
+          <input type="submit" name="submitted" value="Envoyer">
         </form>
       </div>
     </div>

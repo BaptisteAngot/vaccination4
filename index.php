@@ -3,10 +3,10 @@
   include 'inc/function.php';
   include 'inc/request.php';
   if (isLogged()) {
-    // header('Location: user_log.php');
   }
   include 'inc/header.php';
 ?>
+
 
   <div id= "intro">
     <p>Bienvenue sur notre site InfoVaccins.com </br>
@@ -30,7 +30,6 @@
     <?php } ?>
     </div>
   </div>
-
 
   <div id ="FAQ">
   <h2>Questions fréquentes</h2>

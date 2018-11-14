@@ -21,15 +21,25 @@ if (!empty($_POST['submitted']))
   }
   if(count($error) == 0)
   {
-    $_SESSION['user'] = array(
-      // Clé unique pour eviter les problèmes de connexion
-      'id' => $user['id'],
-      'pseudo' => $user['pseudo'],
-      'email' => $user['email'],
-      'role' => $user['role'],
-      'ip' => $_SERVER['REMOTE_ADDR']
-    );
-    header('Location: user_log.php');
+    if($user['status']== "banni"){
+      $_SESSION['user'] = array('status' => "banni");
+      header('Location: index.php?ban=ban');
+    }
+    else {
+      // Met le user en connecté
+      changestatus($user,"connecte");
+
+      $_SESSION['user'] = array(
+        // Clé unique pour eviter les problèmes de connexion
+        'id' => $user['id'],
+        'pseudo' => $user['pseudo'],
+        'email' => $user['email'],
+        'role' => $user['role'],
+        'ip' => $_SERVER['REMOTE_ADDR'],
+        'status' => "connecte"
+      );
+      header('Location: user_log.php');
+    }
   }
  }
 
@@ -51,7 +61,7 @@ include 'inc/header.php';
     br(); ?>
     <a href="password_forget.php">Mot de passe oublié?</a>
     <input type="submit" name="submitted" value="Envoyer">
- </form> 
+ </form>
 </div>
  <?php
 include 'inc/footer.php';

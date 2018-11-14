@@ -66,6 +66,23 @@ body
   margin-left: -20px;
 }
 
+.notfound .notfound-404 h1 {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 252px;
+  font-weight: 900;
+  margin: 0px;
+  color: #262626;
+  text-transform: uppercase;
+  letter-spacing: -40px;
+  margin-left: -20px;
+}
+
 .notfound .notfound-404 h1>span {
   text-shadow: -8px 0px 0px #fff;
 }
@@ -81,6 +98,65 @@ body
   letter-spacing: 3px;
   padding-left: 6px;
 }
+
+/* ///////////////////////////// */
+
+.notfound .notfound-ban {
+  position: relative;
+  height: 240px;
+}
+
+.notfound .notfound-ban h1 {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 252px;
+  font-weight: 900;
+  margin: 0px;
+  color: #ff0000;
+  text-transform: uppercase;
+  letter-spacing: -40px;
+  margin-left: -20px;
+}
+
+.notfound .notfound-ban h1 {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 252px;
+  font-weight: 900;
+  margin: 0px;
+  color: #ff0000;
+  text-transform: uppercase;
+  letter-spacing: -40px;
+  margin-left: -20px;
+}
+
+.notfound .notfound-ban h1>span {
+  text-shadow: -8px 0px 0px #fff;
+}
+
+.notfound .notfound-ban h3 {
+  font-family: 'Cabin', sans-serif;
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ff0000;
+  margin: 0px;
+  letter-spacing: 3px;
+  padding-left: 6px;
+}
+
+/* ///////////////////////////// */
 
 .notfound h2 {
   font-family: 'Cabin', sans-serif;
@@ -739,4 +815,11 @@ footer p {
 	width: 23%;
 	margin-right: 2%;
 	width: 33.33333%;
+}
+
+.ban h1{
+  color: red;
+  font-size: 300%;
+  font-weight: bold;
+  text-decoration: underline;
 }

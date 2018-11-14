@@ -135,6 +135,16 @@ function deletevaccin($id){
   $query ->bindValue(':id',$id, PDO::PARAM_INT);
   $query -> execute();
 }
+
+//Fonction pour qu'un utilisateur supprimer un vaccin de sa liste de vaccin
+function deletevaccinuser($id){
+  global $pdo;
+
+  $sql="DELETE FROM v4_mesvaccins WHERE id=$id";
+  $query = $pdo -> prepare($sql);
+  $query -> execute();
+}
+
 //Fonction pour effacer un utilisateur en fonction de son id
 function deleteuser($id){
   global $pdo;
@@ -218,12 +228,12 @@ function updateUserDataProfil($id, $pseudo, $email, $nom, $prenom, $age, $passwo
 
   $sql="UPDATE v4_user SET pseudo=:login,nom=:nom,prenom=:prenom,email=:mail,password=:password,age=:age,modified_at=NOW() WHERE id=:id";
   $query=$pdo->prepare($sql);
+  $query ->bindValue(':id',$id, PDO::PARAM_INT);
   $query -> bindValue(':login',$pseudo,PDO::PARAM_STR);
   $query -> bindValue(':nom',$nom,PDO::PARAM_STR);
   $query -> bindValue(':prenom',$prenom,PDO::PARAM_STR);
   $query -> bindValue(':password',$password,PDO::PARAM_STR);
   $query -> bindValue(':mail',$email,PDO::PARAM_STR);
-  $query ->bindValue(':id',$id, PDO::PARAM_INT);
   $query ->bindValue(':age',$age, PDO::PARAM_INT);
   $query->execute();
 }
@@ -354,10 +364,10 @@ function selectnamefromidmesvaccin($id){
 }
 
 //Function update un vaccin d'un user
-function updateinfovacinn($id,$date,$reaction){
+function updateinfovaccin($id,$date,$reaction){
   global $pdo;
 
-  $sql="UPDATE v4v4_mesvaccins SET date=:date,reaction=:reaction WHERE id=:id";
+  $sql="UPDATE v4_mesvaccins SET date=:date,reaction=:reaction WHERE id=:id";
   $query = $pdo->prepare($sql);
   $query ->bindValue(':date',$date, PDO::PARAM_STR);
   $query ->bindValue(':reaction',$reaction, PDO::PARAM_STR);

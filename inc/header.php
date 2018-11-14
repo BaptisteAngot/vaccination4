@@ -22,7 +22,7 @@
           <ul id="menu">
             <li><a href="index.php" class="active">Accueil</a></li>
             <li><a href="index.php#FAQ">Informations</a></li>
-            <li><a href="index.php#form_contact">Nous contacter</a></li>
+            <li><a href="index.php#form-contact">Nous contacter</a></li>
             <?php if (isLogged()) { ?>
               <li><a href="user_log.php">Mon carnet</a></li>
               <li><a href="user_profil.php">Mon Profil</a></li>
@@ -48,8 +48,14 @@
       crossorigin="anonymous"></script>
     <script src="assets/slicknav/jquery.slicknav.min.js"></script>
     <script>
-	$(function(){
-		$('#menu').slicknav();
-	});
-</script>
+    	$(function(){
+    		$('#menu').slicknav();
+    	});
+    </script>
+    <!-- <script>
+      $('#menu').on('click','a',function(){
+        $('#menu a.active').removeClass('active');
+        $(this).addClass('active');
+      });
+    </script> -->
     <body>

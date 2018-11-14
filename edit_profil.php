@@ -15,7 +15,7 @@
           $pseudo = trim(strip_tags($_POST['pseudo']));
           $error = validationpseudoProfil($error,$pseudo,3,100);
           $email = trim(strip_tags($_POST['email']));
-          $error = validationemail($error,$email);
+          $error = validationemailProfil($error,$email);
           $password1 = trim(strip_tags($_POST['password1']));
           $password2 = trim(strip_tags($_POST['password2']));
           $error = validationpassword($error,$password1,$password2,3,50);
@@ -32,7 +32,6 @@
             header('Location: user_profil.php');
           }
         }
-        // Modifier un post dans la BDD
       }
     } else{
       header('Location: page404.php');
@@ -53,8 +52,8 @@
       afficherErreur($error, 'email');
       br();
       labelPassword('password1', 'Mot de passe :', $resultat);
-      br();
       afficherErreur($error, 'password1');
+      br();
       labelPassword('password2', 'Confirmer mot de passe :', $resultat);
       afficherErreur($error, 'password1');
       br();

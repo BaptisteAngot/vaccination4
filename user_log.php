@@ -55,15 +55,17 @@ else{
           <th>Date de vaccination: </th>
           <th>Commentaire: </th>
           <th>Edit :</th>
+          <th align="center">Supprimer :</th>
       </thead>
       <tbody>
         <?php
         foreach ($listevaccinfromiduser as $vaccin) {
           echo '<tr>';
             echo '<td>' .$vaccin['nom'] . '</td>';
-            echo '<td>' .date("d-m-Y",strtotime($vaccin['date'])) . '</td>';
-            echo '<td>' . $vaccin['reaction'] . '</td>';
-            echo '<td> <a href="editvaccinuser.php?id='.$vaccin['id'].'"> Modifier votre vaccin</a> </td>';
+            echo '<td align="center">' .date("d-m-Y",strtotime($vaccin['date'])) . '</td>';
+            echo '<td align="center">' . $vaccin['reaction'] . '</td>';
+            echo '<td align="center"> <a href="editvaccinuser.php?id='.$vaccin['id'].'"> Modifier votre vaccin</a> </td>';
+            echo '<td align="center"> <a href="deletevaccinfromuser.php?id='.$vaccin['id'].'">Delete</a> </td>';
           echo '</tr>';
         }
          ?>

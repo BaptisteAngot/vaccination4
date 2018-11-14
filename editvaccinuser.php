@@ -19,16 +19,11 @@ else{
 
 //Récupérer info d'un vaccin à l'id
 $infovaccin=selectinfofromidvaccin($_GET['id']);
-
 //récupère la liste de tout les vaccins
 $vaccinsexistants= recuperationlistevaccin();
 
 if(!empty($_POST['submitted'])){
   //Faille XSS
-
-  //Nom vaccin
-  $title=trim(strip_tags($_POST['vaccin']));
-  $error=validationText($error,$title,2,50,'titrevaccin');
 
   //Date
   $date=trim(strip_tags($_POST['date']));
@@ -39,7 +34,7 @@ if(!empty($_POST['submitted'])){
   $error=validationText($error,$reaction,0,100,'reaction');
 
   if(count($error)==0){
-    updateinfovacinn($infovaccin,$date,$reaction);
+    updateinfovaccin($infovaccin['id'],$date,$reaction);
     header('Location: user_log.php');
   }
 }
@@ -55,8 +50,11 @@ $date=date("Y-m-d",strtotime($infovaccin['date']));
    <div class="modifvaccin">
      <h1>Modification d'un vaccin réalisé</h1>
      <form class="" method="post">
+       <label class="label" for="vaccin"> Nom du vaccin :</label>
        <input type="text" name="vaccin" value="<?php echo $nomduvaccin ; ?>" disabled>
-       <input type="date" name="date" value="<?php echo $date; ?>">.
+       <label class="label" for="date"> Date de vaccination :</label>
+       <input type="date" name="date" value="<?php echo $date; ?>">
+       <label class="label" for="reaction"> Une réaction ?</label>
        <input type="text" name="reaction" value="<?php echo $infovaccin['reaction']; ?>">
        <input type="submit" name="submitted" value="Mettre à jour vos informations">
      </form>

@@ -37,6 +37,7 @@ if (!empty($_POST['submitted']))
 
 include 'inc/header.php';
  ?>
+ <div class="form-connexion">
  <form method="post">
     <label for="login_mail">Login ou e-mail :</label>
     <input type="text" name="login_mail" value="">
@@ -50,7 +51,7 @@ include 'inc/header.php';
     br(); ?>
     <a href="password_forget.php">Mot de passe oublié?</a>
     <input type="submit" name="submitted" value="Envoyer">
- </form>
-
+ </form> 
+</div>
  <?php
 include 'inc/footer.php';

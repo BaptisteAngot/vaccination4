@@ -1,3 +1,7 @@
+<?php
+  $page = $_SERVER['PHP_SELF'];
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -20,7 +24,7 @@
       <div class="navbar" id="myTopnav">
         <nav>
           <ul id="menu">
-            <li><a href="index.php" class="active">Accueil</a></li>
+            <li><a <?php if($page=="/vaccination4/index.php") echo 'class="active"'; ?> href="index.php">Accueil</a></li>
             <li><a href="index.php#FAQ">Informations</a></li>
             <li><a href="index.php#form-contact">Nous contacter</a></li>
             <?php if (isLogged()) { ?>
@@ -31,8 +35,8 @@
                 <li><a href="index_back.php">Admin</a></li>
               <?php } ?>
             <?php } else { ?>
-              <li><a href="inscription.php">Inscription</a></li>
-              <li><a href="connexion.php">Connexion</a></li>
+              <li><a <?php if($page=="/vaccination4/inscription.php") echo 'class="active"'; ?> href="inscription.php">Inscription</a></li>
+              <li><a <?php if($page=="/vaccination4/connexion.php") echo 'class="active"'; ?> href="connexion.php">Connexion</a></li>
             <?php } ?>
           </ul>
         </nav>
@@ -52,10 +56,10 @@
     		$('#menu').slicknav();
     	});
     </script>
-    <!-- <script>
+    <script>
       $('#menu').on('click','a',function(){
         $('#menu a.active').removeClass('active');
         $(this).addClass('active');
       });
-    </script> -->
+    </script>
     <body>

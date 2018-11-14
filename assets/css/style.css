@@ -355,12 +355,8 @@ h3 {
 
 
 #partenaires {
-<<<<<<< HEAD
-  background-color: crimson;
-=======
   background-color: #ECF0F3;
   /* padding-top: 20px; */
->>>>>>> 560c41b4e5d1c58fd5a9caf1234b2d6238651e2b
   padding-bottom: 50px;
   height: 500px;
   text-align: center;
@@ -383,7 +379,6 @@ h3 {
   width: 25%;
   padding-top: 35px;
   padding-bottom: 35px;
-<<<<<<< HEAD
 }
 #box {
     float: left;
@@ -408,8 +403,6 @@ h3 {
   float: right;
   width: 50%;
   height: 50%;
-=======
->>>>>>> 560c41b4e5d1c58fd5a9caf1234b2d6238651e2b
 }
 
 #contact {
@@ -497,15 +490,11 @@ h3 {
   padding-bottom: 25px;
 }
 
-<<<<<<< HEAD
-=======
 .section4 {
   float: left;
   width: 100%;
   padding-top: 0px;
-
 }
->>>>>>> 560c41b4e5d1c58fd5a9caf1234b2d6238651e2b
 
 #form-contact form {
   max-width: 1040px;
@@ -517,7 +506,6 @@ h3 {
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
 #form-contact { background-color: #ECF0F3; background-image: url('../../images/medical2.jpg'); background-size: 100%;}
 
 #form-contact p.textintro {
@@ -528,12 +516,10 @@ h3 {
 }
 
 #form-contact  h2
-=======
 #form_contact {padding: 0px 10px 20px 10px; background-image: url('../../images/medical2.jpg'); background-size: 100%; background-repeat: no-repeat;}
 #form_contact p.textintro {text-align: center; margin: 10px 0 0px 0;}
 
 .section4 h2
->>>>>>> 560c41b4e5d1c58fd5a9caf1234b2d6238651e2b
 {
   background-color: #3FB3A6;
   text-align: center;
@@ -672,9 +658,9 @@ footer p {
 .newvaccin{
   background-color: #f4e7d3;
   border: 2px solid rgb(4, 113, 152);
-  float:right;
+  float:left;
   width: 48%;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 20 20px;
   padding: 0 5px 0 5px;
   display: inline;
   overflow: hidden;
@@ -687,7 +673,7 @@ footer p {
   background-color: #FFF;
   border: 2px solid rgb(4, 113, 152);
   float: left;
-  width: 46%;
+  width: 47%;
   margin: 0 20px 0 20px;
   border-radius: 10px;
 }

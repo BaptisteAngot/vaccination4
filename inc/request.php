@@ -262,6 +262,17 @@ function connect($login_mail,$password){
   return $user;
 }
 
+//Fonction pour changer le status d'un user lorsqu'il se connect
+function changestatus($user,$status){
+  global $pdo;
+
+  $sql= "UPDATE v4_user SET status=:status WHERE id=:id";
+  $query = $pdo->prepare($sql);
+  $query -> bindValue(':status',$status,PDO::PARAM_STR);
+  $query -> bindValue(':id',$user['id'],PDO::PARAM_INT);
+  $query -> execute();
+}
+
 //Fonction pour se register
 function register($pseudo,$email,$hash,$token){
   global $pdo;

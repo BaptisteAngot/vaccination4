@@ -37,9 +37,14 @@
 </div>
 <div class="clear"></div>
 
+<<<<<<< HEAD
+    <div class="column">
+      <p>Nos réseaux sociaux</p>
+=======
   <div class='wrap'>
     <div class="column2">
       <h4>Nos réseaux sociaux</h4>
+>>>>>>> 6862b80638b7d402efe4c1bccba23e8678888c55
       <ul class="social-icons">
           <li><a href="https://www.facebook.com/InfoVaccins-763363707343739/" class="facebook"></a></li>
           <li><a href="#" class="twitter"></a></li>
@@ -57,6 +62,9 @@
       <p>01 02 03 04 05 06</p>
     </div>
   </div>
+<<<<<<< HEAD
+
+=======
   <div class="clear"></div>
 
   <div class='wrap'>
@@ -65,6 +73,7 @@
     </div>
   </div>
   <div class="clear"></div>
+>>>>>>> 6862b80638b7d402efe4c1bccba23e8678888c55
 
 </footer>
 </body>

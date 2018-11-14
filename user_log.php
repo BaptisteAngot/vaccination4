@@ -99,4 +99,5 @@ else{
   </div>
 
 </div>
+<div class="clear"></div>
  <?php include 'inc/footer.php'; ?>

@@ -107,6 +107,7 @@
           } else {
             $error['name'] = 'Veuillez entrer votre nom';
           }
+
           if (!empty($email)){
               if(strlen($email) < 3 ) {
           $error['email'] = 'Votre titre est trop court. (minimum 3 caractères)';
@@ -116,6 +117,7 @@
           } else {
             $error['email'] = 'Veuillez renseigner un titre';
           }
+
           if (!empty($message)){
               if(strlen($message) < 3 ) {
           $error['message'] = 'Votre contenu est trop court. (minimum 3 caractères)';
@@ -123,6 +125,7 @@
           } else {
             $error['message'] = 'Veuillez renseigner un contenu';
           }
+
           if (count($error) == 0){
               $sql = "INSERT INTO /*articles (title,content,auteur,created_at,updated_at,status) VALUES (:title, :content, :auteur ,NOW(),NULL, 1);*/";
               $query = $pdo->prepare($sql);
@@ -138,6 +141,7 @@
               $query->bindValue(':message',$message, PDO::PARAM_STR);
               // execution de la requête preparé
               $query->execute();
+
           }
       }
    ?>

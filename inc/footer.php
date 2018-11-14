@@ -37,6 +37,9 @@
 
 <div class="clear"></div>
 
+    <div class="column">
+      <p>Nos réseaux sociaux</p>
+  <div class='wrap'>
   <div class='wrap_footer'>
     <div class="column2">
       <h4>Nos réseaux sociaux</h4>
@@ -57,6 +60,7 @@
       <p>01 02 03 04 05 06</p>
     </div>
   </div>
+
   <div class="clear"></div>
 
   <div class='wrap_footer'>
@@ -65,6 +69,7 @@
     </div>
   </div>
   <div class="clear"></div>
+
 </div>
 </footer>
 </body>

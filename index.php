@@ -34,77 +34,87 @@
   </div>
 
 
-      <div id ="FAQ">
-          <h2>Questions fréquentes</h2>
-          <div class="ligne"></div>
-        <div class="wrap">
-          <ul>
-            <div class="boiteQuestion"> <li>Qu'est-ce que InfoVaccins.com?</li> </div>
-            <p>InfoVaccins.com est un carnet de santé connecté accessible sous toutes les patformes.</p>
-            <div class="boiteQuestion"> <li>À quoi sert-il?</li> </div>
-            <p>Il permet de consulter les informations des différents vaccins mais également de s'y tenir
-               informé.Après inscription InfoVaccins.com vous avertira des prochains vaccins vous concernant personnellement.
-            </p><br>
-            <div class="boiteQuestion"> <li>Qui sont les concernés?</li> </div>
-            <p>InfoVaccins.com concerne tous le monde.</p>
-            <div class="boiteQuestion"> <li>Quels sont les avantages?</li> </div>
-            <p>InfoVaccins.com permet une de s'informer rapidement et efficacement sans avoir besoins de consulter un médecin
-            car toutes nos informations on était vérifié par des spécialiste en matière de vaccination.</p>
-          </ul>
-        </div>
+  <div id ="FAQ">
+  <h2>Questions fréquentes</h2>
+  <div class="ligne"></div>
+    <div class="wrap">
+      <ul>
+        <div class="boiteQuestion"> <li>Qu'est-ce que InfoVaccins.com?</li> </div>
+        <p>InfoVaccins.com est un carnet de santé connecté accessible sous toutes les patformes.</p>
+        <div class="boiteQuestion"> <li>À quoi sert-il?</li> </div>
+        <p>Il permet de consulter les informations des différents vaccins mais également de s'y tenir
+           informé.Après inscription InfoVaccins.com vous avertira des prochains vaccins vous concernant personnellement.
+        </p>
+        <div class="boiteQuestion"> <li>Qui sont les concernés?</li> </div>
+        <p>InfoVaccins.com concerne tous le monde.</p>
+        <div class="boiteQuestion"> <li>Quels sont les avantages?</li> </div>
+        <p>InfoVaccins.com permet une de s'informer rapidement et efficacement sans avoir besoins de consulter un médecin
+          car toutes nos informations on était vérifié par des spécialiste en matière de vaccination.
+        </p>
+      </ul>
+    </div>
+  </div>
+
+
+  <section id="equipe">
+  <h2>Notre équipe</h2>
+    <div class="ligne"></div>
+    <div class="wrap">
+      <div class="section1">
+          <img src="images/Equipe/BaptisteAngot.jpg" alt="Un membre d'InfoVaccins.">
+          <h3>Baptiste Angot </h3>
+          <p>Développeur WEB à NFactory</p>
       </div>
+      <div class="section1">
+          <img src="images/Equipe/TurpinPaul.jpg" alt="Un membre d'InfoVaccins.">
+          <h3>Paul Turpin</h3>
+          <p>Développeur WEB à NFactory</p>
+      </div>
+      <div class="section1">
+          <img src="images/Equipe/Jean-BaptisteDeSaint-Léger.jpg" alt="Un membre d'InfoVaccins.">
+          <h3>Jean-Baptiste de Sain-Léger</h3>
+          <p>Développeur WEB à NFactory</p>
+      </div>
+      <div class="section1">
+          <img src="images/Equipe/NicolasDufresne.jpg" alt="Un membre d'InfoVaccins.">
+          <h3>Nicolas Dufresne</h3>
+          <p>Développeur WEB à NFactory</p>
+      </div>
+    </div>
+  </section>
+  <div class="clear"></div>
 
 
-      <section id="equipe">
-          <h2>Notre équipe</h2>
-          <div class="ligne"></div>
-          <div class="wrap">
-            <div class="section1">
-              <img src="images/Equipe/BaptisteAngot.jpg" alt="Un membre d'InfoVaccins.">
-              <h3>Baptiste Angot </h3>
-              <p>Développeur WEB à NFactory</p>
-            </div>
-            <div class="section1">
-              <img src="images/Equipe/TurpinPaul.jpg" alt="Un membre d'InfoVaccins.">
-              <h3>Paul Turpin</h3>
-              <p>Développeur WEB à NFactory</p>
-            </div>
-            <div class="section1">
-              <img src="images/Equipe/Jean-BaptisteDeSaint-Léger.jpg" alt="Un membre d'InfoVaccins.">
-              <h3>Jean-Baptiste de Sain-Léger</h3>
-              <p>Développeur WEB à NFactory</p>
-            </div>
-            <div class="section1">
-              <img src="images/Equipe/NicolasDufresne.jpg" alt="Un membre d'InfoVaccins.">
-              <h3>Nicolas Dufresne</h3>
-              <p>Développeur WEB à NFactory</p>
-            </div>
-        </div>
-      </section>
 
-      <div class="clear"></div>
+  <section id="partenaires">
+    <h2>Nos partenaires</h2>
+    <div class="wrap">
+        <div class="ligne"></div>
+        <div id="box"><img height="700" src="images/partenaires.png" width="350"></div>
 
-      <section id="partenaires">
-          <h2>Nos partenaires</h2>
-          <div class="wrap">
-          <div class="ligne"></div>
-          <div class="section2">
-            <a href="#"><img src="images/e-vaccine.png" alt="Un partenaire d'InfoVaccins."></a>
-          </div>
-          <div class="section2">
-            <a href="#"><img src="images/e-vaccine.png" alt="Un partenaire d'InfoVaccins."></a>
-          </div>
-          <div class="section2">
-            <a href="#"><img src="images/e-vaccine.png" alt="Un partenaire d'InfoVaccins."></a>
-          </div>
-          <div class="section2">
-            <a href="#"><img src="images/e-vaccine.png" alt="Un partenaire d'InfoVaccins."></a>
-          </div>
-        
-        </div>
-      </section>
 
-      <div class="clear"></div>
+
+    <!-- Place somewhere in the <body> of your page -->
+    <div class="flexslider">
+      <ul class="slides">
+        <li>
+          <img src="images/imgVaccin.jpg"/>
+        </li>
+        <li>
+          <img src="images/imgVaccin2.jpg"/>
+        </li>
+        <li>
+          <img src="images/imgVaccin3.jpg"/>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>
+  </section>
+  <div class="clear"></div>
+
+
+
   <?php
 
   $titre = 'Nouveau message';
@@ -174,31 +184,48 @@
 
    ?>
 
-   <div class="section4">
-            <section id="form_contact">
-              <h2>Contact</h2>
+   <section id="form-contact">
+     <h2>Contact</h2>
+     <div class="section4">
                 <div class="ligne"></div>
-                <p class="textintro">Si vous souhaitez nous contacter pour des informations complémentaires, remplissez le formulaire suivant :</p>
+                <div class="wrap">
+                  <p class="textintro">Si vous souhaitez nous contacter pour des informations complémentaires, remplissez le formulaire suivant :</p>
 
-                <form action="" method="post">
-                  <div class="w50">
-                    <label for="name">Votre Nom</label>
-                    <input class="inputerror" type="text" name="name" value="" placeholder="Ex: Pierre Martin">
-                  </div>
+                  <form action="" method="post">
+                    <div class="w50">
+                      <label for="name">Votre Nom</label>
+                      <input class="inputerror" type="text" name="name" value="" placeholder="Ex: Pierre Martin">
+                    </div>
 
-                  <div class="w50">
-                    <label for="email">Votre Email</label>
-                    <input type="email" name="email" value="" placeholder="Ex: pierremartin@gmail.com">
-                  </div>
+                    <div class="w50">
+                      <label for="email">Votre Email</label>
+                      <input type="email" name="email" value="" placeholder="Ex: pierremartin@gmail.com">
+                    </div>
 
-                  <div class="w100">
-                    <label for="message">Votre Message</label>
-                    <textarea name="message" rows="8" cols="80" placeholder="Votre message..."></textarea>
-                  </div>
+                    <div class="w100">
+                      <label for="message">Votre Message</label>
+                      <textarea name="message" rows="8" cols="80" placeholder="Votre message..."></textarea>
+                    </div>
 
-                  <input type="submit" name="submit" value="Envoyer">
-                </form>
-            </section>
+                    <input type="submit" name="submit" value="Envoyer">
+                  </form>
+                </div>
           </div>
+        </section>
         <div class="clear"></div>
+
+
+        <script
+        src="https://code.jquery.com/jquery-1.6.2.min.js"
+        integrity="sha256-0W0HoDU0BfzslffvxQomIbx0Jfml6IlQeDlvsNxGDE8="
+        crossorigin="anonymous">
+        </script>
+        <script src="assets/flexslider/jquery.flexslider.js"></script>
+        <script type="text/javascript" charset="utf-8">
+          $(window).load(function() {
+            $('.flexslider').flexslider();
+          });
+        </script>
+
+
   <?php include 'inc/footer.php'; ?>

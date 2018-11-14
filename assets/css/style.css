@@ -680,6 +680,7 @@ footer p {
   overflow: hidden;
   border-radius: 10px;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .modifprofil{
@@ -695,6 +696,7 @@ footer p {
   border-radius: 10px;
   text-align: center;
   z-index: -1;
+  margin-bottom: 50px;
 }
 
 .myvaccin{

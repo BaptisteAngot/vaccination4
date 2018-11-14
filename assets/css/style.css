@@ -163,8 +163,7 @@ body
   transition: all 1.5s;
 }
 
-#menu li a.active,
-#menu li a.active:hover
+.active, .active:hover
 {
     background-color: #8fafd6;
     color: white;

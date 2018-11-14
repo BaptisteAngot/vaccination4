@@ -27,14 +27,16 @@ else{
 
   include 'inc/header.php';
 ?>
-<h3>Votre profil</h3>
-<div class="profil">
-  <p>Pseudo : <?php echo $resultat['pseudo']?></p>
-  <p>Email : <?php echo $resultat['email']?></p>
-  <p>Nom : <?php echo $resultat['nom']?></p>
-  <p>Prénom : <?php echo $resultat['prenom']?></p>
-  <p>Age : <?php echo $resultat['age']?></p>
-  <button  type="button" name="button"><a href="edit_profil.php">Modifer</a></button>
+<div class="modifprofil">
+  <h3>Votre profil</h3>
+  <div class="profil">
+    <p>Pseudo : <?php echo $resultat['pseudo']?></p>
+    <p>Email : <?php echo $resultat['email']?></p>
+    <p>Nom : <?php echo $resultat['nom']?></p>
+    <p>Prénom : <?php echo $resultat['prenom']?></p>
+    <p>Age : <?php echo $resultat['age']?></p>
+    <button  type="button" name="button"><a href="edit_profil.php">Modifer</a></button>
+  </div>
 </div>
 <?php
   include 'inc/footer.php';

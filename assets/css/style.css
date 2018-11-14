@@ -453,7 +453,7 @@ input[type="date"] {
     padding:5px;
     display: inline-block !important;
     visibility: visible !important;
-    width: 15%;
+    width: 30%;
     border-radius: 5px;
     float: left;
 }
@@ -531,6 +531,20 @@ select::-ms-expand {
   text-align: center;
 }
 
+.modifprofil{
+  background-color: #f4e7d3;
+  border: 2px solid rgb(4, 113, 152);
+  float:left;
+  width: 70%;
+  margin-right: 25%;
+  margin-left: 15%;
+  padding: 0 5px 0 5px;
+  display: inline;
+  overflow: hidden;
+  border-radius: 10px;
+  text-align: center;
+  z-index: -1;
+}
 
 .myvaccin{
   background-color: #FFF;
@@ -578,6 +592,7 @@ select::-ms-expand {
   float: left;
   clear: both;
   text-align: center;
+  padding-left: 20px;
 }
 
 .formnewvaccin{
@@ -590,45 +605,35 @@ select::-ms-expand {
   font-size: 1.2em;
 }
 
-
-#footer {
-  background-color: #56739A;
+.modifvaccin{
+  float: left;
+  background-color: #e4e4e4;
   width: 100%;
-  height: 150px;
-}
-
-#footer .bouton1 {
-  width : 48px;
-  height : 48px;
-  display : inline-block; /*Très important, sinon les dimensions ne sont pas prises en compte*/
-  background : url("../../images/logo_twitter_grey.png") no-repeat;
-}
-
-#footer .bouton1:hover {
-  background-image: url('../../images/logo_twitter.png');
-}
-
-#footer .bouton2 {
-  width : 48px;
-  height : 48px;
-  display : inline-block;
-  background : url("../../images/logo_fb_grey.png") no-repeat;
-}
-
-#footer .bouton2:hover {
-  background-image: url('../../images/logo_fb.png');
-}
-
-footer {
-  width: 100%;
-  background-color: #56739A;
-  color: white;
+  border-radius: 10px;
   text-align: center;
+  padding: 10px 0 10px 0;
+  border: 2px solid rgb(4, 113, 152);
 }
 
-footer p {
-  text-align: center;
+.modifvaccin input[type="date"]{
+  margin-left:  20px;
 }
+
+.modifvaccin input{
+  margin: 10px 0 10px 0;
+}
+
+.modifvaccin input[type="submit"]{
+  width: 50%;
+  margin-left: 25%;
+}
+
+.modifvaccin h1{
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 
 
 .social-icons
@@ -673,9 +678,65 @@ footer p {
 
 }
 
-#footer .column
+#footer {
+  background-color: #56739A;
+  width: 100%;
+}
+
+#footer .bouton1 {
+  width : 48px;
+  height : 48px;
+  display : inline-block; /*Très important, sinon les dimensions ne sont pas prises en compte*/
+  background : url("../../images/logo_twitter_grey.png") no-repeat;
+}
+
+#footer .bouton1:hover {
+  background-image: url('../../images/logo_twitter.png');
+}
+
+#footer .bouton2 {
+  width : 48px;
+  height : 48px;
+  display : inline-block;
+  background : url("../../images/logo_fb_grey.png") no-repeat;
+}
+
+#footer .bouton2:hover {
+  background-image: url('../../images/logo_fb.png');
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: #56739A;
+  color: white;
+  /* text-align: center; */
+}
+
+footer p {
+  text-align: center;
+}
+
+#footer .column1
 {
   margin: 3% 0 0 0;
 	float: left;
+	width: 24%;
+}
+
+#footer .column2
+{
+  margin: 15px 0 0 0;
+	float: left;
+	width: 33.333333333333333333333%;
+}
+
+#footer .column3
+{
+  margin: 15px 0 0 0;
+	float: left;
+	width: 100%;
+	width: 23%;
+	margin-right: 2%;
 	width: 33.33333%;
 }

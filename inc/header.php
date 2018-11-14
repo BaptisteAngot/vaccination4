@@ -29,7 +29,7 @@
             <li><a href="index.php#form-contact">Nous contacter</a></li>
             <?php if (isLogged()) { ?>
               <li><a href="user_log.php">Mon carnet</a></li>
-              <li><a href="user_profil.php">Mon Profil</a></li>
+              <li><a <?php if($page=="/vaccination4/user_profil.php") echo 'class="active"'; ?> href="user_profil.php">Mon profil</a></li>
               <li><a href="deconnexion.php">Déconnexion</a></li>
               <?php if (isAdmin()) { ?>
                 <li><a href="index_back.php">Admin</a></li>

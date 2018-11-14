@@ -17,6 +17,12 @@ body
   margin: 0 auto;
 }
 
+.wrap_footer {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -784,11 +790,14 @@ select::-ms-expand {
 footer {
   display : table-row;
   width: 100%;
+  max-width: 100%;
   height: 300px;
   background-color: #56739A;
   color: white;
-  bottom:0;
-  /* text-align: center; */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
 }
 
 footer p {
@@ -814,9 +823,6 @@ footer p {
   margin: 15px 0 0 0;
 	float: left;
 	width: 100%;
-	width: 23%;
-	margin-right: 2%;
-	width: 33.33333%;
 }
 
 .ban h1{

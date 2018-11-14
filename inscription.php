@@ -36,34 +36,37 @@ if (!empty($_POST['submitted']))
 
 include 'inc/header.php';
  ?>
- <section class="form_inscription">
+ <div class="wrap">
+
+   <section class="form_inscription">
 
 
-<form class="sub_form" action="" method="post">
-  <label for="pseudo">Pseudo :</label>
-  <input type="text" name="pseudo" value="">
-  <?php
-  afficherErreur($error, 'pseudo');
-  br(); ?>
-  <label for="mail">E-mail :</label>
-  <input type="text" name="mail" value="">
-  <?php
-  afficherErreur($error, 'mail');
-  br(); ?>
-  <label for="mdp">Mot de passe :</label>
-  <input type="password" name="mdp" value="">
-  <?php
-  afficherErreur($error, 'mdp');
-  br(); ?>
-  <label for="mdp2">Vérifiez votre mot de passe :</label>
-  <input type="password" name="mdp2" value="">
-  <?php
-  afficherErreur($error, 'mdp');
-  br(); ?>
-  <input type="submit" name="submitted" value="Envoyer">
-</form>
+     <form class="sub_form" action="" method="post">
+       <label for="pseudo">Pseudo :</label>
+       <input type="text" name="pseudo" value="">
+       <?php
+       afficherErreur($error, 'pseudo');
+       br(); ?>
+       <label for="mail">E-mail :</label>
+       <input type="text" name="mail" value="">
+       <?php
+       afficherErreur($error, 'mail');
+       br(); ?>
+       <label for="mdp">Mot de passe :</label>
+       <input type="password" name="mdp" value="">
+       <?php
+       afficherErreur($error, 'mdp');
+       br(); ?>
+       <label for="mdp2">Vérifiez votre mot de passe :</label>
+       <input type="password" name="mdp2" value="">
+       <?php
+       afficherErreur($error, 'mdp');
+       br(); ?>
+       <input type="submit" name="submitted" value="Envoyer">
+     </form>
 
- </section>
+   </section>
+ </div>
 
 <?php
 include 'inc/footer.php';

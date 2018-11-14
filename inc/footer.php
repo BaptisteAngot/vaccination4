@@ -1,5 +1,9 @@
 <footer id="footer">
+<<<<<<< HEAD
 <div class='wrap_footer'>
+=======
+
+>>>>>>> eebb84b03bbb126678e067f1e5d3301ebcd327c3
   <div class="column1">
 				<ul class="footer__menu">
 					<h4>Le Carnet</h4>
@@ -34,7 +38,7 @@
             						<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li>
             				</ul>
             			</div>
-</div>
+
 <div class="clear"></div>
 
   <div class='wrap_footer'>
@@ -65,7 +69,7 @@
     </div>
   </div>
   <div class="clear"></div>
-
+</div>
 </footer>
 </body>
 </html>

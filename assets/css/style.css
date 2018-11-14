@@ -7,8 +7,8 @@ body
 	font-size: 17px;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-color: #ecf0f3;
   background-image: url("../../images/medicalFond.jpg");
+  background-color: #ECF0F3;
 }
 
 .wrap {
@@ -129,9 +129,10 @@ body
 #header .navbar{
   background-color: #56739A;
   overflow: hidden;
+
 }
 
-#header .menufixed {position: fixed;background-color: #56739A;width: 100%; border-bottom: solid black 1px;}
+#header .menufixed {position: fixed;background-color: #56739A;width: 100%; border-bottom: solid black 1px;  z-index: 10;}
 
 .slicknav_menu {
 	display:none;
@@ -281,18 +282,10 @@ body
   margin-left: 12.5%;
 }
 
-h3 {
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
 .ligne {
   width:60px; height:2px; margin: 10px auto; background-color: #000;
 }
 
-<<<<<<< HEAD
-
-=======
 #equipe{
   background-color: lime;
   width: 100%;
@@ -389,10 +382,6 @@ h3 {
   color: #ECF0F3;
 }
 
-#contact h3 {
-  padding-bottom: 20px;
-}
-
 
 #equipe{
   background-color: lime;
@@ -445,13 +434,6 @@ h3 {
   padding-bottom: 35px;
 }
 
-
-#form-contact {
-  background-color: #ECF0F3;
-  background-image: url('../../images/medical2.jpg');
-  background-size: 100%;
-  text-align: center;
-}
 .section4 {
   float: left;
   width: 100%;
@@ -459,7 +441,7 @@ h3 {
 }
 
 
-#form-contact { background-color: #ECF0F3; background-image: url('../../images/medical2.jpg'); background-size: 100%;}
+#form-contact { background-color: #ECF0F3; background-size: 100%;}
 
 .form-connexion{
   margin-top: 400px;
@@ -599,11 +581,6 @@ select::-ms-expand {
   transition: .25s all ease;
 }
 
-.derniere_phrase {
-  padding-top: 70px;
-  font-size: 1.05em;
-}
-
 .newvaccin{
   background-color: #f4e7d3;
   border: 2px solid rgb(4, 113, 152);
@@ -678,22 +655,10 @@ select::-ms-expand {
 
 
 #footer {
-  background-color: crimson;
+  background-color: #56739A;
   width: 100%;
-  height: 200px;
+  height: 150px;
 }
-
-
-#footer .section3 {
-  float: left;
-  width: 33%;
-  padding-top: 20px;
-}
-
-#footer .section3 h3 {
-  padding-bottom: 25px;
-}
-
 
 #footer .bouton1 {
   width : 48px;
@@ -717,7 +682,6 @@ select::-ms-expand {
   background-image: url('../../images/logo_fb.png');
 }
 
-
 footer {
   width: 100%;
   background-color: #56739A;
@@ -733,6 +697,7 @@ footer p {
 .social-icons
 {
 	margin: 5px;
+  margin-left: 37%;
 }
 
 .social-icons li a
@@ -799,10 +764,9 @@ footer p {
 
 }
 
-.column
+#footer .column
 {
+  margin: 3% 0 0 0;
 	float: left;
-	width: 23%;
-	margin-right: 2%;
-
+	width: 33.33333%;
 }

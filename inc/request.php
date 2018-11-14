@@ -412,7 +412,7 @@ function majpassword($user,$new_token,$hash){
 
 
 // Requête SQL des pseudos
-function sqlpseudo(){
+function sqlpseudo($mail){
   global $pdo;
 
   $sql = "SELECT email, token FROM v4_user WHERE email = :mail";

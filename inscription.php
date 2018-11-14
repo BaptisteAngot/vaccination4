@@ -36,7 +36,7 @@ if (!empty($_POST['submitted']))
 
 include 'inc/header.php';
  ?>
- <div class="wrap">
+ <div class="wrap_inscription">
 
    <section class="form_inscription">
 

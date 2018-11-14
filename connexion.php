@@ -37,8 +37,6 @@ if (!empty($_POST['submitted']))
 
 include 'inc/header.php';
  ?>
-<section class="form_inscription">
-
  <form method="post">
     <label for="login_mail">Login ou e-mail :</label>
     <input type="text" name="login_mail" value="">
@@ -54,6 +52,5 @@ include 'inc/header.php';
     <input type="submit" name="submitted" value="Envoyer">
  </form>
 
-</section>
  <?php
 include 'inc/footer.php';

@@ -225,6 +225,20 @@ function validationpseudoProfil($error,$pseudo,$min,$max,$empty = true){
     return $error;
 }
 
+function validatemail($error,$mail,$empty=true){
+  global $pdo;
+
+  if(!empty($mail)){
+    if(!filter_var($mail,FILTER_VALIDATE_EMAIL)){
+      $error['mail'] = 'Mail invalide';
+    }
+  }
+  else{
+    $error['mail']= 'Mail vide';
+  }
+  return $error;
+}
+
 function validationemail($error,$mail,$empty=true){
   global $pdo;
   if(!empty($mail)){

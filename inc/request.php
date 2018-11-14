@@ -135,6 +135,16 @@ function deletevaccin($id){
   $query ->bindValue(':id',$id, PDO::PARAM_INT);
   $query -> execute();
 }
+
+//Fonction pour qu'un utilisateur supprimer un vaccin de sa liste de vaccin
+function deletevaccinuser($id){
+  global $pdo;
+
+  $sql="DELETE FROM v4_mesvaccins WHERE id=$id";
+  $query = $pdo -> prepare($sql);
+  $query -> execute();
+}
+
 //Fonction pour effacer un utilisateur en fonction de son id
 function deleteuser($id){
   global $pdo;
@@ -329,4 +339,38 @@ function recupvaccinsfromid($id){
   $query->execute();
   $listevaccinid=$query->fetchAll();
   return $listevaccinid;
+}
+
+//Récuperation info d'un vaccin en fonction d'un id
+function selectinfofromidvaccin($id){
+  global $pdo;
+
+  $sql="SELECT * FROM v4_mesvaccins WHERE id=$id";
+  $query = $pdo->prepare($sql);
+  $query->execute();
+  $infovaccin = $query->fetch();
+  return $infovaccin;
+}
+
+//Fonction qui récupère le nom d'un vaccin en fonction d'un id
+function selectnamefromidmesvaccin($id){
+  global $pdo;
+
+  $sql="SELECT nom FROM v4_vaccin LEFT JOIN v4_mesvaccins AS mv ON v4_vaccin.id=mv.id_vaccin WHERE mv.id=$id";
+  $query = $pdo->prepare($sql);
+  $query->execute();
+  $namevacin = $query->fetch();
+  return $namevacin;
+}
+
+//Function update un vaccin d'un user
+function updateinfovaccin($id,$date,$reaction){
+  global $pdo;
+
+  $sql="UPDATE v4_mesvaccins SET date=:date,reaction=:reaction WHERE id=:id";
+  $query = $pdo->prepare($sql);
+  $query ->bindValue(':date',$date, PDO::PARAM_STR);
+  $query ->bindValue(':reaction',$reaction, PDO::PARAM_STR);
+  $query ->bindValue(':id',$id, PDO::PARAM_STR);
+  $query->execute();
 }

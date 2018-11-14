@@ -42,33 +42,35 @@
 
   include 'inc/header.php';
  ?>
- <h3>Modifer votre profil</h3>
- <form class="" method="post">
-   <?php
-      labelText('pseudo', 'Pseudo :', $resultat);
-      afficherErreur($error, 'pseudo');
-      br();
-      labelEmail('email', 'Email :', $resultat);
-      afficherErreur($error, 'email');
-      br();
-      labelPassword('password1', 'Mot de passe :', $resultat);
-      afficherErreur($error, 'password1');
-      br();
-      labelPassword('password2', 'Confirmer mot de passe :', $resultat);
-      afficherErreur($error, 'password1');
-      br();
-      labelText('nom', 'Nom :', $resultat);
-      afficherErreur($error, 'nom');
-      br();
-      labelText('prenom', 'Prenom :', $resultat);
-      afficherErreur($error, 'prenom');
-      br();
-      labelText('age', 'Age :', $resultat);
-      afficherErreur($error, 'age');
-      br();
-   ?>
-   <input type="submit" name="submitted" value="Modifier">
- </form>
+ <div class="modifprofil">
+   <h3>Modifier votre profil</h3>
+   <form class="" method="post">
+     <?php
+     labelText('pseudo', 'Pseudo :', $resultat);
+     afficherErreur($error, 'pseudo');
+     br();
+     labelEmail('email', 'Email :', $resultat);
+     afficherErreur($error, 'email');
+     br();
+     labelPassword('password1', 'Mot de passe :', $resultat);
+     afficherErreur($error, 'password1');
+     br();
+     labelPassword('password2', 'Confirmer mot de passe :', $resultat);
+     afficherErreur($error, 'password1');
+     br();
+     labelText('nom', 'Nom :', $resultat);
+     afficherErreur($error, 'nom');
+     br();
+     labelText('prenom', 'Prenom :', $resultat);
+     afficherErreur($error, 'prenom');
+     br();
+     labelText('age', 'Age :', $resultat);
+     afficherErreur($error, 'age');
+     br();
+     ?>
+     <input type="submit" name="submitted" value="Modifier">
+   </form>
+ </div>
 
 <?php
   include 'inc/footer.php';

@@ -515,7 +515,7 @@ input[type="date"] {
     padding:5px;
     display: inline-block !important;
     visibility: visible !important;
-    width: 15%;
+    width: 30%;
     border-radius: 5px;
     float: left;
 }
@@ -593,6 +593,20 @@ select::-ms-expand {
   text-align: center;
 }
 
+.modifprofil{
+  background-color: #f4e7d3;
+  border: 2px solid rgb(4, 113, 152);
+  float:left;
+  width: 70%;
+  margin-right: 25%;
+  margin-left: 15%;
+  padding: 0 5px 0 5px;
+  display: inline;
+  overflow: hidden;
+  border-radius: 10px;
+  text-align: center;
+  z-index: -1;
+}
 
 .myvaccin{
   background-color: #FFF;
@@ -640,6 +654,7 @@ select::-ms-expand {
   float: left;
   clear: both;
   text-align: center;
+  padding-left: 20px;
 }
 
 .formnewvaccin{
@@ -652,6 +667,34 @@ select::-ms-expand {
   font-size: 1.2em;
 }
 
+.modifvaccin{
+  float: left;
+  background-color: #e4e4e4;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  border: 2px solid rgb(4, 113, 152);
+}
+
+.modifvaccin input[type="date"]{
+  margin-left:  20px;
+}
+
+.modifvaccin input{
+  margin: 10px 0 10px 0;
+}
+
+.modifvaccin input[type="submit"]{
+  width: 50%;
+  margin-left: 25%;
+}
+
+.modifvaccin h1{
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
 
 
 
@@ -783,4 +826,7 @@ footer p {
   margin: 15px 0 0 0;
 	float: left;
 	width: 100%;
+	width: 23%;
+	margin-right: 2%;
+	width: 33.33333%;
 }

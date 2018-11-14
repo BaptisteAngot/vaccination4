@@ -5,7 +5,7 @@ body
   line-height: 1.5;
 	font-family: 'Arvo', serif;
 	font-size: 17px;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../../images/medicalFond.jpg");
   background-color: #ECF0F3;

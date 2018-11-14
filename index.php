@@ -2,12 +2,10 @@
   include 'inc/pdo.php';
   include 'inc/function.php';
   include 'inc/request.php';
-
   if (isLogged()) {
     // header('Location: user_log.php');
   }
   include 'inc/header.php';
-
 ?>
 
   <div id= "intro">
@@ -116,9 +114,9 @@
 
 
   <?php
-
   $titre = 'Nouveau message';
   $error = array();
+
       if ( !empty($_POST['submitnewpost']) ) {
           $name = trim(strip_tags($_POST['name']));
           $email = trim(strip_tags($_POST['email']));
@@ -154,6 +152,14 @@
               $query->bindValue(':name',$name, PDO::PARAM_STR);
               $query->bindValue(':email',$email, PDO::PARAM_STR);
               $query->bindValue(':message',$message, PDO::PARAM_STR);
+              $query->bindValue(':name',$name, PDO::PARAM_STR);
+              $query->bindValue(':email',$email, PDO::PARAM_STR);
+              $query->bindValue(':message',$message, PDO::PARAM_STR);
+              // Protection injections SQL
+              $query->bindValue(':name',$name, PDO::PARAM_STR);
+              $query->bindValue(':email',$email, PDO::PARAM_STR);
+              $query->bindValue(':message',$message, PDO::PARAM_STR);
+              // execution de la requête preparé
               $query->execute();
           }
       }

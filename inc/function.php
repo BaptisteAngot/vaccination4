@@ -208,6 +208,23 @@ function validationpseudo($error,$pseudo,$min,$max,$empty = true){
     return $error;
 }
 
+function validationpseudoProfil($error,$pseudo,$min,$max,$empty = true){
+  if (!empty($pseudo)) {
+    if(strlen($pseudo)<$min){
+      $error['pseudo']= 'minimum '.$min .' caractères';
+    }
+    elseif (strlen($pseudo)>$max) {
+      $error['pseudo']= 'maximum '.$max.' caractères';
+    }
+  }
+  else{
+    if($pseudo){
+      $error['pseudo']='veuillez renseigner ce champ';
+    }
+  }
+    return $error;
+}
+
 function validationemail($error,$mail,$empty=true){
   global $pdo;
   if(!empty($mail)){
@@ -231,6 +248,7 @@ function validationpassword($error,$password1,$password2,$min,$max,$empty = true
     if (!empty($password1)) {
       if($password1 != $password2){
         $error['password'] = 'Erreur: Veuillez saisir le même mot de passe';
+        die('oui');
       }
       elseif(strlen($password1)<$min){
         $error['password']= 'minimum '.$min .' caractères';
@@ -250,6 +268,7 @@ function validationpassword($error,$password1,$password2,$min,$max,$empty = true
     else {
       $error['password'] = 'Erreur : password vide';
   }
+  return $error;
 }
 
 function transformdate($date){

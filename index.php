@@ -142,8 +142,8 @@
       }
    ?>
 
-   <h2>Nous contacter</h2>
    <div id="form-contact">
+     <h2>Nous contacter</h2>
         <div class="ligne"></div>
         <div class="wrap">
         <p> Si vous souhaitez nous contacter pour des informations complémentaires, remplissez le formulaire suivant :</p>

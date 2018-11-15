@@ -5,11 +5,14 @@ body
   line-height: 1.5;
 	font-family: 'Lato', sans-serif;
 	font-size: 17px;
-  background-image: url("../../images/medicalFond.jpg");
 
   background-color: #ECF0F3;
-  background-size:cover;
+  background-size: contain;
   background-repeat: no-repeat;
+}
+
+.toutSaufLeFooter {
+    background-image: url("../../images/medicalFond.jpg");
 }
 
 .wrap {
@@ -331,17 +334,7 @@ h2{
   width: 50%;
   }
 
-@media screen and (min-width: 767px) {
-  #intro .connexion{
-    font-size: 30px;
-  }
-}
 
-@media screen and (min-width: 767px) {
-  #intro .inscription{
-    font-size: 30px;
-  }
-}
 #intro .inscription a, .connexion a{
   border-radius: 30px;
   transition: all 0.5s;
@@ -646,7 +639,7 @@ select::-ms-expand {
   background-color: #f4e7d3;
   border: 2px solid rgb(4, 113, 152);
   float:left;
-  width: 48%;
+  min-width: 100%;
   margin: 0 20px 20 20px;
   padding: 0 5px 0 5px;
   display: inline;
@@ -677,6 +670,7 @@ select::-ms-expand {
   border: 2px solid rgb(4, 113, 152);
   float: left;
   width: 47%;
+  min-width: 100%;
   margin: 0 20px 0 20px;
   border-radius: 10px;
 
@@ -685,10 +679,16 @@ select::-ms-expand {
 .myvaccin table{
   width: 100%;
   margin: 20px 0 20px 0;
+  min-width: 100%;
 }
 
 .myvaccin thead{
   background-color: #e4e4e4;
+  overflow: hidden;
+}
+
+.myvaccin th{
+  overflow: auto;
 }
 
 .myvaccin td{
@@ -762,8 +762,6 @@ select::-ms-expand {
   font-size: 1.2em;
 }
 
-
-
 .social-icons
 {
 	margin: 5px;
@@ -806,9 +804,9 @@ select::-ms-expand {
 }
 
 #footer {
-  background-image: url("../img/medical2.jpg");
+  background-color: black;
   width: 100%;
-  height: 310px;
+  position: absolute bottom;
 }
 
 #footer .bouton1 {
@@ -838,6 +836,13 @@ select::-ms-expand {
   margin: 3% 0 0 0;
 	float: left;
 	width: 13%;
+}
+
+.column5
+{
+  margin: 3% 0 0 0;
+	float: left;
+	width: 49%;
 }
 
 /*
@@ -875,4 +880,16 @@ select::-ms-expand {
 
 .form_inscription label{
   text-align: center;
+}
+
+@media screen and (min-width: 767px) {
+  #intro .connexion{
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #intro .inscription{
+    font-size: 25px;
+  }
 }

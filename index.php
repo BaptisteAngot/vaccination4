@@ -22,6 +22,7 @@
             mail($email,$titre,$message);
           }
       }
+      include 'inc/header.php';
 ?>
 
 
@@ -106,7 +107,7 @@
         <div class="ligne"></div>
         <div id="box"><img height="700" src="images/partenaires.png" width="350"></div>
     </div>
-
+  </section>
    <div id="form-contact">
      <h2>Nous contacter</h2>
         <div class="ligne"></div>
@@ -134,5 +135,5 @@
       </div>
     </div>
     <div class="clear"></div>
-  </section>
+
   <?php include 'inc/footer.php'; ?>

@@ -9,17 +9,17 @@ if (!empty($_POST['submitted']))
 
   // Vérification pseudo
   $pseudo = trim(strip_tags($_POST['pseudo']));
-  validationpseudo($error,$pseudo,3,50);
+  $error = validationpseudo($error,$pseudo,3,50);
 
   //Vérfication email
   $mail = trim(strip_tags($_POST['mail']));
-  validationemail($error,$mail);
+  $error = validationemail($error,$mail);
 
 
 
   $mdp = trim(strip_tags($_POST['mdp']));
   $mdp2 = trim(strip_tags($_POST['mdp2']));
-  validationpassword($error,$mdp,$mdp2,3,50);
+  $error = validationpassword($error,$mdp,$mdp2,3,50);
 
 
   if (count($error) == 0) {
@@ -29,9 +29,8 @@ if (!empty($_POST['submitted']))
     register($pseudo,$mail,$hash,$token);
 
     // redirection
-    header('Location: index.php');
+    header('Location: connexion.php');
   }
-  debug($error);
 }
 
 include 'inc/header.php';
@@ -55,12 +54,14 @@ include 'inc/header.php';
        <label for="mdp">Mot de passe :</label>
        <input type="password" name="mdp" value="">
        <?php
-       afficherErreur($error, 'mdp');
+       br();
+       afficherErreur($error, 'password1');
        br(); ?>
        <label for="mdp2">Vérifiez votre mot de passe :</label>
        <input type="password" name="mdp2" value="">
        <?php
-       afficherErreur($error, 'mdp');
+       br();
+       afficherErreur($error, 'password1');
        br(); ?>
        <input type="submit" name="submitted" value="Envoyer">
      </form>

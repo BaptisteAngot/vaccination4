@@ -167,8 +167,7 @@ function validationdate($error,$date,$key,$empty = true){
     }
   }
   else {
-    // problem with input ...
-    $error[$key]='Probleme de format';
+    $error[$key]='Veuillez remplir le champs date';
   }
   return $error;
 }
@@ -181,6 +180,18 @@ function generateRandomString($length) {
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
     return $randomString;
+}
+
+function decrypt_hash($hash_crypte)
+{
+	// Enlever le sel du début et de fin
+	$hash_crypte = str_replace(SEL_DEBUT, '', $hash_crypte);
+	$hash_crypte = str_replace(SEL_FIN, '', $hash_crypte);
+
+	// Enlever le sel du milieu
+	$hash = preg_replace('#('.SEPARATEUR_DEBUT.'[a-z0-9]+'.SEPARATEUR_FIN.')#', '', $hash_crypte);
+
+	return $hash;
 }
 
 function validationpseudo($error,$pseudo,$min,$max,$empty = true){
@@ -311,6 +322,8 @@ function validationText($error,$data,$min,$max,$key,$empty = true){
   }
   return $error;
 }
+
+
 
 function vmail($error,$data,$key){
   if(!empty($data)){

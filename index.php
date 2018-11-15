@@ -2,11 +2,9 @@
   include 'inc/pdo.php';
   include 'inc/function.php';
   include 'inc/request.php';
-  if (isLogged()) {
-  }
-  include 'inc/header.php';
 
-  $titre = 'Nouveau message';
+
+  $titre = 'Nouveau message Contact';
   $error = array();
 
       if ( !empty($_POST['submitted']) ) {
@@ -24,6 +22,7 @@
             mail($email,$titre,$message);
           }
       }
+      include 'inc/header.php';
 ?>
 
 
@@ -108,7 +107,7 @@
         <div class="ligne"></div>
         <div id="box"><img height="700" src="images/partenaires.png" width="350"></div>
     </div>
-
+  </section>
    <div id="form-contact">
      <h2>Nous contacter</h2>
         <div class="ligne"></div>
@@ -117,11 +116,15 @@
         <form action="" method="post">
           <div class="w50">
             <label for="name">Votre Nom</label>
-            <input class="inputerror" type="text" name="name" value="" placeholder="Ex: Pierre Martin">
+            <input class="inputerror" type="text" name="name" value="<?php if (isLogged()) {
+              echo $_SESSION['user']['pseudo'];
+            }else { ?>" placeholder="<?php echo "Ex: Pierre Martin" ; } ?>">
           </div>
           <div class="w50">
               <label for="email">Votre Email</label>
-              <input type="email" name="email" value="" placeholder="Ex: pierremartin@gmail.com">
+              <input type="email" name="email" value="<?php if (isLogged()) {
+                echo $_SESSION['user']['email'];
+              } else {?>" placeholder="<?php echo 'Ex: pierremartin@gmail.com' ;} ?>">
           </div>
           <div class="w100">
             <label for="message">Votre Message</label>
@@ -132,5 +135,7 @@
       </div>
     </div>
     <div class="clear"></div>
+  </section>
+
 
   <?php include 'inc/footer.php'; ?>

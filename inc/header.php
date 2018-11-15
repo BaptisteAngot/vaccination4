@@ -10,11 +10,11 @@
     <meta name="author" content="vaccination4">
     <meta name="robots" content="all|(no)follow|(no)index|none">
     <title>InfosVaccins.com</title>
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/flexslider/flexslider.css" type="text/css">
     <link rel="stylesheet" href="./assets/slicknav/slicknav.css" />
     <link rel="shortcut icon" href="./images/logoOnglet.png">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
 
 <!-- Le header contient la navbar, le logo, la liste cliquable et l'intro-->

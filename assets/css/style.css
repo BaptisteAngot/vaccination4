@@ -3,12 +3,12 @@
 body
 {
   line-height: 1.5;
-	font-family: 'Arvo', serif;
+	font-family: 'Lato', sans-serif;
 	font-size: 17px;
-  background-size:cover;
-  background-repeat: no-repeat;
   background-image: url("../../images/medicalFond.jpg");
   background-color: #ECF0F3;
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .wrap {
@@ -28,7 +28,11 @@ body
   width: 100%;
   margin: 0 auto;
 }
-
+.wrap_footer2 {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -280,6 +284,7 @@ h2{
 		display:block;
     position: fixed;
     width: 100%;
+    z-index: 10;
 	}
 }
 
@@ -299,8 +304,8 @@ h2{
 
 #intro{
   text-align: center;
-  margin-top: 20%;
   color: #FFF;
+  margin-top: 20%;
 }
 
 @media screen and (min-width: 601px) {
@@ -491,7 +496,7 @@ h2{
   background-repeat: no-repeat;
   height: 625px;
   color: #777777;
-}
+  text-align: center}
 
 #form-contact p {
   background-color:#ecf0f3;
@@ -519,14 +524,15 @@ form div {float: left;}
 .w100 {width:100%;}
 input[type=text] {width: 95%;}
 input[type=text].inputerror{border:2px }
-input[type=email], textarea {width: 100%;}
-input {height:50px;}
+input[type=email], textarea {width: 100%; color: #fff;}
+input {height:50px; color: #fff;}
+
 
 input[type=text], input[type=email],textarea {border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:10px;background-color: #8FAFD6}
 textarea {padding-top: 10px;margin-bottom: 30px;resize: none;}
-input[type=submit] {cursor:pointer;border:none;display: block;margin: 15px auto; width:275px;font-size: 1.2em;border-radius:10px;background-color: #8FAFD6; transition: 0.5s;color: #FFF}
+input[type=submit] {cursor:pointer;border:none;display: block;margin: 15px auto; width:275px;font-size: 1.2em;border-radius:10px;background-color: #8FAFD6; transition: 0.5s;color: #FFF;}
 input[type=submit]:hover {color: #008fcf;background-color:#6FA7C7;}
-.error {color:red;padding-left: 30px;}
+.error {color:red;padding-left: 30px; display: -webkit-inline-box;}
 
 
 input[type=password]{
@@ -552,16 +558,34 @@ input[type="date"]::-webkit-inner-spin-button {
     display: none;
 }
 
+button{
+  cursor:pointer;
+  border: 1px solid #8FAFD6;
+  display: block;
+  margin: 15px auto;
+  width:100px;
+  font-size: 1.2em;
+  border-radius:10px;
+  background-color: #8FAFD6;
+  transition: 0.5s;
+  color: #FFF;
+}
+button:hover{
+  border: 2px solid #3e83d6;
+  text-shadow: 1px 1px black;
+
+}
+
 /* Always display the drop down caret */
 input[type="date"]::-webkit-calendar-picker-indicator {
-    color: #000;
+    color: #fff;
 }
 
 /* A few custom styles for date inputs */
 input[type="date"] {
     appearance: none;
     -webkit-appearance: none;
-    color: #000;
+    color: #fff;
     font-family: "Helvetica", arial, sans-serif;
     font-size: 18px;
     border:1px solid #ecf0f1;
@@ -575,7 +599,7 @@ input[type="date"] {
 }
 
 input[type="date"], focus {
-    color: #000;
+    color: #fff;
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -591,6 +615,7 @@ select {
   border: 0 !important;
   background: #8FAFD6;
   background-image: none;
+  color: #fff;
 }
 /* Custom Select */
 .select {
@@ -656,17 +681,16 @@ select::-ms-expand {
 .modifprofil{
   background-color: #f4e7d3;
   border: 2px solid rgb(4, 113, 152);
-  float:left;
+  margin-left: 10%;
   width: 70%;
-  margin-right: 25%;
-  margin-left: 15%;
   padding: 0 5px 0 5px;
-  display: inline;
+  display: block;
   overflow: hidden;
   border-radius: 10px;
   text-align: center;
   z-index: -1;
   margin-bottom: 50px;
+  padding: 20px 0 20px 0;
 }
 
 .myvaccin{
@@ -676,10 +700,12 @@ select::-ms-expand {
   width: 47%;
   margin: 0 20px 0 20px;
   border-radius: 10px;
+
 }
 
 .myvaccin table{
   width: 100%;
+  margin: 20px 0 20px 0;
 }
 
 .myvaccin thead{
@@ -762,7 +788,7 @@ select::-ms-expand {
 .social-icons
 {
 	margin: 5px;
-  margin-left: 37%;
+  margin-left: 12%;
 }
 
 .social-icons li a
@@ -803,7 +829,8 @@ select::-ms-expand {
 #footer {
   background-color: #56739A;
   width: 100%;
-  height: 200px;
+  height: 310px;
+  color:#FFF;
 }
 
 #footer .bouton1 {
@@ -832,24 +859,7 @@ select::-ms-expand {
 {
   margin: 3% 0 0 0;
 	float: left;
-	width: 24%;
-}
-
-
-#footer .column2
-{
-  margin: 15px 0 0 0;
-	float: left;
-	width: 33.33333333333333333333333333333333333333%;
-}
-
-
-#footer .column3
-{
-  margin: 15px 0 0 0;
-	float: left;
-	width: 100%;
-  background-color: #333;
+	width: 25%;
 }
 
 .ban h1{

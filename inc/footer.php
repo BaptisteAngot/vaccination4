@@ -6,7 +6,12 @@
           <li><a  href="#" title="Qui sommes-nous ?">Qui sommes-nous ?</a></li>
         <li><a href="#" title="Comment ça marche ?">Comment ça marche ?</a></li>
         <li><a href="#" title="Parutions presse">Parutions presse</a></li>
-        <li><a href="#" title="Mentions légales">Mentions légales</a></li>
+        <li><a href="#" title="Mentions légales">Mentions légales</a></li></br>
+          <h4>Nos réseaux sociaux</h4>
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com/InfoVaccins-763363707343739/" class="facebook"></a></li>
+            <li><a href="#" class="twitter"></a></li>
+        </ul>
 				</ul>
 			</div>
       <div class="column1">
@@ -15,7 +20,9 @@
               <li><a href="#" title="Questions fréquentes">Questions fréquentes</a></li>
               <li><a href="#" title="Témoignages clients">Témoignages clients</a></li>
               <li><a href="#" title="Conditions Générales de Vente">Conditions Générales de Vente</a></li>
-              <li><a href="#" title="Conditions Générales d'Utilisation">Conditions Générales d'Utilisation</a></li>
+              <li><a href="#" title="Conditions Générales d'Utilisation">Conditions Générales d'Utilisation</a></li></br>
+              <h4>Où nous trouver ?</h4>
+              <p>24 Place Saint-Marc <br>76000 Rouen</p>
     				</ul>
     			</div>
           <div class="column1">
@@ -23,7 +30,10 @@
         					<h4>Santé</h4>
         						<li><a href="#" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
         						<li><a href="#" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
-        						<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li>
+        						<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li></br>
+                    <h4>Contact</h4>
+                    <p>contact@infovaccins.com</p>
+                    <p>01 02 03 04 05 06</p>
         				</ul>
         			</div>
               <div class="column1">
@@ -31,44 +41,34 @@
             					<h4>Les infos</h4>
             						<li><a href="#" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
             						<li><a href="#" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
-            						<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li>
+            						<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li></br>
+                        <p>© Copyright InfoVaccins 2018 ®. All rights reserved.</p>
             				</ul>
             			</div>
 </div>
 <div class="clear"></div>
 
 
-  <div class='wrap_footer'>
-    <div class="column2">
-      <h4>Nos réseaux sociaux</h4>
-      <ul class="social-icons">
-          <li><a href="https://www.facebook.com/InfoVaccins-763363707343739/" class="facebook"></a></li>
-          <li><a href="#" class="twitter"></a></li>
-      </ul>
-    </div>
 
-    <div class="column2">
-      <h4>Où nous trouver ?</h4>
-      <p>24 Place Saint-Marc <br>76000 Rouen</p>
-    </div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
-    <div class="column2">
-      <h4>Contact</h4>
-      <p>contact@infovaccins.com</p>
-      <p>01 02 03 04 05 06</p>
-    </div>
-  </div>
+<script src="assets/slicknav/jquery.slicknav.min.js"></script>
 
-  <div class="clear"></div>
+<script>
+  $(function(){
+    $('#menu').slicknav();
+  });
+</script>
 
-  <div class='wrap_footer'>
-    <div class="column3">
-      <p>© Copyright InfoVaccins 2018 ®. All rights reserved.</p>
-    </div>
-  </div>
-  <div class="clear"></div>
+<script>
+  $('#menu').on('click','a',function(){
+    $('#menu a.active').removeClass('active');
+    $(this).addClass('active');
+  });
+</script>
 
-
-</footer>
 </body>
 </html>

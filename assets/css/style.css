@@ -5,11 +5,11 @@ body
   line-height: 1.5;
 	font-family: 'Lato', sans-serif;
 	font-size: 17px;
-  background-size: contain;
-  background-repeat: no-repeat;
   background-image: url("../../images/medicalFond.jpg");
 
   background-color: #ECF0F3;
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .wrap {
@@ -300,8 +300,8 @@ h2{
 
 #intro{
   text-align: center;
-  margin-top: 20%;
   color: #FFF;
+  margin-top: 20%;
 }
 
 @media screen and (min-width: 601px) {
@@ -492,7 +492,7 @@ h2{
   background-repeat: no-repeat;
   height: 625px;
   color: #777777;
-}
+  text-align: center}
 
 #form-contact p {
   background-color:#ecf0f3;
@@ -808,6 +808,7 @@ select::-ms-expand {
 #footer {
   background-image: url("../img/medical2.jpg");
   width: 100%;
+  height: 310px;
 }
 
 #footer .bouton1 {
@@ -839,13 +840,13 @@ select::-ms-expand {
 	width: 13%;
 }
 
-
+/*
 #footer .column2
 {
   margin: 15px 0 0 0;
 	float: left;
-	width: 33.33333333333333333333333333333333333333%;
-}
+	width: 33.33333333333333333333333%;
+} */
 
 
 #footer .column3

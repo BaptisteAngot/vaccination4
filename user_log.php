@@ -48,7 +48,7 @@ else{
 
    <div class="userlog">
 
-     <div class="myvaccin">
+     <div class="myvaccin column5">
        <h1>Liste de vos différents vaccins</h1>
        <table>
          <thead class="thead">
@@ -74,7 +74,7 @@ else{
        </table>
      </div>
      <div class="clear"></div>
-     <div class="newvaccin">
+     <div class="newvaccin column5">
        <form class="formnewvaccin" method="post">
          <h1>Ajout d'un nouveau vaccin</h1>
          <label class="label" for="vaccin">Votre vaccin a ajouté: </label>
@@ -99,7 +99,7 @@ else{
        </form>
      </div>
      <div class="clear"></div>
-   </div>
+
    <div class="clear"></div>
  </div>
 <div class="clear"></div>

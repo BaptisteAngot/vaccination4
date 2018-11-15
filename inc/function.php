@@ -386,6 +386,7 @@ function Afficherinfo($user){
     echo '<td><a class="material-icons" href="edit_user_back.php?id=' . $user['id'] . '"><i class="material-icons">edit</i></a></td>';
     echo '<td><a href="deleteuser_back.php?id=' . $user['id'] . '"><i class="material-icons">delete</i></a></td>';
     echo '</tr>';
+
 }
 
 //Fonction pour afficher le tableau avec tout les utilisateurs

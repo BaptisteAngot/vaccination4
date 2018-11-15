@@ -39,7 +39,7 @@
 
 
   <div class='wrap_footer'>
-    <div class="column2">
+    <div class="column1">
       <h4>Nos réseaux sociaux</h4>
       <ul class="social-icons">
           <li><a href="https://www.facebook.com/InfoVaccins-763363707343739/" class="facebook"></a></li>
@@ -47,12 +47,12 @@
       </ul>
     </div>
 
-    <div class="column2">
+    <div class="column1">
       <h4>Où nous trouver ?</h4>
       <p>24 Place Saint-Marc <br>76000 Rouen</p>
     </div>
 
-    <div class="column2">
+    <div class="column1">
       <h4>Contact</h4>
       <p>contact@infovaccins.com</p>
       <p>01 02 03 04 05 06</p>

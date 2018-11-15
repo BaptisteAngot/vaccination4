@@ -309,6 +309,18 @@ function validationpassword($error,$password1,$password2,$min,$max,$empty = true
   return $error;
 }
 
+function verifPasswordEdit($password, $hash, $error, $name)
+{
+  $resultatpassword = password_verify($password, $hash);
+  if (!empty($password)) {
+    if ($resultatpassword == FALSE) {
+      $error[$name] = 'Votre ancien mot de passe est incorrect!';
+    }
+  }else {
+    $error[$name] = 'Pour changer vos infos, veuillez renseigné votre ancien mot de passe.';
+  }
+  return $error;
+}
 function transformdate($date){
   $newdate= date("d-m-Y", strtotime($date['created_at']));
   return $newdate;

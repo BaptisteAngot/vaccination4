@@ -6,8 +6,9 @@
   }
   include 'inc/header.php';
 
-  $titre = 'Nouveau message';
+  $titre = 'Nouveau message Contact';
   $error = array();
+  pre($_SESSION);
 
       if ( !empty($_POST['submitted']) ) {
           $name = trim(strip_tags($_POST['name']));
@@ -121,7 +122,9 @@
           </div>
           <div class="w50">
               <label for="email">Votre Email</label>
-              <input type="email" name="email" value="" placeholder="Ex: pierremartin@gmail.com">
+              <input type="email" name="email" value="" placeholder="<?php if (isLogged()) {
+                echo $_SESSION['user']['email'];
+              }else{ echo 'Ex: pierremartin@gmail.com' ; }?>">
           </div>
           <div class="w100">
             <label for="message">Votre Message</label>

@@ -17,10 +17,11 @@
       <div class="column1">
     				<ul class="footer__menu">
     					<h4>Les Client</h4>
-              <li><a href="wip.html" title="Questions fréquentes">Questions fréquentes</a></li>
-              <li><a href="wip.html" title="Témoignages clients">Témoignages clients</a></li>
-              <li><a href="wip.html" title="Conditions Générales de Vente">Conditions Générales de Vente</a></li>
-              <li><a href="wip.html" title="Conditions Générales d'Utilisation">Conditions Générales d'Utilisation</a></li></br>
+              <li><a href="#" title="Questions fréquentes">Questions fréquentes</a></li>
+              <li><a href="#" title="Témoignages clients">Témoignages clients</a></li>
+              <li><a href="#" title="Conditions Générales de Vente">Conditions Générales de Vente</a></li>
+
+
               <h4>Où nous trouver ?</h4>
               <p>24 Place Saint-Marc <br>76000 Rouen</p>
     				</ul>

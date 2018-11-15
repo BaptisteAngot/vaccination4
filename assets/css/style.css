@@ -13,12 +13,13 @@ body
 
 .wrap {
   max-width: 1100px;
+  /* min-width: 700px; */
   width: 100%;
   margin: 0 auto;
 }
 
-.wrap_inscription {
-  max-width: 600px;
+.wrap_inscription{
+  max-width: 700px;
   width: 100%;
   margin: 0 auto;
 }
@@ -371,9 +372,10 @@ h2{
 }
 
 #box {
-    margin: 45px 0 45px 25%;
-    width: 50%;
-    height: 350px;
+    margin-left: 14%;
+    margin-top: 40px;
+    width: 800px;
+    height: 360px;
     border: 2px black solid;
     overflow: hidden;
     background-color: #F2F2F2;
@@ -488,6 +490,9 @@ input[type=text].inputerror{border:2px }
 input[type=email], textarea {width: 100%; color: #fff;}
 input {height:50px; color: #fff;}
 
+.form_inscription a{
+  margin-left: 38%;
+}
 
 
 input[type=text], input[type=email],textarea {border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:10px;background-color: #8FAFD6}
@@ -546,7 +551,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* A few custom styles for date inputs */
 input[type="date"] {
     appearance: none;
-    -webkit-appearance: none;
+    -webkit-appearance: none
     color: #fff;
     font-family: "Helvetica", arial, sans-serif;
     padding:5px 5px 5px 30px;
@@ -886,4 +891,8 @@ select::-ms-expand {
   .notfound h2 {
     font-size: 16px;
   }
+}
+
+.imgTableau{
+  margin-left: 7%;
 }

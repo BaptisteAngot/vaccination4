@@ -103,10 +103,10 @@
 
 
   <section id="partenaires">
-    <h2>Nos partenaires</h2>
+    <h2>Vaccination : êtes-vous à jour ?</h2>
     <div class="wrap">
         <div class="ligne"></div>
-        <div id="box"><img height="700" src="images/partenaires.png" width="350"></div>
+        <div id="box"> <a href="tableauVaccin.php"><img height="700" src="assets/img/slider.png" width="800"></a> </div>
     </div>
   </section>
    <div id="form-contact">

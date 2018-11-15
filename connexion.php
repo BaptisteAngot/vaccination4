@@ -48,7 +48,6 @@ if (!empty($_POST['submitted']))
 include 'inc/header.php';
  ?>
  <div class="wrap_inscription">
-
    <div class="form_inscription">
      <form method="post">
        <label for="login_mail">Login ou e-mail :</label>

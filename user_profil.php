@@ -3,22 +3,22 @@
   include 'inc/function.php';
   include 'inc/request.php';
 
-  use Defuse\Crypto\Crypto;
-  use \Defuse\Crypto\Key;
-
-  require "vendor/autoload.php";
-
-  // On génère une clé aléatoire pour le cryptage
-  $key = Key::createNewRandomKey();
-  // Récupération de la clé aléatoire en chaîne de caractère pour le stockage
-  $key->saveToAsciiSafeString();
-  $message="test";
-
-  $cryptmessage=Crypto::encrypt($message,$key);
-  echo $cryptmessage;
-
-  $decryptext= Crypto::decrypt($cryptmessage,$key);
-  echo $decryptext;
+  // use Defuse\Crypto\Crypto;
+  // use \Defuse\Crypto\Key;
+  //
+  // require "vendor/autoload.php";
+  //
+  // // On génère une clé aléatoire pour le cryptage
+  // $key = Key::createNewRandomKey();
+  // // Récupération de la clé aléatoire en chaîne de caractère pour le stockage
+  // $key->saveToAsciiSafeString();
+  // $message="test";
+  //
+  // $cryptmessage=Crypto::encrypt($message,$key);
+  // echo $cryptmessage;
+  //
+  // $decryptext= Crypto::decrypt($cryptmessage,$key);
+  // echo $decryptext;
 
 
   $id = $_SESSION['user']['id'];

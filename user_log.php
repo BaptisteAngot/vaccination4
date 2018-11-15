@@ -80,7 +80,7 @@ else{
          <h1>Ajout d'un nouveau vaccin</h1>
          <label class="label" for="vaccin">Votre vaccin a ajouté: </label>
          <!-- Champs select -->
-         <div class="select">
+         <div class="select center">
            <select class="" name="vaccin">
              <?php foreach ($vaccinsexistants as $vaccinexistant) {
                echo '<option>' . $vaccinexistant['nom'] . '</option>';
@@ -89,7 +89,7 @@ else{
          </div>
          <!-- Champs Date -->
          <label class="label" for="date">Date de votre vaccin:</label>
-         <input type="date" name="date" value="">
+         <input class="center" type="date" name="date" value="">
          <?php afficherErreur($error,'date') ;?>
          <!-- Champs reaction -->
          <label class="label" for="reaction">Une réaction ?</label>

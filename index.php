@@ -88,7 +88,7 @@
       </div>
       <div class="section1">
           <img src="images/Equipe/Jean-BaptisteDeSaint-Léger.jpg" alt="Un membre d'InfoVaccins.">
-          <h3>Jean-Baptiste de Sain-Léger</h3>
+          <h3>Jean-Baptiste de Saint-Léger</h3>
           <p>Développeur WEB à NFactory</p>
       </div>
       <div class="section1">

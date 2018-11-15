@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./assets/flexslider/flexslider.css" type="text/css">
     <link rel="stylesheet" href="./assets/slicknav/slicknav.css" />
     <link rel="shortcut icon" href="./images/logoOnglet.png">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
 
 <!-- Le header contient la navbar, le logo, la liste cliquable et l'intro-->

@@ -3,3 +3,5 @@
 inc/pdo.php
 *.json
 config.php
+
+/vendor/

@@ -479,7 +479,8 @@ h2{
 }
 
 label{
-  display: block;padding-left: 0px;
+  display: block;
+  padding-left: 0px;
   margin-bottom: 5px;
   font-size: 1.2em;
   font-weight: bold;

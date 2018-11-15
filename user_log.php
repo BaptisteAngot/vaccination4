@@ -90,6 +90,7 @@ else{
          <!-- Champs Date -->
          <label class="label" for="date">Date de votre vaccin:</label>
          <input type="date" name="date" value="">
+         <?php afficherErreur($error,'date') ;?>
          <!-- Champs reaction -->
          <label class="label" for="reaction">Une réaction ?</label>
          <input type="text" name="reaction" value="">

@@ -2,7 +2,7 @@
 include 'inc/pdo.php';
 include 'inc/function.php';
 include 'inc/request.php';
-include 'config.php';
+// include 'config.php';
 
 //$adresse = cheminURL();
 $header="MIME-Version: 1.0\r\n";
@@ -12,16 +12,15 @@ $header.='Content-Transfer-Encoding: 8bit';
 
 $success = '';
 $error = array();
+
 if (!empty($_POST['submitted']))
 {
   $mail = trim(strip_tags($_POST['mail']));
   if (!empty($mail)){
+
     // Requête SQL des pseudos
-    $sql = "SELECT email, token FROM v4_user WHERE email = :mail";
-    $query = $pdo -> prepare($sql);
-    $query -> bindValue(':mail',$mail);
-    $query -> execute();
-    $user = $query->fetch();
+    $user=sqlpseudo($mail);
+
     if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
       $error['mail'] = 'E-mail invalide';
     }
@@ -31,7 +30,7 @@ if (!empty($_POST['submitted']))
         // echo $body;
         mail($mail, "Réinitialisation mot de passe!", $body, $header);
         $success = '<div class="alert-success" role="alert">
-                Réusi! Veuillez consulter vos mails!
+                Réussi! Veuillez consulter vos mails!
               </div>';
         // header('Location: new_password.php');
       }

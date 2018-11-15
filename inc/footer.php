@@ -3,16 +3,10 @@
   <div class="column1">
 				<ul class="footer__menu">
 					<h4>Le Carnet</h4>
-<<<<<<< HEAD
-          <li><a  href="#" title="Qui sommes-nous ?">Qui sommes-nous ?</a></li>
-        <li><a href="#" title="Comment ça marche ?">Comment ça marche ?</a></li>
-        <li><a href="#" title="Parutions presse">Parutions presse</a></li>
-=======
           <li><a  href="wip.html" title="Qui sommes-nous ?">Qui sommes-nous ?</a></li>
         <li><a href="wip.html" title="Comment ça marche ?">Comment ça marche ?</a></li>
         <li><a href="wip.html" title="Parutions presse">Parutions presse</a></li>
         <li><a href="wip.html" title="Mentions légales">Mentions légales</a></li></br>
->>>>>>> e4bcb07740d127fcad913d59081253c5de9a1cf1
           <h4>Nos réseaux sociaux</h4>
         <ul class="social-icons">
             <li><a href="https://www.facebook.com/InfoVaccins-763363707343739/" class="facebook"></a></li>
@@ -23,16 +17,11 @@
       <div class="column1">
     				<ul class="footer__menu">
     					<h4>Les Client</h4>
-<<<<<<< HEAD
               <li><a href="#" title="Questions fréquentes">Questions fréquentes</a></li>
               <li><a href="#" title="Témoignages clients">Témoignages clients</a></li>
               <li><a href="#" title="Conditions Générales de Vente">Conditions Générales de Vente</a></li>
-=======
-              <li><a href="wip.html" title="Questions fréquentes">Questions fréquentes</a></li>
-              <li><a href="wip.html" title="Témoignages clients">Témoignages clients</a></li>
-              <li><a href="wip.html" title="Conditions Générales de Vente">Conditions Générales de Vente</a></li>
-              <li><a href="wip.html" title="Conditions Générales d'Utilisation">Conditions Générales d'Utilisation</a></li></br>
->>>>>>> e4bcb07740d127fcad913d59081253c5de9a1cf1
+
+
               <h4>Où nous trouver ?</h4>
               <p>24 Place Saint-Marc <br>76000 Rouen</p>
     				</ul>
@@ -40,14 +29,9 @@
           <div class="column1">
         				<ul class="footer__menu">
         					<h4>Santé</h4>
-<<<<<<< HEAD
-        						<li><a href="#" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
-        						<li><a href="#" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
-=======
         						<li><a href="wip.html" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
         						<li><a href="wip.html" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
         						<li><a href="wip.html" title="De nouveaux projets">De nouveaux projets</a></li></br>
->>>>>>> e4bcb07740d127fcad913d59081253c5de9a1cf1
                     <h4>Contact</h4>
                     <p>contact@infovaccins.com</p>
                     <p>01 02 03 04 05 06</p>
@@ -56,14 +40,9 @@
               <div class="column1">
             				<ul class="footer__menu">
             					<h4>Les infos</h4>
-<<<<<<< HEAD
-            						<li><a href="#" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
-            						<li><a href="#" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
-=======
             						<li><a href="wip.html" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
             						<li><a href="wip.html" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
             						<li><a href="wip.html" title="De nouveaux projets">De nouveaux projets</a></li></br>
->>>>>>> e4bcb07740d127fcad913d59081253c5de9a1cf1
                         <p>© Copyright InfoVaccins 2018 ®. All rights reserved.</p>
             				</ul>
             			</div>

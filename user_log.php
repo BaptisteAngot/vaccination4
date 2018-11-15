@@ -2,7 +2,6 @@
 include 'inc/pdo.php';
 include 'inc/function.php';
 include 'inc/request.php';
-include 'inc/header.php';
 $vaccinsexistants= recuperationlistevaccin();
 
 $error=array();
@@ -44,7 +43,7 @@ else{
   }
 
 
- ?>
+ include 'inc/header.php';?>
  <div class="wrap">
 
    <div class="userlog">

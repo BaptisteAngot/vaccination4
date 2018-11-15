@@ -27,6 +27,7 @@ body
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  height: 300px;
 }
 .wrap_footer2 {
   max-width: 1000px;
@@ -812,7 +813,7 @@ select::-ms-expand {
 #footer {
   background-color: #56739A;
   width: 100%;
-  height: 310px;
+  height: 300px;
   color:#FFF;
 }
 

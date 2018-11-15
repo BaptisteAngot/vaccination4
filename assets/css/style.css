@@ -678,10 +678,12 @@ select::-ms-expand {
   width: 47%;
   margin: 0 20px 0 20px;
   border-radius: 10px;
+
 }
 
 .myvaccin table{
   width: 100%;
+  margin: 20px 0 20px 0;
 }
 
 .myvaccin thead{

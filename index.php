@@ -2,13 +2,10 @@
   include 'inc/pdo.php';
   include 'inc/function.php';
   include 'inc/request.php';
-  if (isLogged()) {
-  }
   include 'inc/header.php';
 
   $titre = 'Nouveau message Contact';
   $error = array();
-  pre($_SESSION);
 
       if ( !empty($_POST['submitted']) ) {
           $name = trim(strip_tags($_POST['name']));
@@ -118,13 +115,15 @@
         <form action="" method="post">
           <div class="w50">
             <label for="name">Votre Nom</label>
-            <input class="inputerror" type="text" name="name" value="" placeholder="Ex: Pierre Martin">
+            <input class="inputerror" type="text" name="name" value="<?php if (isLogged()) {
+              echo $_SESSION['user']['pseudo'];
+            }else { ?>" placeholder="<?php echo "Ex: Pierre Martin" ; } ?>">
           </div>
           <div class="w50">
               <label for="email">Votre Email</label>
-              <input type="email" name="email" value="" placeholder="<?php if (isLogged()) {
+              <input type="email" name="email" value="<?php if (isLogged()) {
                 echo $_SESSION['user']['email'];
-              }else{ echo 'Ex: pierremartin@gmail.com' ; }?>">
+              } else {?>" placeholder="<?php echo 'Ex: pierremartin@gmail.com' ;} ?>">
           </div>
           <div class="w100">
             <label for="message">Votre Message</label>

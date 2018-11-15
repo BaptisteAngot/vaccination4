@@ -23,17 +23,6 @@ body
   margin: 0 auto;
 }
 
-.wrap_footer {
-  max-width:1000px;
-  width: 100%;
-  margin: 0 auto;
-  height: 300px;
-}
-.wrap_footer2 {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -487,7 +476,8 @@ label{
   margin-left: 25%;
   border-radius:100px;
   border: solid #777777 1px;
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 form div {float: left;}
@@ -497,6 +487,7 @@ input[type=text] {width: 95%;}
 input[type=text].inputerror{border:2px }
 input[type=email], textarea {width: 100%; color: #fff;}
 input {height:50px; color: #fff;}
+
 
 
 input[type=text], input[type=email],textarea {border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:10px;background-color: #8FAFD6}
@@ -558,15 +549,17 @@ input[type="date"] {
     -webkit-appearance: none;
     color: #fff;
     font-family: "Helvetica", arial, sans-serif;
-    font-size: 18px;
-    border:1px solid #ecf0f1;
-    background:#8FAFD6;
-    padding:5px;
+    padding:5px 5px 5px 30px;
     display: inline-block !important;
     visibility: visible !important;
     width: 30%;
     border-radius: 5px;
     float: left;
+    border: none;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    border-radius:10px;
+    background-color: #8FAFD6
 }
 
 input[type="date"], focus {
@@ -587,12 +580,13 @@ select {
   background: #8FAFD6;
   background-image: none;
   color: #fff;
+
 }
 /* Custom Select */
 .select {
   position: relative;
   display: block;
-  width: 20em;
+  width: 30%;
   height: 3em;
   line-height: 3;
   background: #8FAFD6;
@@ -635,19 +629,6 @@ select::-ms-expand {
   font-size: 1.05em;
 }
 
-.newvaccin{
-  background-color: #f4e7d3;
-  border: 2px solid rgb(4, 113, 152);
-  /* float:left; */
-  min-width: 100%;
-  margin: 0 20px 20 20px;
-  padding: 0 5px 0 5px;
-  display: inline;
-  overflow: hidden;
-  border-radius: 10px;
-  text-align: center;
-  margin-bottom: 50px;
-}
 
 .modifprofil{
   background-color: #f4e7d3;
@@ -667,12 +648,17 @@ select::-ms-expand {
 .myvaccin{
   background-color: #FFF;
   border: 2px solid rgb(4, 113, 152);
-  float: left;
-  width: 47%;
-  min-width: 100%;
-  margin: 0 20px 0 20px;
+  margin-top: 30%;
   border-radius: 10px;
+}
 
+.newVaccin
+{
+  background-color: #FFF;
+  border: 2px solid rgb(4, 113, 152);
+  border-radius: 10px;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .myvaccin table{
@@ -718,14 +704,10 @@ select::-ms-expand {
   padding-left: 20px;
 }
 
-.formnewvaccin{
-  padding: 5px 0 5px 0
-}
 
-.formnewvaccin h1{
-  padding-bottom: 20px;
-  font-weight: bold;
-  font-size: 1.2em;
+
+.center {
+  margin-left: 35%;
 }
 
 .modifvaccin{
@@ -836,13 +818,6 @@ select::-ms-expand {
 	float: left;
 	width: 25%;
 }
-
-/* .column5
-{
-  margin: 3% 0 0 0;
-	float: left;
-	width: 49%;
-} */
 
 .ban h1{
   color: red;

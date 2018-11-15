@@ -44,11 +44,9 @@ else{
 
 
  include 'inc/header.php';?>
- <div class="wrap">
 
-   <div class="userlog">
-
-     <div class="myvaccin column5">
+    <div class="wrap">
+     <div class="myvaccin">
        <h1>Liste de vos différents vaccins</h1>
        <table>
          <thead class="thead">
@@ -74,12 +72,13 @@ else{
        </table>
      </div>
      <div class="clear"></div>
-     <div class="newvaccin column5">
-       <form class="formnewvaccin" method="post">
+
+      <div class="newVaccin">
+       <form class="form-new-vaccin" method="post">
          <h1>Ajout d'un nouveau vaccin</h1>
          <label class="label" for="vaccin">Votre vaccin a ajouté: </label>
          <!-- Champs select -->
-         <div class="select">
+         <div class="select center">
            <select class="" name="vaccin">
              <?php foreach ($vaccinsexistants as $vaccinexistant) {
                echo '<option>' . $vaccinexistant['nom'] . '</option>';
@@ -88,7 +87,7 @@ else{
          </div>
          <!-- Champs Date -->
          <label class="label" for="date">Date de votre vaccin:</label>
-         <input type="date" name="date" value="">
+         <input class="center" type="date" name="date" value="">
          <?php afficherErreur($error,'date') ;?>
          <!-- Champs reaction -->
          <label class="label" for="reaction">Une réaction ?</label>
@@ -97,10 +96,8 @@ else{
          <span>Si aucune, veuillez laisser ce champs vide.</span>
          <input type="submit" name="submitted" value="Ajouter à ma liste des vaccins">
        </form>
-     </div>
-     <div class="clear"></div>
 
-   <div class="clear"></div>
- </div>
-<div class="clear"></div>
+     </div>
+     </div>
+
  <?php include 'inc/footer.php'; ?>

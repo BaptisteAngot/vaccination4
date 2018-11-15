@@ -1,5 +1,5 @@
 <footer id="footer">
-<div class='wrap_footer'>
+<div class='wrap'>
   <div class="column1">
 				<ul class="footer__menu">
 					<h4>Le Carnet</h4>

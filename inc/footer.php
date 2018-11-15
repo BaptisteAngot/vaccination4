@@ -4,9 +4,9 @@
 				<ul class="footer__menu">
 					<h4>Le Carnet</h4>
           <li><a  href="#" title="Qui sommes-nous ?">Qui sommes-nous ?</a></li>
-        <li><a href="#" title="Comment ça marche ?">Comment ça marche ?</a></li>
-        <li><a href="#" title="Parutions presse">Parutions presse</a></li>
-        <li><a href="#" title="Mentions légales">Mentions légales</a></li>
+          <li><a href="#" title="Comment ça marche ?">Comment ça marche ?</a></li>
+          <li><a href="#" title="Parutions presse">Parutions presse</a></li>
+          <li><a href="#" title="Mentions légales">Mentions légales</a></li>
 				</ul>
 			</div>
       <div class="column1">
@@ -17,23 +17,23 @@
               <li><a href="#" title="Conditions Générales de Vente">Conditions Générales de Vente</a></li>
               <li><a href="#" title="Conditions Générales d'Utilisation">Conditions Générales d'Utilisation</a></li>
     				</ul>
-    			</div>
+    	</div>
           <div class="column1">
         				<ul class="footer__menu">
         					<h4>Santé</h4>
-        						<li><a href="#" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
-        						<li><a href="#" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
-        						<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li>
+        					<li><a href="#" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
+        					<li><a href="#" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
+        					<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li>
         				</ul>
-        			</div>
+        	</div>
               <div class="column1">
             				<ul class="footer__menu">
             					<h4>Les infos</h4>
-            						<li><a href="#" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
-            						<li><a href="#" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
-            						<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li>
+            					<li><a href="#" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
+            					<li><a href="#" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
+            					<li><a href="#" title="De nouveaux projets">De nouveaux projets</a></li>
             				</ul>
-            			</div>
+            	</div>
 </div>
 <div class="clear"></div>
 

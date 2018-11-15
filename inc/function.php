@@ -167,8 +167,7 @@ function validationdate($error,$date,$key,$empty = true){
     }
   }
   else {
-    // problem with input ...
-    $error[$key]='Probleme de format';
+    $error[$key]='Veuillez remplir le champs date';
   }
   return $error;
 }

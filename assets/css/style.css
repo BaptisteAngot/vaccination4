@@ -492,8 +492,8 @@ input {height:50px; color: #fff;}
 
 input[type=text], input[type=email],textarea {border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:10px;background-color: #8FAFD6}
 textarea {padding-top: 10px;margin-bottom: 30px;resize: none;}
-input[type=submit] {cursor:pointer;border:none;display: block;margin: 15px auto; width:275px;font-size: 1.2em;border-radius:10px;background-color: #8FAFD6; transition: 0.5s;color: #FFF;}
-input[type=submit]:hover {color: #008fcf;background-color:#6FA7C7;}
+input[type=submit] {cursor:pointer;border:none;display: block;margin: 15px auto; font-size: 1.2em;border-radius:10px;background-color: #8FAFD6; transition: 0.5s;color: #FFF; padding: 15px; transition: 0.25s;}
+input[type=submit]:hover {color: #fff; text-shadow: 1px 1px black}
 .error {color:red;padding-left: 30px; display: -webkit-inline-box;}
 
 
@@ -633,7 +633,7 @@ select::-ms-expand {
 .modifprofil{
   background-color: #f4e7d3;
   border: 2px solid rgb(4, 113, 152);
-  margin-left: 10%;
+  margin-left: 15%;
   width: 70%;
   padding: 0 5px 0 5px;
   display: block;

@@ -75,7 +75,7 @@
      afficherErreur($error, 'age');
      br();
      ?>
-     <?php labelPassword('old_password', 'Saisissez votre ancien mot de passe :', $resultat);
+     <?php labelPassword('old_password', 'Pour confirmer, saisissez votre ancien mot de passe :', $resultat);
       afficherErreur($error, 'old_password');
      ?>
      <input type="submit" name="submitted" value="Modifier">

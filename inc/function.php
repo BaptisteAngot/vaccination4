@@ -29,10 +29,18 @@ function Afficherinfovaccins($vaccin){
     echo '<td>' . $vaccin['status'] . '</td>';
     echo '<td class="text-info">' . $vaccin['condition_requise'] . '</td>';
     echo '<td>' . date("d-m-Y",strtotime($vaccin['created_at'])) . '</td>';
-    echo '<td>'. date("d-m-Y",strtotime($vaccin['updated_at'])) . '</td>';
+    echo '<td>'. ifnull(date("d-m-Y",strtotime($vaccin['updated_at']))) . '</td>';
     echo '<td><a href="editvaccin.php?id=' . $vaccin['id'] . '"><i class="material-icons">edit</i></a></td>';
     echo '<td><a href="deletevaccin.php?id=' . $vaccin['id'] . '"><i class="material-icons">delete</i></a></td>';
   echo '</tr>';
+}
+
+function ifnull($date){
+  if($date="01-01-1970"){
+    $date="Jamais";
+    return $date;
+  }
+  return $date;
 }
 
 function Affichertableauvaccin($vaccins,$title,$description){
@@ -362,7 +370,7 @@ function Afficherinfo($user){
     echo '<td>' . $user['email'] . '</td>';
     echo '<td>' . $user['role'] . '</td>';
     echo '<td>' . date("d-m-Y",strtotime($user['created_at'])) . '</td>';
-    echo '<td>' . date("d-m-Y",strtotime($user['modified_at'])) . '</td>';
+    echo '<td>' . ifnull(date("d-m-Y",strtotime($user['modified_at']))) . '</td>';
     echo '<td><a class="material-icons" href="edit_user_back.php?id=' . $user['id'] . '"><i class="material-icons">edit</i></a></td>';
     echo '<td><a href="deleteuser_back.php?id=' . $user['id'] . '"><i class="material-icons">delete</i></a></td>';
     echo '</tr>';

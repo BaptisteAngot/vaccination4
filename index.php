@@ -2,7 +2,6 @@
   include 'inc/pdo.php';
   include 'inc/function.php';
   include 'inc/request.php';
-  include 'inc/header.php';
 
 
   $titre = 'Nouveau message Contact';
@@ -135,5 +134,5 @@
       </div>
     </div>
     <div class="clear"></div>
-
+  </section>
   <?php include 'inc/footer.php'; ?>

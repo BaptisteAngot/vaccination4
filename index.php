@@ -25,6 +25,7 @@
       include 'inc/header.php';
 ?>
 
+<section class="toutSaufLeFooter">
 
   <div id= "intro">
     <p>Bienvenue sur notre site InfoVaccins.com </br>
@@ -135,5 +136,6 @@
       </div>
     </div>
     <div class="clear"></div>
+  </section>
 
   <?php include 'inc/footer.php'; ?>

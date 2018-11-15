@@ -10,6 +10,7 @@
     <meta name="author" content="vaccination4">
     <meta name="robots" content="all|(no)follow|(no)index|none">
     <title>InfosVaccins.com</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/flexslider/flexslider.css" type="text/css">
     <link rel="stylesheet" href="./assets/slicknav/slicknav.css" />
@@ -42,7 +43,7 @@
         </nav>
       </div>
     </div>
-      <a href="#"><img src="images/IconeVaccinlogo.png" alt="Logo InfosVaccin.com"></a>
+      <a href="index.php"><img src="images/IconeVaccinlogo.png" alt="Logo InfosVaccin.com"></a>
       <div class="clear"></div>
     </header>
     <div class="clear"></div>

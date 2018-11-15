@@ -49,7 +49,6 @@
 <div class="clear"></div>
 
 
-<<<<<<< HEAD
   <div class='wrap_footer'>
     <div class="column1">
       <h4>Nos réseaux sociaux</h4>
@@ -79,8 +78,6 @@
 </footer>
 
 
-=======
->>>>>>> 1bcfd55bf3b6b9e267beaf0f0a0e478328f52430
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"

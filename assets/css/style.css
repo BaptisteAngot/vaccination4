@@ -519,8 +519,9 @@ form div {float: left;}
 .w100 {width:100%;}
 input[type=text] {width: 95%;}
 input[type=text].inputerror{border:2px }
-input[type=email], textarea {width: 100%;}
-input {height:50px;}
+input[type=email], textarea {width: 100%; color: #fff;}
+input {height:50px; color: #fff;}
+
 
 input[type=text], input[type=email],textarea {border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:10px;background-color: #8FAFD6}
 textarea {padding-top: 10px;margin-bottom: 30px;resize: none;}
@@ -554,14 +555,14 @@ input[type="date"]::-webkit-inner-spin-button {
 
 /* Always display the drop down caret */
 input[type="date"]::-webkit-calendar-picker-indicator {
-    color: #000;
+    color: #fff;
 }
 
 /* A few custom styles for date inputs */
 input[type="date"] {
     appearance: none;
     -webkit-appearance: none;
-    color: #000;
+    color: #fff;
     font-family: "Helvetica", arial, sans-serif;
     font-size: 18px;
     border:1px solid #ecf0f1;
@@ -575,7 +576,7 @@ input[type="date"] {
 }
 
 input[type="date"], focus {
-    color: #000;
+    color: #fff;
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -591,6 +592,7 @@ select {
   border: 0 !important;
   background: #8FAFD6;
   background-image: none;
+  color: #fff;
 }
 /* Custom Select */
 .select {
@@ -676,10 +678,12 @@ select::-ms-expand {
   width: 47%;
   margin: 0 20px 0 20px;
   border-radius: 10px;
+
 }
 
 .myvaccin table{
   width: 100%;
+  margin: 20px 0 20px 0;
 }
 
 .myvaccin thead{

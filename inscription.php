@@ -54,12 +54,14 @@ include 'inc/header.php';
        <label for="mdp">Mot de passe :</label>
        <input type="password" name="mdp" value="">
        <?php
-       afficherErreur($error, 'mdp');
+       br();
+       afficherErreur($error, 'password1');
        br(); ?>
        <label for="mdp2">Vérifiez votre mot de passe :</label>
        <input type="password" name="mdp2" value="">
        <?php
-       afficherErreur($error, 'mdp');
+       br();
+       afficherErreur($error, 'password1');
        br(); ?>
        <input type="submit" name="submitted" value="Envoyer">
      </form>

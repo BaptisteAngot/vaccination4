@@ -58,7 +58,6 @@
       <p>01 02 03 04 05 06</p>
     </div>
   </div>
-
   <div class="clear"></div>
 
     <div class="column3">
@@ -66,6 +65,9 @@
     </div>
   <div class="clear"></div>
 </footer>
+
+
+
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -85,5 +87,6 @@
     $(this).addClass('active');
   });
 </script>
+
 </body>
 </html>

@@ -107,7 +107,7 @@
         <div class="ligne"></div>
         <div id="box"><img height="700" src="images/partenaires.png" width="350"></div>
     </div>
-
+  </section>
    <div id="form-contact">
      <h2>Nous contacter</h2>
         <div class="ligne"></div>
@@ -135,6 +135,9 @@
       </div>
     </div>
     <div class="clear"></div>
+<<<<<<< HEAD
+=======
   </section>
+>>>>>>> 85d783878bdcb5733281477eae580f4bd060c5d3
 
   <?php include 'inc/footer.php'; ?>

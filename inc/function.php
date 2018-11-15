@@ -183,6 +183,18 @@ function generateRandomString($length) {
     return $randomString;
 }
 
+function decrypt_hash($hash_crypte)
+{
+	// Enlever le sel du début et de fin
+	$hash_crypte = str_replace(SEL_DEBUT, '', $hash_crypte);
+	$hash_crypte = str_replace(SEL_FIN, '', $hash_crypte);
+
+	// Enlever le sel du milieu
+	$hash = preg_replace('#('.SEPARATEUR_DEBUT.'[a-z0-9]+'.SEPARATEUR_FIN.')#', '', $hash_crypte);
+
+	return $hash;
+}
+
 function validationpseudo($error,$pseudo,$min,$max,$empty = true){
   if (!empty($pseudo)) {
     if(strlen($pseudo)<$min){

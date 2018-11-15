@@ -305,7 +305,7 @@ h2{
 #intro{
   text-align: center;
   color: #FFF;
-  margin-top: -50%;
+  margin-top: -100%;
 }
 
 @media screen and (min-width: 601px) {

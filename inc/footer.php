@@ -61,11 +61,11 @@
 
   <div class="clear"></div>
 
-  <div class='wrap_footer'>
+
     <div class="column3">
       <p>© Copyright InfoVaccins 2018 ®. All rights reserved.</p>
     </div>
-  </div>
+
   <div class="clear"></div>
 
 

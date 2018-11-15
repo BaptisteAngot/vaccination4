@@ -74,7 +74,7 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
               <!-- Champs age pour faire le vaccin -->
               <div class="form-group">
                  <label for="age" class="bmd-label-floating">Veuillez saisir l'age où l'on doit faire le vaccin</label>
-                 <input type="number" class="form-control" id="age" name="age" value="<?php if(!empty($data['age'])){echo $data['age'];} ?>"
+                 <input type="number" class="form-control" id="age" name="age" value="<?php if(!empty($data['limit_age'])){echo $data['limit_age'];} ?>"
                  <span class="bmd-help"><?php if(!empty($error['nomvaccin'])){echo $error['age'];}else echo "Veuillez saisir un age sous forme de chiffre."?></span>
               </div>
               <!-- Champs dosage de ce vaccin -->

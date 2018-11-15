@@ -9,17 +9,17 @@ if (!empty($_POST['submitted']))
 
   // Vérification pseudo
   $pseudo = trim(strip_tags($_POST['pseudo']));
-  validationpseudo($error,$pseudo,3,50);
+  $error = validationpseudo($error,$pseudo,3,50);
 
   //Vérfication email
   $mail = trim(strip_tags($_POST['mail']));
-  validationemail($error,$mail);
+  $error = validationemail($error,$mail);
 
 
 
   $mdp = trim(strip_tags($_POST['mdp']));
   $mdp2 = trim(strip_tags($_POST['mdp2']));
-  validationpassword($error,$mdp,$mdp2,3,50);
+  $error = validationpassword($error,$mdp,$mdp2,3,50);
 
 
   if (count($error) == 0) {
@@ -31,7 +31,6 @@ if (!empty($_POST['submitted']))
     // redirection
     header('Location: index.php');
   }
-  debug($error);
 }
 
 include 'inc/header.php';

@@ -5,14 +5,10 @@ body
   line-height: 1.5;
 	font-family: 'Lato', sans-serif;
 	font-size: 17px;
-
+  background-image: url("../../images/medicalFond.jpg");
   background-color: #ECF0F3;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-}
-
-.toutSaufLeFooter {
-    background-image: url("../../images/medicalFond.jpg");
 }
 
 .wrap {
@@ -28,7 +24,7 @@ body
 }
 
 .wrap_footer {
-  max-width: 1486px;
+  max-width:1000px;
   width: 100%;
   margin: 0 auto;
   height: 300px;
@@ -642,7 +638,7 @@ select::-ms-expand {
 .newvaccin{
   background-color: #f4e7d3;
   border: 2px solid rgb(4, 113, 152);
-  float:left;
+  /* float:left; */
   min-width: 100%;
   margin: 0 20px 20 20px;
   padding: 0 5px 0 5px;
@@ -664,7 +660,7 @@ select::-ms-expand {
   border-radius: 10px;
   text-align: center;
   z-index: -1;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
   padding: 20px 0 20px 0;
 }
 
@@ -713,10 +709,6 @@ select::-ms-expand {
   margin: 5px 0 5px 0;
   font-weight: bold;
   font-size: 1.2em;
-}
-
-.userlog{
-  float: left;
 }
 
 .label{
@@ -842,33 +834,15 @@ select::-ms-expand {
 {
   margin: 3% 0 0 0;
 	float: left;
-	width: 13%;
+	width: 25%;
 }
 
-.column5
+/* .column5
 {
   margin: 3% 0 0 0;
 	float: left;
 	width: 49%;
-}
-
-/*
-#footer .column2
-{
-  margin: 15px 0 0 0;
-	float: left;
-	width: 33.33333333333333333333333%;
 } */
-
-
-#footer .column3
-{
-  margin: 15px 0 0 0;
-	float: left;
-	width: 100%;
-  background-color: #333;
-	width: 25%;
-}
 
 .ban h1{
   color: red;

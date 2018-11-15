@@ -136,13 +136,6 @@
       </div>
     </div>
     <div class="clear"></div>
-<<<<<<< HEAD
-=======
   </section>
-
->>>>>>> 1bcfd55bf3b6b9e267beaf0f0a0e478328f52430
-
-
-
 </section>
   <?php include 'inc/footer.php'; ?>

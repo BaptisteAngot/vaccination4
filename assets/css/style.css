@@ -28,7 +28,11 @@ body
   width: 100%;
   margin: 0 auto;
 }
-
+.wrap_footer2 {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -280,6 +284,7 @@ h2{
 		display:block;
     position: fixed;
     width: 100%;
+    z-index: 10;
 	}
 }
 
@@ -525,7 +530,7 @@ input {height:50px; color: #fff;}
 
 input[type=text], input[type=email],textarea {border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:10px;background-color: #8FAFD6}
 textarea {padding-top: 10px;margin-bottom: 30px;resize: none;}
-input[type=submit] {cursor:pointer;border:none;display: block;margin: 15px auto; width:275px;font-size: 1.2em;border-radius:10px;background-color: #8FAFD6; transition: 0.5s;color: #FFF}
+input[type=submit] {cursor:pointer;border:none;display: block;margin: 15px auto; width:275px;font-size: 1.2em;border-radius:10px;background-color: #8FAFD6; transition: 0.5s;color: #FFF;}
 input[type=submit]:hover {color: #008fcf;background-color:#6FA7C7;}
 .error {color:red;padding-left: 30px; display: -webkit-inline-box;}
 
@@ -783,7 +788,7 @@ select::-ms-expand {
 .social-icons
 {
 	margin: 5px;
-  margin-left: 37%;
+  margin-left: 12%;
 }
 
 .social-icons li a
@@ -822,9 +827,10 @@ select::-ms-expand {
 }
 
 #footer {
-  background-color: crimson;
+  background-color: #56739A;
   width: 100%;
   height: 310px;
+  color:#FFF;
 }
 
 #footer .bouton1 {
@@ -853,24 +859,7 @@ select::-ms-expand {
 {
   margin: 3% 0 0 0;
 	float: left;
-	width: 24%;
-}
-
-/* 
-#footer .column2
-{
-  margin: 15px 0 0 0;
-	float: left;
-	width: 33.33333333333333333333333%;
-} */
-
-
-#footer .column3
-{
-  margin: 15px 0 0 0;
-	float: left;
-	width: 100%;
-  background-color: #333;
+	width: 25%;
 }
 
 .ban h1{

@@ -385,3 +385,40 @@ function updateinfovaccin($id,$date,$reaction){
   $query ->bindValue(':id',$id, PDO::PARAM_STR);
   $query->execute();
 }
+
+//Fonction pour selection un user en fonction de son token et son mail
+function selectuserfromtoken($token,$mail){
+  global $pdo;
+
+  $sql = "SELECT * FROM v4_user WHERE email = '$mail' AND token = '$token'";
+  $query = $pdo -> prepare($sql);
+  $query -> execute();
+  $user = $query->fetch();
+  return $user;
+}
+
+
+//Met à jours le mot de passe oublié d'un user
+function majpassword($user,$new_token,$hash){
+  global $pdo;
+
+  $sql = "UPDATE v4_user SET token = :new_token , password = :hash, updated_at = NOW() WHERE id = :id";
+  $query = $pdo -> prepare($sql);
+  $query -> bindValue(':id', $user['id']);
+  $query -> bindValue(':new_token', $new_token);
+  $query -> bindValue(':hash', $hash);
+  $query -> execute();
+}
+
+
+// Requête SQL des pseudos
+function sqlpseudo($mail){
+  global $pdo;
+
+  $sql = "SELECT email, token FROM v4_user WHERE email = :mail";
+  $query = $pdo -> prepare($sql);
+  $query -> bindValue(':mail',$mail);
+  $query -> execute();
+  $user = $query->fetch();
+  return $user;
+}

@@ -8,10 +8,8 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
   $mail = urldecode($_GET['email']);
   $token = urldecode($_GET['token']);
 
-  $sql = "SELECT * FROM v4_user WHERE email = '$mail' AND token = '$token'";
-  $query = $pdo -> prepare($sql);
-  $query -> execute();
-  $user = $query->fetch();
+  $user =selectuserfromtoken($token,$mail);
+
   if (!empty($user))
   {
     if (!empty($_POST['submitted']))
@@ -42,13 +40,9 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
       {
         $hash = password_hash($password, PASSWORD_DEFAULT);
         $new_token = generateRandomString(50);
-        $sql = "UPDATE v4_user SET token = :new_token , password = :hash, updated_at = NOW() WHERE id = :id";
-        $query = $pdo -> prepare($sql);
-        $query -> bindValue(':id', $user['id']);
-        $query -> bindValue(':new_token', $new_token);
-        $query -> bindValue(':hash', $hash);
-        $query -> execute();
-        //header('Location: index.php');
+
+        majpassword($user,$new_token,$hash);
+        header('Location: index.php');
       }
 
     }

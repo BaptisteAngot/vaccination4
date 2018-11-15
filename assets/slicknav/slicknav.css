@@ -78,7 +78,7 @@
 .slicknav_menu {
   font-size: 16px;
   box-sizing: border-box;
-  background: #4c4c4c;
+  background: #56739A;
   padding: 5px; }
   .slicknav_menu * {
     box-sizing: border-box; }
@@ -96,7 +96,7 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #222; }
+  background-color: #8EA2C6; }
 
 .slicknav_nav {
   color: #fff;
@@ -117,7 +117,7 @@
       -webkit-border-radius: 6px;
       -moz-border-radius: 6px;
       border-radius: 6px;
-      background: #ccc;
+      background: #ecf0f3;
       color: #fff; }
   .slicknav_nav a {
     padding: 5px 10px;
@@ -129,7 +129,7 @@
       -moz-border-radius: 6px;
       border-radius: 6px;
       background: #ccc;
-      color: #222; }
+      color: #56739A; }
   .slicknav_nav .slicknav_txtnode {
     margin-left: 15px; }
   .slicknav_nav .slicknav_item a {

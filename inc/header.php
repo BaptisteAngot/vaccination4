@@ -28,7 +28,7 @@
             <li><a href="index.php#FAQ">Informations</a></li>
             <li><a href="index.php#form-contact">Nous contacter</a></li>
             <?php if (isLogged()) { ?>
-              <li><a <?php if($page=="/vaccination4/user_log.php") echo 'class="active"'; ?> href="user_profil.php">Mon Carnet</a></li>
+              <li><a <?php if($page=="/vaccination4/user_log.php") echo 'class="active"'; ?> href="user_log.php">Mon Carnet</a></li>
               <li><a <?php if($page=="/vaccination4/user_profil.php") echo 'class="active"'; ?> href="user_profil.php">Mon profil</a></li>
               <li><a href="deconnexion.php">Déconnexion</a></li>
               <?php if (isAdmin()) { ?>
@@ -46,20 +46,4 @@
       <div class="clear"></div>
     </header>
     <div class="clear"></div>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <script src="assets/slicknav/jquery.slicknav.min.js"></script>
-    <script>
-    	$(function(){
-    		$('#menu').slicknav();
-    	});
-    </script>
-    <script>
-      $('#menu').on('click','a',function(){
-        $('#menu a.active').removeClass('active');
-        $(this).addClass('active');
-      });
-    </script>
     <body>

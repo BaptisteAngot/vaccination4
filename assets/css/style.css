@@ -790,6 +790,20 @@ select::-ms-expand {
   color:#FFF;
 }
 
+#footer ul li a{
+  color:#FFF;
+  text-decoration: none;
+}
+
+#footer h4{
+  font-weight: bold;
+  font-size: 1.3em;
+  text-decoration: underline;
+  padding-bottom: 5px;
+  color: #8FAFD6;
+
+}
+
 #footer .bouton1 {
   width : 48px;
   height : 48px;

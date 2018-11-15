@@ -136,4 +136,5 @@
     </div>
     <div class="clear"></div>
   </section>
+
   <?php include 'inc/footer.php'; ?>

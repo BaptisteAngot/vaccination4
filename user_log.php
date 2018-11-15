@@ -33,10 +33,10 @@ else{
 
     //Champs reaction
     $reaction=trim(strip_tags($_POST['reaction']));
-    $error=validationText($error,$reaction,0,100,'reaction');
+    $error=validationText($error,$reaction,0,100,'reaction',false);
+
 
     $idtitle=returnidfromvname($title,$vaccinsexistants);
-
     if(count($error)==0){
       insertvaccinfromid($idtitle,$iduser,$date,$reaction);
       header('Location: user_log.php');
@@ -46,7 +46,7 @@ else{
 
  ?>
  <div class="wrap">
-   
+
    <div class="userlog">
 
      <div class="myvaccin">
@@ -74,6 +74,7 @@ else{
          </tbody>
        </table>
      </div>
+     <div class="clear"></div>
      <div class="newvaccin">
        <form class="formnewvaccin" method="post">
          <h1>Ajout d'un nouveau vaccin</h1>
@@ -86,11 +87,9 @@ else{
              } ?>
            </select>
          </div>
-         <br>
          <!-- Champs Date -->
          <label class="label" for="date">Date de votre vaccin:</label>
          <input type="date" name="date" value="">
-         <br>
          <!-- Champs reaction -->
          <label class="label" for="reaction">Une réaction ?</label>
          <input type="text" name="reaction" value="">
@@ -99,8 +98,9 @@ else{
          <input type="submit" name="submitted" value="Ajouter à ma liste des vaccins">
        </form>
      </div>
-
+     <div class="clear"></div>
    </div>
+   <div class="clear"></div>
  </div>
 <div class="clear"></div>
  <?php include 'inc/footer.php'; ?>

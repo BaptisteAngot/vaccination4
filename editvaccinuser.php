@@ -31,7 +31,7 @@ if(!empty($_POST['submitted'])){
 
   //reaction
   $reaction=trim(strip_tags($_POST['reaction']));
-  $error=validationText($error,$reaction,0,100,'reaction');
+  $error=validationText($error,$reaction,0,100,'reaction',false);
 
   if(count($error)==0){
     updateinfovaccin($infovaccin['id'],$date,$reaction);

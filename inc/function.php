@@ -324,6 +324,8 @@ function validationText($error,$data,$min,$max,$key,$empty = true){
   return $error;
 }
 
+
+
 function vmail($error,$data,$key){
   if(!empty($data)){
     if(!filter_var($data,FILTER_VALIDATE_EMAIL)){

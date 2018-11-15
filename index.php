@@ -135,5 +135,9 @@
       </div>
     </div>
     <div class="clear"></div>
+<<<<<<< HEAD
+=======
+  </section>
+>>>>>>> 85d783878bdcb5733281477eae580f4bd060c5d3
 
   <?php include 'inc/footer.php'; ?>

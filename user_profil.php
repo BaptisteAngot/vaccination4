@@ -31,5 +31,6 @@ else{
     <button  type="button" name="button" onclick="window.location.href='edit_profil.php'">Modifier</button>
   </div>
 </div>
+
 <?php
   include 'inc/footer.php';

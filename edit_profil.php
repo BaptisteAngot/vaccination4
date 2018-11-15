@@ -9,27 +9,34 @@
   if(!empty($id) && is_numeric($id)){
     if($_SESSION['user']['id'] == $id){
       $resultat = recoveruserdata($id);
+
       if (!empty($resultat)) {
         if (!empty($_POST['submitted']))
         {
-          $pseudo = trim(strip_tags($_POST['pseudo']));
-          $error = validationpseudoProfil($error,$pseudo,3,100);
-          $email = trim(strip_tags($_POST['email']));
-          $error = validationemailProfil($error,$email);
-          $password1 = trim(strip_tags($_POST['password1']));
-          $password2 = trim(strip_tags($_POST['password2']));
-          $error = validationpassword($error,$password1,$password2,3,50);
-          $nom = trim(strip_tags($_POST['nom']));
-          $error = validationTexte($error, $nom, 3, 50, 'nom');
-          $prenom = trim(strip_tags($_POST['prenom']));
-          $error = validationTexte($error, $prenom, 3, 50, 'prenom');
-          $age = trim(strip_tags($_POST['age']));
-          $error = validationChiffre($error,$age,'age');
+          $old_password = trim(strip_tags($_POST['old_password']));
+          $resultatpassword = verifpassword($old_password);
+          if (empty($resultatpassword)) {
+            $error['old_password'] = 'Votre ancien mot de passe est incorrect!';
+          }else {
+            $pseudo = trim(strip_tags($_POST['pseudo']));
+            $error = validationpseudoProfil($error,$pseudo,3,100);
+            $email = trim(strip_tags($_POST['email']));
+            $error = validationemailProfil($error,$email);
+            $password1 = trim(strip_tags($_POST['password1']));
+            $password2 = trim(strip_tags($_POST['password2']));
+            $error = validationpassword($error,$password1,$password2,3,50);
+            $nom = trim(strip_tags($_POST['nom']));
+            $error = validationTexte($error, $nom, 3, 50, 'nom');
+            $prenom = trim(strip_tags($_POST['prenom']));
+            $error = validationTexte($error, $prenom, 3, 50, 'prenom');
+            $age = trim(strip_tags($_POST['age']));
+            $error = validationChiffre($error,$age,'age');
+          }
           if (count($error) == 0) {
             $hash = password_hash($password1, PASSWORD_DEFAULT);
             updateUserDataProfil($id,$pseudo,$email, $nom, $prenom, $age, $hash);
             // redirection
-            header('Location: user_profil.php');
+            //header('Location: user_profil.php');
           }
         }
       }
@@ -67,6 +74,9 @@
      labelText('age', 'Age :', $resultat);
      afficherErreur($error, 'age');
      br();
+     ?>
+     <?php labelPassword('old_password', 'Saisissez votre ancien mot de passe :', $resultat);
+      afficherErreur($error, 'old_password');
      ?>
      <input type="submit" name="submitted" value="Modifier">
    </form>

@@ -2,9 +2,7 @@
   include 'inc/pdo.php';
   include 'inc/function.php';
   include 'inc/request.php';
-  if (isLogged()) {
-  }
-  include 'inc/header.php';
+
 
   $titre = 'Nouveau message';
   $error = array();
@@ -24,6 +22,7 @@
             mail($email,$titre,$message);
           }
       }
+      include 'inc/header.php';
 ?>
 
 

@@ -61,14 +61,29 @@
 
   <div class="clear"></div>
 
-  <div class='wrap_footer'>
     <div class="column3">
       <p>© Copyright InfoVaccins 2018 ®. All rights reserved.</p>
     </div>
-  </div>
   <div class="clear"></div>
-
-
 </footer>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script src="assets/slicknav/jquery.slicknav.min.js"></script>
+
+<script>
+  $(function(){
+    $('#menu').slicknav();
+  });
+</script>
+
+<script>
+  $('#menu').on('click','a',function(){
+    $('#menu a.active').removeClass('active');
+    $(this).addClass('active');
+  });
+</script>
 </body>
 </html>

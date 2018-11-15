@@ -24,7 +24,7 @@ body
 }
 
 .wrap_footer {
-  max-width: 100%;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
@@ -836,6 +836,15 @@ select::-ms-expand {
 	float: left;
 	width: 24%;
 }
+
+
+#footer .column2
+{
+  margin: 15px 0 0 0;
+	float: left;
+	width: 33.33333333333333333333333333333333333333%;
+}
+
 
 #footer .column3
 {

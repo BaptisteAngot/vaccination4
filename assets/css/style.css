@@ -5,14 +5,10 @@ body
   line-height: 1.5;
 	font-family: 'Lato', sans-serif;
 	font-size: 17px;
-
+  background-image: url("../../images/medicalFond.jpg");
   background-color: #ECF0F3;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-}
-
-.toutSaufLeFooter {
-    background-image: url("../../images/medicalFond.jpg");
 }
 
 .wrap {
@@ -27,16 +23,6 @@ body
   margin: 0 auto;
 }
 
-.wrap_footer {
-  max-width: 1486px;
-  width: 100%;
-  margin: 0 auto;
-}
-.wrap_footer2 {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -643,23 +629,6 @@ select::-ms-expand {
   font-size: 1.05em;
 }
 
-.newvaccin{
-  background-color: #f4e7d3;
-  border: 2px solid rgb(4, 113, 152);
-  float:left;
-  min-width: 100%;
-  margin: 0 20px 20 20px;
-  padding: 0 5px 0 5px;
-  display: inline;
-  overflow: hidden;
-  border-radius: 10px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.newvaccin input {
-
-}
 
 .modifprofil{
   background-color: #f4e7d3;
@@ -672,19 +641,24 @@ select::-ms-expand {
   border-radius: 10px;
   text-align: center;
   z-index: -1;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
   padding: 20px 0 20px 0;
 }
 
 .myvaccin{
   background-color: #FFF;
   border: 2px solid rgb(4, 113, 152);
-  float: left;
-  width: 47%;
-  min-width: 100%;
-  margin: 0 20px 0 20px;
+  margin-top: 30%;
   border-radius: 10px;
+}
 
+.newVaccin
+{
+  background-color: #FFF;
+  border: 2px solid rgb(4, 113, 152);
+  border-radius: 10px;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .myvaccin table{
@@ -723,10 +697,6 @@ select::-ms-expand {
   font-size: 1.2em;
 }
 
-.userlog{
-  float: left;
-}
-
 .label{
   float: left;
   clear: both;
@@ -734,15 +704,7 @@ select::-ms-expand {
   padding-left: 20px;
 }
 
-.formnewvaccin{
-  padding: 5px 0 5px 0;
-}
 
-.formnewvaccin h1{
-  padding-bottom: 20px;
-  font-weight: bold;
-  font-size: 1.2em;
-}
 
 .center {
   margin-left: 35%;
@@ -824,7 +786,7 @@ select::-ms-expand {
   position: absolute bottom;
   background-color: #56739A;
   width: 100%;
-  height: 310px;
+  height: 300px;
   color:#FFF;
 }
 
@@ -854,31 +816,6 @@ select::-ms-expand {
 {
   margin: 3% 0 0 0;
 	float: left;
-	width: 13%;
-}
-
-.column5
-{
-  margin: 3% 0 0 0;
-	float: left;
-	width: 49%;
-}
-
-/*
-#footer .column2
-{
-  margin: 15px 0 0 0;
-	float: left;
-	width: 33.33333333333333333333333%;
-} */
-
-
-#footer .column3
-{
-  margin: 15px 0 0 0;
-	float: left;
-	width: 100%;
-  background-color: #333;
 	width: 25%;
 }
 

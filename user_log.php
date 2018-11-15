@@ -2,7 +2,6 @@
 include 'inc/pdo.php';
 include 'inc/function.php';
 include 'inc/request.php';
-include 'inc/header.php';
 $vaccinsexistants= recuperationlistevaccin();
 
 $error=array();
@@ -44,12 +43,10 @@ else{
   }
 
 
- ?>
- <div class="wrap">
+ include 'inc/header.php';?>
 
-   <div class="userlog">
-
-     <div class="myvaccin column5">
+    <div class="wrap">
+     <div class="myvaccin">
        <h1>Liste de vos différents vaccins</h1>
        <table>
          <thead class="thead">
@@ -75,8 +72,9 @@ else{
        </table>
      </div>
      <div class="clear"></div>
-     <div class="newvaccin column5">
-       <form class="formnewvaccin" method="post">
+
+      <div class="newVaccin">
+       <form class="form-new-vaccin" method="post">
          <h1>Ajout d'un nouveau vaccin</h1>
          <label class="label" for="vaccin">Votre vaccin a ajouté: </label>
          <!-- Champs select -->
@@ -98,11 +96,7 @@ else{
          <span>Si aucune, veuillez laisser ce champs vide.</span>
          <input type="submit" name="submitted" value="Ajouter à ma liste des vaccins">
        </form>
-     </div>
-     <div class="clear"></div>
 
-   <div class="clear"></div>
- </div>
-<div class="clear"></div>
-</div>
+     </div>
+     </div>
  <?php include 'inc/footer.php'; ?>

@@ -450,6 +450,16 @@ h2{
   padding-bottom: 100px;
 }
 
+.form-new-vaccin{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.formedit input{
+  margin: 0 30px 0 30px;
+}
+
+
 #form-contact {
   background-image: url('../img/medical2.jpg');
   margin-top: -10px;
@@ -487,7 +497,7 @@ form div {float: left;}
 .w100 {width:100%;}
 input[type=text] {width: 95%;}
 input[type=text].inputerror{border:2px }
-input[type=email], textarea {width: 100%; color: #fff;}
+input[type=email], textarea {width: 75%; color: #fff;}
 input {height:50px; color: #fff;}
 
 .form_inscription a{
@@ -508,7 +518,7 @@ input[type=password]{
   background-color: #8FAFD6;
   border-radius: 10px;
   width: 50%;
-  margin-left: 25%;
+  /* margin-left: 25%; */
 }
 ::placeholder {color: #FFF; opacity: 1;}
 :-ms-input-placeholder {color: #FFF;}
@@ -856,6 +866,14 @@ select::-ms-expand {
 
 .form_inscription label{
   text-align: center;
+}
+
+.form_inscription input[type=password]{
+  margin-left: 25%;
+}
+
+.form_inscription input[type=email]{
+
 }
 
 @media screen and (min-width: 767px) {

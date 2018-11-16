@@ -16,8 +16,6 @@
           $error=validatemail($error,$email);
           $error=validationText($error,$message,3,1000,'message');
 
-          pre($error);
-
           if (count($error) == 0){
             mail($email,$titre,$message);
           }

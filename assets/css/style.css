@@ -24,6 +24,10 @@ body
   margin: 0 auto;
 }
 
+.wrap_inscription input[type=text] {
+  margin-left: 17px;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

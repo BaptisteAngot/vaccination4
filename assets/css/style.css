@@ -508,6 +508,14 @@ input {height:50px; color: #fff;}
   margin-left: 38%;
 }
 
+.form_password_forget input[type=email] {
+  margin-left: 12.5%;
+}
+
+.form_password_forget label {
+  margin-top: 300px;
+  padding-left: 22%;
+}
 
 input[type=text], input[type=email],textarea {border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:10px;background-color: #8FAFD6}
 textarea {padding-top: 10px;margin-bottom: 30px;resize: none;}

@@ -422,3 +422,15 @@ function sqlpseudo($mail){
   $user = $query->fetch();
   return $user;
 }
+
+function getOldPassword($id)
+{
+  global $pdo;
+
+  $sql = "SELECT password FROM v4_user WHERE id = :id";
+  $query = $pdo -> prepare($sql);
+  $query -> bindValue(':id',$id);
+  $query -> execute();
+  $old_hash = $query->fetch();
+  return $old_hash;
+}

@@ -26,7 +26,7 @@ if (!empty($_POST['submitted']))
     }
     else {
       if (!empty($user)) {
-         $body = '<p>Cliquez <a href="http://localhost/vaccination4/new_password?email='.urlencode($user['email']).'&token='.urlencode($user['token']).'">ICI<?php"></a></p>';
+         $body = '<p>Cliquez <a href="http://localhost/vaccination4/new_password.php?email='.urlencode($user['email']).'&token='.urlencode($user['token']).'">ICI<?php"></a></p>';
         // echo $body;
         mail($mail, "Réinitialisation mot de passe!", $body, $header);
         $success = '<div class="alert-success" role="alert">
@@ -45,7 +45,7 @@ if (!empty($_POST['submitted']))
 include 'inc/header.php';
  ?>
 
-<form class=""  method="post">
+<form class="form_password_forget"  method="post">
   <label for="mail">Adresse mail :</label>
   <input type="email" name="mail" value="<?php if (!empty($_POST['email'])) {
     echo $_POST['email'];

@@ -304,16 +304,18 @@ function validationpassword($error,$password1,$password2,$min,$max,$empty = true
       $error['password1']= 'maximum '.$max.' caractères';
     }
   } else {
-    $error['password1'] = 'Erreur : password vide';
+    if ($empty) {
+      $error['password1'] = 'Erreur : password vide';
+    }
   }
   return $error;
 }
 
-function verifPasswordEdit($password, $hash, $error, $name)
+function verifPasswordEdit($old_password, $old_hash, $error, $name)
 {
-  $resultatpassword = password_verify($password, $hash);
-  if (!empty($password)) {
-    if ($resultatpassword == FALSE) {
+
+  if (!empty($old_password)) {
+    if (!password_verify($old_password, $old_hash)) {
       $error[$name] = 'Votre ancien mot de passe est incorrect!';
     }
   }else {
@@ -321,6 +323,7 @@ function verifPasswordEdit($password, $hash, $error, $name)
   }
   return $error;
 }
+
 function transformdate($date){
   $newdate= date("d-m-Y", strtotime($date['created_at']));
   return $newdate;

@@ -24,6 +24,10 @@ body
   margin: 0 auto;
 }
 
+.wrap_inscription input[type=text] {
+  margin-left: 17px;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -808,6 +812,12 @@ select::-ms-expand {
 #footer ul li a{
   color:#FFF;
   text-decoration: none;
+}
+
+#footer ul li a:hover{
+  color:#FFF;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #footer h4{

@@ -58,10 +58,10 @@ function Affichertableauvaccin($vaccins,$title,$description){
               echo '<th> Description </th>';
               echo '<th> Age </th>';
               echo '<th> Dosage </th>';
-              echo '<th> Status </th>';
+              echo '<th> Statut </th>';
               echo '<th> Condition requise </th>';
-              echo '<th> Créer le: </th>';
-              echo '<th> Modifier le: </th>';
+              echo '<th> Créée le : </th>';
+              echo '<th> Modifié le : </th>';
               echo '<th> Edit </th>';
               echo '<th> Delete </th>';
             echo '</thead>';
@@ -402,8 +402,8 @@ function Affichertableauuser($users,$title,$description){
           echo '<table class="table">';
             echo '<thead class=" text-info">';
               echo '<th> ID </th>';
-              echo '<th> Login </th>';
-              echo '<th> Status </th>';
+              echo '<th> Login: </th>';
+              echo '<th> Statut: </th>';
               echo '<th> Email: </th>';
               echo '<th> Rôle </th>';
               echo '<th> Date de création </th>';

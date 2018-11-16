@@ -682,7 +682,7 @@ select::-ms-expand {
 
 .myvaccin table{
   width: 100%;
-  margin: 20px 0 20px 0;
+  margin: 20px 5px 20px 5px;
   min-width: 100%;
 }
 
@@ -705,7 +705,7 @@ select::-ms-expand {
 
 .myvaccin thead,tbody tr{
   display:table;
-  width:100%;
+  width:99%;
   table-layout:fixed;
 }
 

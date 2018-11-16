@@ -27,10 +27,9 @@ if (!empty($_POST['submitted']))
     else {
       if (!empty($user)) {
          $body = '<p>Cliquez <a href="http://localhost/vaccination4/new_password.php?email='.urlencode($user['email']).'&token='.urlencode($user['token']).'">ICI<?php"></a></p>';
-        // echo $body;
         mail($mail, "Réinitialisation mot de passe!", $body, $header);
         $success = '<div class="alert-success" role="alert">
-                Réussi! Veuillez consulter vos mails!
+                Réussi! Veuillez consulter vos mails! Ou cliquez <a href="http://localhost/vaccination4/new_password.php?email='.urlencode($user['email']).'&token='.urlencode($user['token']).'">ICI<?php"></a>
               </div>';
         // header('Location: new_password.php');
       }

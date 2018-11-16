@@ -54,16 +54,15 @@
     <div class="wrap-FAQ">
       <ul>
         <div class="boiteQuestion"> <li>Qu'est-ce que InfoVaccins.com?</li> </div>
-        <p>InfoVaccins.com est un carnet de santé connecté accessible sous toutes les patformes.</p>
+        <p>InfoVaccins.com est un carnet de santé connecté accessible sous toutes les plateformes.</p>
         <div class="boiteQuestion"> <li>À quoi sert-il?</li> </div>
-        <p>Il permet de consulter les informations des différents vaccins mais également de s'y tenir
-           informé.Après inscription InfoVaccins.com vous avertira des prochains vaccins vous concernant personnellement.
+        <p>
+          Il permet de consulter les informations des différents vaccins mais également de s'y tenir informé.Après inscription InfoVaccins.com vous avertira des prochains vaccins vous concernant personnellement.
         </p>
         <div class="boiteQuestion"> <li>Qui sont les concernés?</li> </div>
         <p>InfoVaccins.com concerne tous le monde.</p>
         <div class="boiteQuestion"> <li>Quels sont les avantages?</li> </div>
-        <p>InfoVaccins.com permet une de s'informer rapidement et efficacement sans avoir besoins de consulter un médecin
-          car toutes nos informations on était vérifié par des spécialiste en matière de vaccination.
+        <p>InfoVaccins.com permet une de s'informer rapidement et efficacement sans avoir besoin de consulter un médecin, car toutes nos informations, on était vérifié par des spécialistes en matière de vaccination.
         </p>
       </ul>
     </div>

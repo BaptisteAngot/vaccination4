@@ -48,7 +48,7 @@
  ?>
  <div class="modifprofil">
    <h3>Modifier votre profil</h3>
-   <form class="" method="post">
+   <form class="formedit" method="post">
      <?php
      labelText('pseudo', 'Pseudo :', $resultat);
      afficherErreur($error, 'pseudo');
@@ -71,13 +71,14 @@
      labelText('age', 'Age :', $resultat);
      afficherErreur($error, 'age');
      br();
-     ?>
-     <?php labelPassword('old_password', 'Pour confirmer, saisissez votre ancien mot de passe :', $resultat);
-      afficherErreur($error, 'old_password');
+
+     labelPassword('old_password', 'Pour confirmer, saisissez votre ancien mot de passe :', $resultat);
+     afficherErreur($error, 'old_password');
      ?>
      <input type="submit" name="submitted" value="Modifier">
    </form>
  </div>
+
 <div class="clear"></div>
 <?php
   include 'inc/footer.php';

@@ -24,6 +24,10 @@ body
   margin: 0 auto;
 }
 
+.wrap_inscription input[type=text] {
+  margin-left: 17px;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -450,6 +454,16 @@ h2{
   padding-bottom: 100px;
 }
 
+.form-new-vaccin{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.formedit input{
+  margin: 0 30px 0 30px;
+}
+
+
 #form-contact {
   background-image: url('../img/medical2.jpg');
   margin-top: -10px;
@@ -487,13 +501,25 @@ form div {float: left;}
 .w100 {width:100%;}
 input[type=text] {width: 95%;}
 input[type=text].inputerror{border:2px }
-input[type=email], textarea {width: 100%; color: #fff;}
+input[type=email], textarea {width: 75%; color: #fff;}
 input {height:50px; color: #fff;}
 
 .form_inscription a{
   margin-left: 38%;
 }
 
+.form_password_forget {
+  margin-bottom: 200px;
+}
+
+.form_password_forget input[type=email] {
+  margin-left: 12.5%;
+}
+
+.form_password_forget label {
+  margin-top: 300px;
+  padding-left: 22%;
+}
 
 input[type=text], input[type=email],textarea {border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:10px;background-color: #8FAFD6}
 textarea {padding-top: 10px;margin-bottom: 30px;resize: none;}
@@ -508,7 +534,7 @@ input[type=password]{
   background-color: #8FAFD6;
   border-radius: 10px;
   width: 50%;
-  margin-left: 25%;
+  /* margin-left: 25%; */
 }
 ::placeholder {color: #FFF; opacity: 1;}
 :-ms-input-placeholder {color: #FFF;}
@@ -793,6 +819,7 @@ select::-ms-expand {
   width: 100%;
   height: 300px;
   color:#FFF;
+
 }
 
 #footer ul li a{
@@ -862,6 +889,14 @@ select::-ms-expand {
 
 .form_inscription label{
   text-align: center;
+}
+
+.form_inscription input[type=password]{
+  margin-left: 25%;
+}
+
+.form_inscription input[type=email]{
+
 }
 
 @media screen and (min-width: 767px) {

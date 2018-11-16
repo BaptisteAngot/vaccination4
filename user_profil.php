@@ -6,13 +6,11 @@
   // use Defuse\Crypto\Crypto;
   // use \Defuse\Crypto\Key;
   //
-  // require "vendor/autoload.php";
-  //
-  // // On génère une clé aléatoire pour le cryptage
-  // $key = Key::createNewRandomKey();
-  // // Récupération de la clé aléatoire en chaîne de caractère pour le stockage
-  // $key->saveToAsciiSafeString();
-  // $message="test";
+  // require "vendor/autoload.php
+
+
+
+
   //
   // $cryptmessage=Crypto::encrypt($message,$key);
   // echo $cryptmessage;

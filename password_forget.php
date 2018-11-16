@@ -45,7 +45,7 @@ if (!empty($_POST['submitted']))
 include 'inc/header.php';
  ?>
 
-<form class=""  method="post">
+<form class="form_password_forget"  method="post">
   <label for="mail">Adresse mail :</label>
   <input type="email" name="mail" value="<?php if (!empty($_POST['email'])) {
     echo $_POST['email'];

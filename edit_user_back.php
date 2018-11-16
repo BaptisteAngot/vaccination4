@@ -39,7 +39,8 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
       $mail=trim(strip_tags($_POST['email']));
       $error=vmail($error,$mail,'email');
 
-      echo count($error);
+      // echo count($error);
+      // pre($error);
 
       if(count($error)==0){
         updateuserdata($id,$login,$status,$role,$mail);

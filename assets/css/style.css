@@ -800,6 +800,12 @@ select::-ms-expand {
   text-decoration: none;
 }
 
+#footer ul li a:hover{
+  color:#FFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 #footer h4{
   font-weight: bold;
   font-size: 1.3em;

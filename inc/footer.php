@@ -4,9 +4,7 @@
 				<ul class="footer__menu">
 					<h4>Le Carnet</h4>
           <li><a  href="wip.html" title="Qui sommes-nous ?">Qui sommes-nous ?</a></li>
-        <li><a href="wip.html" title="Comment ça marche ?">Comment ça marche ?</a></li>
-        <li><a href="wip.html" title="Parutions presse">Parutions presse</a></li>
-        <li><a href="wip.html" title="Mentions légales">Mentions légales</a></li></br>
+        <li><a href="wip.html" title="Comment ça marche ?">Comment ça marche ?</a></li></br>
           <h4>Nos réseaux sociaux</h4>
         <ul class="social-icons">
             <li><a href="https://www.facebook.com/InfoVaccins-763363707343739/" class="facebook"></a></li>
@@ -17,9 +15,8 @@
       <div class="column1">
     				<ul class="footer__menu">
     					<h4>Les Client</h4>
-              <li><a href="#" title="Questions fréquentes">Questions fréquentes</a></li>
-              <li><a href="#" title="Témoignages clients">Témoignages clients</a></li>
-              <li><a href="#" title="Conditions Générales de Vente">Conditions Générales de Vente</a></li>
+              <li><a href="wip.html" title="Questions fréquentes">Questions fréquentes</a></li>
+              <li><a href="wip.html" title="Témoignages clients">Témoignages clients</a></li></br>
 
 
               <h4>Où nous trouver ?</h4>
@@ -30,8 +27,7 @@
         				<ul class="footer__menu">
         					<h4>Santé</h4>
         						<li><a href="wip.html" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
-        						<li><a href="wip.html" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
-        						<li><a href="wip.html" title="De nouveaux projets">De nouveaux projets</a></li></br>
+        						<li><a href="wip.html" title="Comment l'utiliser?">Comment l'utiliser?</a></li></br>
                     <h4>Contact</h4>
                     <p>contact@infovaccins.com</p>
                     <p>01 02 03 04 05 06</p>
@@ -41,8 +37,7 @@
             				<ul class="footer__menu">
             					<h4>Les infos</h4>
             						<li><a href="wip.html" title="Tout savoir sur la conception du carnet de vaccination">Tout savoir sur la conception du carnet de vaccination</a></li>
-            						<li><a href="wip.html" title="Comment l'utiliser?">Comment l'utiliser?</a></li>
-            						<li><a href="wip.html" title="De nouveaux projets">De nouveaux projets</a></li></br>
+            						<li><a href="wip.html" title="Comment l'utiliser?">Comment l'utiliser?</a></li></li></br>
                         <p>© Copyright InfoVaccins 2018 ®. All rights reserved.</p>
             				</ul>
             			</div>

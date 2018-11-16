@@ -56,10 +56,10 @@
      labelEmail('email', 'Email :', $resultat);
      afficherErreur($error, 'email');
      br();
-     labelPassword('password1', 'Mot de passe :', $resultat);
+     labelPassword('password1', 'Mot de passe (optionnel):', $resultat);
      afficherErreur($error, 'password1');
      br();
-     labelPassword('password2', 'Confirmer mot de passe :', $resultat);
+     labelPassword('password2', 'Confirmer mot de passe (optionnel):', $resultat);
      afficherErreur($error, 'password1');
      br();
      labelText('nom', 'Nom :', $resultat);

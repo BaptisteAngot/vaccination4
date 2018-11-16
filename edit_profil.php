@@ -32,7 +32,7 @@
           if (count($error) == 0) {
             updateUserDataProfil($id,$pseudo,$email, $nom, $prenom, $age, $hash);
             // redirection
-            //header('Location: user_profil.php');
+            header('Location: user_profil.php');
           }
         }
       }

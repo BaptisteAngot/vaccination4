@@ -508,6 +508,10 @@ input {height:50px; color: #fff;}
   margin-left: 38%;
 }
 
+.form_password_forget {
+  margin-bottom: 200px;
+}
+
 .form_password_forget input[type=email] {
   margin-left: 12.5%;
 }
@@ -815,6 +819,7 @@ select::-ms-expand {
   width: 100%;
   height: 300px;
   color:#FFF;
+
 }
 
 #footer ul li a{

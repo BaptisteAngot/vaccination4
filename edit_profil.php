@@ -20,9 +20,9 @@
             $error = validationemailProfil($error,$email);
             $password1 = trim(strip_tags($_POST['password1']));
             $password2 = trim(strip_tags($_POST['password2']));
-            $hash = password_hash($password1, PASSWORD_DEFAULT);
-            $error = verifPasswordEdit($old_password, $hash, $error,'old_password');
-            $error = validationpassword($error,$password1,$password2,3,50);
+            $old_hash = getOldPassword($id);
+            $error = verifPasswordEdit($old_password, $old_hash['password'], $error,'old_password');
+            $error = validationpassword($error,$password1,$password2,3,50, false);
             $nom = trim(strip_tags($_POST['nom']));
             $error = validationTexte($error, $nom, 3, 50, 'nom');
             $prenom = trim(strip_tags($_POST['prenom']));
@@ -30,6 +30,7 @@
             $age = trim(strip_tags($_POST['age']));
             $error = validationChiffre($error,$age,'age');
           if (count($error) == 0) {
+            $hash = password_hash($password1, PASSWORD_DEFAULT);
             updateUserDataProfil($id,$pseudo,$email, $nom, $prenom, $age, $hash);
             // redirection
             header('Location: user_profil.php');
